@@ -97,7 +97,7 @@
     }
     else if(indexPath.row == 3)
     {
-        
+        [UILabel showMessage:@"Cheers!" ofSize:18 ofColor:[UIColor blueColor] inView:self.view.window forDuration:1.5];
     }
 }
 

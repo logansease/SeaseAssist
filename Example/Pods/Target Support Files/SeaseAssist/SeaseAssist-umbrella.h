@@ -2,6 +2,7 @@
 
 #import "UIAlertController+Helpers.h"
 #import "UIAlertView+Helpers.h"
+#import "UILabel+Message.h"
 #import "UIViewController+Top.h"
 
 FOUNDATION_EXPORT double SeaseAssistVersionNumber;
