@@ -7,6 +7,7 @@
 //
 
 #import "SAViewController.h"
+#import "UIAlertView+Helpers.h"
 
 @interface SAViewController ()
 
@@ -16,6 +17,7 @@
 
 - (void)viewDidLoad
 {
+    [UIAlertView showWithTitle:@"Test" andMessage:@"Test"];
     [super viewDidLoad];
 	// Do any additional setup after loading the view, typically from a nib.
 }

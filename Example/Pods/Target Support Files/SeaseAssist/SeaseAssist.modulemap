@@ -1,0 +1,6 @@
+framework module SeaseAssist {
+  umbrella header "SeaseAssist-umbrella.h"
+
+  export *
+  module * { export * }
+}

@@ -1,0 +1,25 @@
+{
+  "name": "SeaseAssist",
+  "version": "0.1.0",
+  "summary": "A short description of SeaseAssist.",
+  "description": "",
+  "homepage": "https://github.com/<GITHUB_USERNAME>/SeaseAssist",
+  "license": "MIT",
+  "authors": {
+    "Logan Sease": "logan.sease@qonceptual.com"
+  },
+  "source": {
+    "git": "https://github.com/<GITHUB_USERNAME>/SeaseAssist.git",
+    "tag": "0.1.0"
+  },
+  "platforms": {
+    "ios": "7.0"
+  },
+  "requires_arc": true,
+  "source_files": "Pod/Classes/**/*",
+  "resource_bundles": {
+    "SeaseAssist": [
+      "Pod/Assets/*.png"
+    ]
+  }
+}

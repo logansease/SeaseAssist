@@ -1,0 +1,14 @@
+PODS:
+  - SeaseAssist (0.1.0)
+
+DEPENDENCIES:
+  - SeaseAssist (from `../`)
+
+EXTERNAL SOURCES:
+  SeaseAssist:
+    :path: "../"
+
+SPEC CHECKSUMS:
+  SeaseAssist: d73158b3b9cb013ba5ad2fc8bc7c55b9ea6b5e3b
+
+COCOAPODS: 0.39.0
