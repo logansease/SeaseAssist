@@ -7,26 +7,26 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		031D3A99AD7992C205A2501F8F526C72 /* UIAlertController+Helpers.m in Sources */ = {isa = PBXBuildFile; fileRef = 29011B087F17F09F22BE4F768C651417 /* UIAlertController+Helpers.m */; };
 		09CEC3485E705267E0D91B3D85139A1F /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C3B7BDF5CE5CB8F095FE12DA55D9A9BB /* UIKit.framework */; };
 		1EA6033100E9833E3EEAEDBE40BF767E /* Pods-SeaseAssist_Tests-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 94F0717FD2CCF89466BB4DC3B0925586 /* Pods-SeaseAssist_Tests-dummy.m */; };
+		213ECCF9ADC352DB47C788D3AB245DDB /* SeaseAssist-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = C35485204939C5374E977D24548F384B /* SeaseAssist-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		380BBF8363A38933965BBC553831C8D2 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6E7E5AF37923BFA48D6994B9BFC6535F /* Foundation.framework */; };
 		38B081F5C4317305E0665D5408C8AEA8 /* Pods-SeaseAssist_Tests-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = C1742E6C906CBBE36172407AE32A63DD /* Pods-SeaseAssist_Tests-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		3B59DFEF03661F68C96104A64FA1D829 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6E7E5AF37923BFA48D6994B9BFC6535F /* Foundation.framework */; };
 		3C6E86879A57C9E4A3B5522DA1E28D16 /* Pods-SeaseAssist_Example-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 71A295B977D776151E4958D906C591EE /* Pods-SeaseAssist_Example-dummy.m */; };
-		47AE0501D0D2D329B31ADB4377513D05 /* SeaseAssist-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = B6C3C584D29127CB061078B25E7DE7AE /* SeaseAssist-dummy.m */; };
-		48F1E5CCB3D3B58CFC81F0CE5F48D801 /* SeaseAssist-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = C35485204939C5374E977D24548F384B /* SeaseAssist-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		70D809F71C1CCF5E00AA500B /* UIAlertController+Helpers.m in Sources */ = {isa = PBXBuildFile; fileRef = 70D809F51C1CCF5E00AA500B /* UIAlertController+Helpers.m */; };
-		70D809F81C1CCF5E00AA500B /* UIAlertController+Helpers.m in Sources */ = {isa = PBXBuildFile; fileRef = 70D809F51C1CCF5E00AA500B /* UIAlertController+Helpers.m */; };
-		70D809F91C1CCF6800AA500B /* UIAlertController+Helpers.h in Headers */ = {isa = PBXBuildFile; fileRef = 70D809F41C1CCF5E00AA500B /* UIAlertController+Helpers.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		70D809FC1C1CCFC800AA500B /* UIViewController+Top.h in Headers */ = {isa = PBXBuildFile; fileRef = 70D809FA1C1CCFC800AA500B /* UIViewController+Top.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		70D809FD1C1CCFC800AA500B /* UIViewController+Top.m in Sources */ = {isa = PBXBuildFile; fileRef = 70D809FB1C1CCFC800AA500B /* UIViewController+Top.m */; };
-		70D809FE1C1CCFCE00AA500B /* UIViewController+Top.m in Sources */ = {isa = PBXBuildFile; fileRef = 70D809FB1C1CCFC800AA500B /* UIViewController+Top.m */; };
-		70D809FF1C1CCFD600AA500B /* UIAlertView+Helpers.m in Sources */ = {isa = PBXBuildFile; fileRef = B598E408B1E5EF3D106C49382BB884E0 /* UIAlertView+Helpers.m */; };
-		926AD9639946737DE33EAC0BD7FF4DF2 /* UIAlertView+Helpers.m in Sources */ = {isa = PBXBuildFile; fileRef = B598E408B1E5EF3D106C49382BB884E0 /* UIAlertView+Helpers.m */; };
-		AF7D8717AC6AE0BFC26CE7A5441B1D06 /* UIAlertView+Helpers.h in Headers */ = {isa = PBXBuildFile; fileRef = 803AB449B0B5F9B9B68FCC66769D90D7 /* UIAlertView+Helpers.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		70D80A021C1CD36A00AA500B /* UILabel+Message.h in Headers */ = {isa = PBXBuildFile; fileRef = 70D80A001C1CD36A00AA500B /* UILabel+Message.h */; };
+		70D80A031C1CD36A00AA500B /* UILabel+Message.m in Sources */ = {isa = PBXBuildFile; fileRef = 70D80A011C1CD36A00AA500B /* UILabel+Message.m */; };
+		70D80A041C1CD36A00AA500B /* UILabel+Message.m in Sources */ = {isa = PBXBuildFile; fileRef = 70D80A011C1CD36A00AA500B /* UILabel+Message.m */; };
+		7FC17A6F9B2FAABE00779660190C222F /* UIAlertView+Helpers.h in Headers */ = {isa = PBXBuildFile; fileRef = 6B057537295B6A574330029C43ACC868 /* UIAlertView+Helpers.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		86CDD704E4012269C8EF87B66732D0EB /* UIAlertView+Helpers.m in Sources */ = {isa = PBXBuildFile; fileRef = 3DD261BDA809A05CAC1F77BEB5A2B62F /* UIAlertView+Helpers.m */; };
+		ACD931F77CDBE4FBABDA9609535432F5 /* SeaseAssist-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = B6C3C584D29127CB061078B25E7DE7AE /* SeaseAssist-dummy.m */; };
+		ACEB3201AA9635E7530AA9F4E9C67530 /* UIViewController+Top.m in Sources */ = {isa = PBXBuildFile; fileRef = 107A98CD43FF3B901CDD7CA74825EEF7 /* UIViewController+Top.m */; };
 		CC45003F01CAB8863E9926454183E4E9 /* Pods-SeaseAssist_Example-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 897D3656781895E9AF466E8F3FE41B8D /* Pods-SeaseAssist_Example-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		CD91480FDA15AB3A42D436F2822A1369 /* UIViewController+Top.h in Headers */ = {isa = PBXBuildFile; fileRef = 26A98DD2F90D38FB75DE40F097D42679 /* UIViewController+Top.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		D61B2E53209EF6B65359E2F00553E658 /* SeaseAssist.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 0C0317DEA5139B7B31D9DE6AC9ADFE25 /* SeaseAssist.bundle */; };
 		DECE22C1C10A066A7824137DDDDBC497 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6E7E5AF37923BFA48D6994B9BFC6535F /* Foundation.framework */; };
+		F1A0CC2294FF292D8CDF8849BEB2ADF9 /* UIAlertController+Helpers.h in Headers */ = {isa = PBXBuildFile; fileRef = 53AF0362F2FCF4A57AB4FC2B8FB2AF9B /* UIAlertController+Helpers.h */; settings = {ATTRIBUTES = (Public, ); }; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -56,30 +56,32 @@
 /* Begin PBXFileReference section */
 		08F9168D233D8838062FB8815A90A639 /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		0C0317DEA5139B7B31D9DE6AC9ADFE25 /* SeaseAssist.bundle */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SeaseAssist.bundle; sourceTree = BUILT_PRODUCTS_DIR; };
+		107A98CD43FF3B901CDD7CA74825EEF7 /* UIViewController+Top.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "UIViewController+Top.m"; sourceTree = "<group>"; };
 		1B2086A67EFF029A883FDFA7B80D59DA /* Pods_SeaseAssist_Tests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_SeaseAssist_Tests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		1CFB7A504E5B8E92D0E2FD52AA7DE1EE /* Pods-SeaseAssist_Tests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-SeaseAssist_Tests.release.xcconfig"; sourceTree = "<group>"; };
 		1ED84B3206F602FA534E3B0193DA990B /* Pods-SeaseAssist_Tests.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = "sourcecode.module-map"; path = "Pods-SeaseAssist_Tests.modulemap"; sourceTree = "<group>"; };
 		1F17E8386387790F1B92600B67AFD4AD /* Pods-SeaseAssist_Example-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-SeaseAssist_Example-acknowledgements.markdown"; sourceTree = "<group>"; };
+		26A98DD2F90D38FB75DE40F097D42679 /* UIViewController+Top.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "UIViewController+Top.h"; sourceTree = "<group>"; };
+		29011B087F17F09F22BE4F768C651417 /* UIAlertController+Helpers.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "UIAlertController+Helpers.m"; sourceTree = "<group>"; };
 		2C1A377A92F9303C92660752247A6E9B /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		364F82DCF5D4349D71824606FD1956AF /* SeaseAssist-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "SeaseAssist-prefix.pch"; sourceTree = "<group>"; };
 		3AFA4F8BDE4ADAA30F2DF859657A4529 /* SeaseAssist.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = "sourcecode.module-map"; path = SeaseAssist.modulemap; sourceTree = "<group>"; };
+		3DD261BDA809A05CAC1F77BEB5A2B62F /* UIAlertView+Helpers.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "UIAlertView+Helpers.m"; sourceTree = "<group>"; };
 		3FCFC2E625A5658010B1A2A46703D41A /* Pods_SeaseAssist_Example.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_SeaseAssist_Example.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		47A36260005857A784D4C3B971583F59 /* SeaseAssist.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = SeaseAssist.xcconfig; sourceTree = "<group>"; };
+		53AF0362F2FCF4A57AB4FC2B8FB2AF9B /* UIAlertController+Helpers.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "UIAlertController+Helpers.h"; sourceTree = "<group>"; };
+		6B057537295B6A574330029C43ACC868 /* UIAlertView+Helpers.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "UIAlertView+Helpers.h"; sourceTree = "<group>"; };
 		6E7E5AF37923BFA48D6994B9BFC6535F /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS9.0.sdk/System/Library/Frameworks/Foundation.framework; sourceTree = DEVELOPER_DIR; };
-		70D809F41C1CCF5E00AA500B /* UIAlertController+Helpers.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIAlertController+Helpers.h"; sourceTree = "<group>"; };
-		70D809F51C1CCF5E00AA500B /* UIAlertController+Helpers.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIAlertController+Helpers.m"; sourceTree = "<group>"; };
-		70D809FA1C1CCFC800AA500B /* UIViewController+Top.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIViewController+Top.h"; sourceTree = "<group>"; };
-		70D809FB1C1CCFC800AA500B /* UIViewController+Top.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIViewController+Top.m"; sourceTree = "<group>"; };
+		70D80A001C1CD36A00AA500B /* UILabel+Message.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UILabel+Message.h"; sourceTree = "<group>"; };
+		70D80A011C1CD36A00AA500B /* UILabel+Message.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UILabel+Message.m"; sourceTree = "<group>"; };
 		71A295B977D776151E4958D906C591EE /* Pods-SeaseAssist_Example-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-SeaseAssist_Example-dummy.m"; sourceTree = "<group>"; };
 		73C0E549B17EC9BD093196260DF01A44 /* Pods-SeaseAssist_Example.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-SeaseAssist_Example.debug.xcconfig"; sourceTree = "<group>"; };
 		7EC312F9AAA5821793C925C6A691CFFA /* Pods-SeaseAssist_Tests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-SeaseAssist_Tests.debug.xcconfig"; sourceTree = "<group>"; };
 		802FB587353902903FD632F8314E74EA /* SeaseAssist.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = SeaseAssist.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		803AB449B0B5F9B9B68FCC66769D90D7 /* UIAlertView+Helpers.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "UIAlertView+Helpers.h"; sourceTree = "<group>"; };
 		897D3656781895E9AF466E8F3FE41B8D /* Pods-SeaseAssist_Example-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-SeaseAssist_Example-umbrella.h"; sourceTree = "<group>"; };
 		94F0717FD2CCF89466BB4DC3B0925586 /* Pods-SeaseAssist_Tests-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-SeaseAssist_Tests-dummy.m"; sourceTree = "<group>"; };
 		A325F21407DD1F55353178973680BD09 /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		AB7F3D1E0B3AA369D384531E45E1CE7E /* Pods-SeaseAssist_Tests-frameworks.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-SeaseAssist_Tests-frameworks.sh"; sourceTree = "<group>"; };
-		B598E408B1E5EF3D106C49382BB884E0 /* UIAlertView+Helpers.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "UIAlertView+Helpers.m"; sourceTree = "<group>"; };
 		B6C3C584D29127CB061078B25E7DE7AE /* SeaseAssist-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "SeaseAssist-dummy.m"; sourceTree = "<group>"; };
 		BA6428E9F66FD5A23C0A2E06ED26CD2F /* Podfile */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; name = Podfile; path = ../Podfile; sourceTree = SOURCE_ROOT; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
 		C1742E6C906CBBE36172407AE32A63DD /* Pods-SeaseAssist_Tests-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-SeaseAssist_Tests-umbrella.h"; sourceTree = "<group>"; };
@@ -140,19 +142,6 @@
 			name = iOS;
 			sourceTree = "<group>";
 		};
-		2168FCB9E26147F01D059490252E88D8 /* Classes */ = {
-			isa = PBXGroup;
-			children = (
-				70D809FA1C1CCFC800AA500B /* UIViewController+Top.h */,
-				70D809FB1C1CCFC800AA500B /* UIViewController+Top.m */,
-				70D809F41C1CCF5E00AA500B /* UIAlertController+Helpers.h */,
-				70D809F51C1CCF5E00AA500B /* UIAlertController+Helpers.m */,
-				803AB449B0B5F9B9B68FCC66769D90D7 /* UIAlertView+Helpers.h */,
-				B598E408B1E5EF3D106C49382BB884E0 /* UIAlertView+Helpers.m */,
-			);
-			path = Classes;
-			sourceTree = "<group>";
-		};
 		25A66687172D077CF207CAE46A4E44BC /* Products */ = {
 			isa = PBXGroup;
 			children = (
@@ -180,14 +169,6 @@
 			);
 			name = "Pods-SeaseAssist_Example";
 			path = "Target Support Files/Pods-SeaseAssist_Example";
-			sourceTree = "<group>";
-		};
-		41322047B9A03EA29EA5852AA4AE19CE /* Pod */ = {
-			isa = PBXGroup;
-			children = (
-				2168FCB9E26147F01D059490252E88D8 /* Classes */,
-			);
-			path = Pod;
 			sourceTree = "<group>";
 		};
 		433CD3331B6C3787F473C941B61FC68F /* Frameworks */ = {
@@ -238,7 +219,7 @@
 		9BE0F0A49AE7E62D139B4BDDAB8D0866 /* SeaseAssist */ = {
 			isa = PBXGroup;
 			children = (
-				41322047B9A03EA29EA5852AA4AE19CE /* Pod */,
+				E3D89F26F27BE813D0050CAF9A45CA3D /* Pod */,
 				B9D4A9F6296DC983F86D8A8D82D8B76A /* Support Files */,
 			);
 			name = SeaseAssist;
@@ -259,6 +240,14 @@
 			path = "Example/Pods/Target Support Files/SeaseAssist";
 			sourceTree = "<group>";
 		};
+		E3D89F26F27BE813D0050CAF9A45CA3D /* Pod */ = {
+			isa = PBXGroup;
+			children = (
+				EE98954F8321D14139AACA1A222897FF /* Classes */,
+			);
+			path = Pod;
+			sourceTree = "<group>";
+		};
 		E834C195E4FB18FE7FDAEB1ABFDC1A4B /* Targets Support Files */ = {
 			isa = PBXGroup;
 			children = (
@@ -266,6 +255,21 @@
 				721D0DA46DCEDE88A8DAF1B71C153422 /* Pods-SeaseAssist_Tests */,
 			);
 			name = "Targets Support Files";
+			sourceTree = "<group>";
+		};
+		EE98954F8321D14139AACA1A222897FF /* Classes */ = {
+			isa = PBXGroup;
+			children = (
+				70D80A001C1CD36A00AA500B /* UILabel+Message.h */,
+				70D80A011C1CD36A00AA500B /* UILabel+Message.m */,
+				53AF0362F2FCF4A57AB4FC2B8FB2AF9B /* UIAlertController+Helpers.h */,
+				29011B087F17F09F22BE4F768C651417 /* UIAlertController+Helpers.m */,
+				6B057537295B6A574330029C43ACC868 /* UIAlertView+Helpers.h */,
+				3DD261BDA809A05CAC1F77BEB5A2B62F /* UIAlertView+Helpers.m */,
+				26A98DD2F90D38FB75DE40F097D42679 /* UIViewController+Top.h */,
+				107A98CD43FF3B901CDD7CA74825EEF7 /* UIViewController+Top.m */,
+			);
+			path = Classes;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -279,22 +283,23 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		4B0F6AA50A9EE6AAA38C29DD04CD5B93 /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				213ECCF9ADC352DB47C788D3AB245DDB /* SeaseAssist-umbrella.h in Headers */,
+				70D80A021C1CD36A00AA500B /* UILabel+Message.h in Headers */,
+				F1A0CC2294FF292D8CDF8849BEB2ADF9 /* UIAlertController+Helpers.h in Headers */,
+				7FC17A6F9B2FAABE00779660190C222F /* UIAlertView+Helpers.h in Headers */,
+				CD91480FDA15AB3A42D436F2822A1369 /* UIViewController+Top.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		8155402AF0C9FED76037B8989B088F8E /* Headers */ = {
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 				38B081F5C4317305E0665D5408C8AEA8 /* Pods-SeaseAssist_Tests-umbrella.h in Headers */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		F25B320F365D8A8E6B55CF386BF9EF83 /* Headers */ = {
-			isa = PBXHeadersBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				70D809F91C1CCF6800AA500B /* UIAlertController+Helpers.h in Headers */,
-				48F1E5CCB3D3B58CFC81F0CE5F48D801 /* SeaseAssist-umbrella.h in Headers */,
-				AF7D8717AC6AE0BFC26CE7A5441B1D06 /* UIAlertView+Helpers.h in Headers */,
-				70D809FC1C1CCFC800AA500B /* UIViewController+Top.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -305,10 +310,10 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = CE90ED48E66B79856627A35F1D019DBB /* Build configuration list for PBXNativeTarget "SeaseAssist" */;
 			buildPhases = (
-				3723665781F77A33C19EE2E14E302699 /* Sources */,
+				FA029B0BDB4DDE6554762D776F0EDAC3 /* Sources */,
 				F0F4A779F8AD96431FC823AC999CD8FE /* Frameworks */,
 				7FEFE51140C5AB7E4963E9C6948F67CC /* Resources */,
-				F25B320F365D8A8E6B55CF386BF9EF83 /* Headers */,
+				4B0F6AA50A9EE6AAA38C29DD04CD5B93 /* Headers */,
 			);
 			buildRules = (
 			);
@@ -429,24 +434,11 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		3723665781F77A33C19EE2E14E302699 /* Sources */ = {
-			isa = PBXSourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				70D809FD1C1CCFC800AA500B /* UIViewController+Top.m in Sources */,
-				70D809F71C1CCF5E00AA500B /* UIAlertController+Helpers.m in Sources */,
-				47AE0501D0D2D329B31ADB4377513D05 /* SeaseAssist-dummy.m in Sources */,
-				926AD9639946737DE33EAC0BD7FF4DF2 /* UIAlertView+Helpers.m in Sources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 		61E3EC65598B48C943DBB1D53529A340 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				70D809FE1C1CCFCE00AA500B /* UIViewController+Top.m in Sources */,
-				70D809F81C1CCF5E00AA500B /* UIAlertController+Helpers.m in Sources */,
-				70D809FF1C1CCFD600AA500B /* UIAlertView+Helpers.m in Sources */,
+				70D80A041C1CD36A00AA500B /* UILabel+Message.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -455,6 +447,18 @@
 			buildActionMask = 2147483647;
 			files = (
 				1EA6033100E9833E3EEAEDBE40BF767E /* Pods-SeaseAssist_Tests-dummy.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		FA029B0BDB4DDE6554762D776F0EDAC3 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				ACD931F77CDBE4FBABDA9609535432F5 /* SeaseAssist-dummy.m in Sources */,
+				70D80A031C1CD36A00AA500B /* UILabel+Message.m in Sources */,
+				031D3A99AD7992C205A2501F8F526C72 /* UIAlertController+Helpers.m in Sources */,
+				86CDD704E4012269C8EF87B66732D0EB /* UIAlertView+Helpers.m in Sources */,
+				ACEB3201AA9635E7530AA9F4E9C67530 /* UIViewController+Top.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

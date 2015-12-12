@@ -10,6 +10,8 @@
 
 #import "UIAlertView+Helpers.h"
 #import "UIAlertController+Helpers.h"
+#import "UIViewController+Top.h"
+#import "UILabel+Message.h"
 
 
 @interface SATableViewController ()
@@ -42,7 +44,7 @@
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
     if(section == 0)
     {
-        return 1;
+        return 4;
     }
     
     return 0;
@@ -63,6 +65,14 @@
     {
         cell.textLabel.text = @"UIAlertController Helper";
     }
+    else if(indexPath.row == 2)
+    {
+        cell.textLabel.text = @"Find the top ViewController from anywhere!";
+    }
+    else if(indexPath.row == 3)
+    {
+        cell.textLabel.text = @"Make a toast!";
+    }
     
     return cell;
 }
@@ -75,7 +85,19 @@
     }
     else if(indexPath.row == 1)
     {
-        [UIAlertController ]
+        //note you don't even need to pass in a from ViewController... it will figure it out on its own!
+        [UIAlertController showDialogWithTitle:@"So simple" andMessage:@"We can even get an alert controller with 1 line!" from:nil andActions:@[@"I love it", @"I Hate it", @"Whatever"] completionHandler:^(NSInteger selected) {
+            [UIAlertView showWithTitle:@"You Pressed" andMessage:[NSString stringWithFormat:@"%li",selected]];
+        }];
+    }
+    else if(indexPath.row == 2)
+    {
+        UIViewController * top = [UIViewController topViewController];
+        [UIAlertView showWithTitle:@"Found the top" andMessage:[NSString stringWithFormat:@"Top VC is a %@",[top class]]];
+    }
+    else if(indexPath.row == 3)
+    {
+        
     }
 }
 

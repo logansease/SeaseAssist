@@ -45,6 +45,8 @@
         [alert addAction:[UIAlertAction actionWithTitle:title style:style handler:^(UIAlertAction * _Nonnull action) {
             handler(index);
         }]];
+        
+        index++;
     }
     
     [controller presentViewController:alert animated:YES completion:nil];
