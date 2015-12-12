@@ -9,6 +9,6 @@ EXTERNAL SOURCES:
     :path: "../"
 
 SPEC CHECKSUMS:
-  SeaseAssist: d73158b3b9cb013ba5ad2fc8bc7c55b9ea6b5e3b
+  SeaseAssist: 16fb99facf1b92a130a30f3f3061469d7991b652
 
 COCOAPODS: 0.39.0
