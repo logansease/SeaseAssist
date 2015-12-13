@@ -1,5 +1,7 @@
 PODS:
-  - SeaseAssist (0.1.0)
+  - MBProgressHUD (0.9.1)
+  - SeaseAssist (0.1.0):
+    - MBProgressHUD (~> 0.9.1)
 
 DEPENDENCIES:
   - SeaseAssist (from `../`)
@@ -9,6 +11,7 @@ EXTERNAL SOURCES:
     :path: "../"
 
 SPEC CHECKSUMS:
-  SeaseAssist: 16fb99facf1b92a130a30f3f3061469d7991b652
+  MBProgressHUD: c47f2c166c126cf2ce36498d80f33e754d4e93ad
+  SeaseAssist: bb5eff4f0039059a0a303943056d24d55f72a218
 
 COCOAPODS: 0.39.0

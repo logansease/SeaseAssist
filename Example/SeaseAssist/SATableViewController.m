@@ -12,7 +12,9 @@
 #import "UIAlertController+Helpers.h"
 #import "UIViewController+Top.h"
 #import "UILabel+Message.h"
-
+#import "MBProgressHUD+Singleton.h"
+#import "SpeechService.h"
+#import "SoundService.h"
 
 @interface SATableViewController ()
 
@@ -44,7 +46,7 @@
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
     if(section == 0)
     {
-        return 4;
+        return 7;
     }
     
     return 0;
@@ -73,6 +75,18 @@
     {
         cell.textLabel.text = @"Make a toast!";
     }
+    else if(indexPath.row == 4)
+    {
+        cell.textLabel.text = @"Progress Indicator";
+    }
+    else if(indexPath.row == 5)
+    {
+        cell.textLabel.text = @"Speak!";
+    }
+    else if(indexPath.row == 6)
+    {
+        cell.textLabel.text = @"Sounds";
+    }
     
     return cell;
 }
@@ -100,6 +114,20 @@
     else if(indexPath.row == 3)
     {
         [UILabel showMessage:@"Cheers!" ofSize:18 ofColor:[UIColor blueColor] inView:self.view.window forDuration:1.5];
+    }
+    else if(indexPath.row == 4)
+    {
+        [MBProgressHUD showWithTitle:@"Testing!"];
+        MBProgressHUD * hud = [MBProgressHUD commonHUD];
+        [hud performSelector:@selector(hide:) withObject:[NSNumber numberWithBool:YES] afterDelay:3];
+    }
+    else if(indexPath.row ==5)
+    {
+        [[SpeechService sharedService]speakText:@"Sease Assist"];
+    }
+    else if(indexPath.row == 6)
+    {
+        [SoundService playSoundAtPath:@"Click.wav"];
     }
 }
 

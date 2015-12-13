@@ -9,5 +9,8 @@
 #import "MBProgressHUD.h"
 
 @interface MBProgressHUD (Singleton)
-
++(id)commonHUD;
++(void)showWithTitle:(NSString*)title;
++(void)hide;
++(void)setupCommonHUDWithView:(UIView*)view;
 @end

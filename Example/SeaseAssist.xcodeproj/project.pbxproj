@@ -20,6 +20,8 @@
 		6003F5B2195388D20070C39A /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6003F591195388D20070C39A /* UIKit.framework */; };
 		6003F5BA195388D20070C39A /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 6003F5B8195388D20070C39A /* InfoPlist.strings */; };
 		6003F5BC195388D20070C39A /* Tests.m in Sources */ = {isa = PBXBuildFile; fileRef = 6003F5BB195388D20070C39A /* Tests.m */; };
+		709347B31C1E160E0058DD38 /* Click.wav in Resources */ = {isa = PBXBuildFile; fileRef = 709347B21C1E160E0058DD38 /* Click.wav */; };
+		709347B51C1E16230058DD38 /* thumb_up.png in Resources */ = {isa = PBXBuildFile; fileRef = 709347B41C1E16230058DD38 /* thumb_up.png */; };
 		70D809F31C1CCE6000AA500B /* SATableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 70D809F21C1CCE6000AA500B /* SATableViewController.m */; };
 		80C80EB7E5B854068B77D3AC /* Pods_SeaseAssist_Example.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 95CCCE98F49415B5164F8853 /* Pods_SeaseAssist_Example.framework */; };
 		873B8AEB1B1F5CCA007FD442 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 873B8AEA1B1F5CCA007FD442 /* Main.storyboard */; };
@@ -55,6 +57,8 @@
 		6003F5B9195388D20070C39A /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		6003F5BB195388D20070C39A /* Tests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Tests.m; sourceTree = "<group>"; };
 		606FC2411953D9B200FFA9A0 /* Tests-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Tests-Prefix.pch"; sourceTree = "<group>"; };
+		709347B21C1E160E0058DD38 /* Click.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = Click.wav; sourceTree = "<group>"; };
+		709347B41C1E16230058DD38 /* thumb_up.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = thumb_up.png; sourceTree = "<group>"; };
 		70D809F11C1CCE6000AA500B /* SATableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SATableViewController.h; sourceTree = "<group>"; };
 		70D809F21C1CCE6000AA500B /* SATableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SATableViewController.m; sourceTree = "<group>"; };
 		75B8A8BE5618694A91A4C0D5 /* Pods-SeaseAssist_Tests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SeaseAssist_Tests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-SeaseAssist_Tests/Pods-SeaseAssist_Tests.debug.xcconfig"; sourceTree = "<group>"; };
@@ -141,13 +145,13 @@
 		6003F593195388D20070C39A /* Example for SeaseAssist */ = {
 			isa = PBXGroup;
 			children = (
+				70D809F11C1CCE6000AA500B /* SATableViewController.h */,
+				70D809F21C1CCE6000AA500B /* SATableViewController.m */,
 				6003F59C195388D20070C39A /* SAAppDelegate.h */,
 				6003F59D195388D20070C39A /* SAAppDelegate.m */,
 				873B8AEA1B1F5CCA007FD442 /* Main.storyboard */,
 				6003F5A8195388D20070C39A /* Images.xcassets */,
 				6003F594195388D20070C39A /* Supporting Files */,
-				70D809F11C1CCE6000AA500B /* SATableViewController.h */,
-				70D809F21C1CCE6000AA500B /* SATableViewController.m */,
 			);
 			name = "Example for SeaseAssist";
 			path = SeaseAssist;
@@ -156,6 +160,8 @@
 		6003F594195388D20070C39A /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				709347B41C1E16230058DD38 /* thumb_up.png */,
+				709347B21C1E160E0058DD38 /* Click.wav */,
 				6003F595195388D20070C39A /* SeaseAssist-Info.plist */,
 				6003F596195388D20070C39A /* InfoPlist.strings */,
 				6003F599195388D20070C39A /* main.m */,
@@ -279,6 +285,8 @@
 				873B8AEB1B1F5CCA007FD442 /* Main.storyboard in Resources */,
 				6003F5A9195388D20070C39A /* Images.xcassets in Resources */,
 				6003F598195388D20070C39A /* InfoPlist.strings in Resources */,
+				709347B51C1E16230058DD38 /* thumb_up.png in Resources */,
+				709347B31C1E160E0058DD38 /* Click.wav in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
