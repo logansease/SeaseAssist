@@ -5,10 +5,6 @@
 [![License](https://img.shields.io/cocoapods/l/SeaseAssist.svg?style=flat)](http://cocoapods.org/pods/SeaseAssist)
 [![Platform](https://img.shields.io/cocoapods/p/SeaseAssist.svg?style=flat)](http://cocoapods.org/pods/SeaseAssist)
 
-## Usage
-
-To run the example project, clone the repo, and run `pod install` from the Example directory first.
-
 ## Requirements
 ios 7+
 
@@ -17,7 +13,11 @@ ios 7+
 SeaseAssist is available through [CocoaPods](http://cocoapods.org). To install
 it, simply add the following line to your Podfile:
 
-## info
+```ruby
+pod "SeaseAssist"
+```
+
+## Info
 
 This library is founded on the basis that commonly performed tasks, which take several lines of code to write should be encompased into simple methods, either using class extensions or services, that can be written in a single line of code. Thus reducing code redundancy and increasing code readibility.
 
@@ -31,7 +31,7 @@ In this package you will find the following:
 - A Validation Helper class for NSString
 - String and NSData cryptography Helpers
 - NSThread Helpers to easily run blocks on the main and background threads
-- A Speach Service for speech to text.
+- A Speech Service for speech to text.
 - UIAlertController Helpers
 - Image Helpers for things like blurring and resizing
 - Animation and Motion Effects Helpers
@@ -42,9 +42,6 @@ In this package you will find the following:
 
 Enjoy! Please feel free to fork and contribute to this repo!
 
-```ruby
-pod "SeaseAssist"
-```
 
 ## Author
 
