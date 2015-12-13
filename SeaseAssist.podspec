@@ -38,4 +38,5 @@ DESC
   # s.public_header_files = 'Pod/Classes/**/*.h'
     s.frameworks = 'UIKit', 'Foundation', 'CoreGraphics', 'SystemConfiguration',  'AVFoundation'
     s.dependency 'MBProgressHUD', '~> 0.9.1'
+    s.dependency 'GCNetworkReachability'
 end

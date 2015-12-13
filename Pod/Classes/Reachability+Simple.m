@@ -8,13 +8,12 @@
 
 #import "Reachability+Simple.h"
 
-@implementation Reachability (Simple)
+@implementation GCNetworkReachability (Simple)
 
 + (BOOL)connected
 {
-    Reachability *reachability = [self reachabilityForInternetConnection];
-    NetworkStatus networkStatus = [reachability currentReachabilityStatus];
-    return !(networkStatus == NotReachable);
+    GCNetworkReachability *reachability = [GCNetworkReachability reachabilityForInternetConnection];
+    return ([reachability isReachable]);
 }
 
 @end

@@ -6,8 +6,8 @@
 //
 //
 
-#import "Reachability.h"
+#import "GCNetworkReachability.h"
 
-@interface Reachability (Simple)
+@interface GCNetworkReachability (Simple)
 + (BOOL)connected;
 @end

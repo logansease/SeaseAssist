@@ -32,6 +32,9 @@
   "dependencies": {
     "MBProgressHUD": [
       "~> 0.9.1"
+    ],
+    "GCNetworkReachability": [
+
     ]
   }
 }

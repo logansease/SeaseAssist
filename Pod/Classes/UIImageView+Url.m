@@ -9,6 +9,7 @@
 #import "UIImageView+Url.h"
 #import "Reachability+Simple.h"
 #import "NSThread+Helpers.h"
+#import "Reachability+Simple.h"
 
 @implementation UIImageView (Url)
 
@@ -35,7 +36,7 @@
     NSInteger tag = self.tag;
     
     //if we are connected
-    if([Reachability connected]){
+    if([GCNetworkReachability connected]){
         
         //create our request
         NSMutableURLRequest *request = [[NSMutableURLRequest alloc] initWithURL:[NSURL URLWithString:urlString] cachePolicy:NSURLRequestUseProtocolCachePolicy timeoutInterval:30.0];

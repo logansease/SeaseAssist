@@ -15,6 +15,7 @@
 #import "MBProgressHUD+Singleton.h"
 #import "SpeechService.h"
 #import "SoundService.h"
+#import "Reachability+Simple.h"
 
 @interface SATableViewController ()
 
@@ -46,7 +47,7 @@
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
     if(section == 0)
     {
-        return 7;
+        return 8;
     }
     
     return 0;
@@ -86,6 +87,10 @@
     else if(indexPath.row == 6)
     {
         cell.textLabel.text = @"Sounds";
+    }
+    else if(indexPath.row == 7)
+    {
+        cell.textLabel.text = @"Check Network Connection";
     }
     
     return cell;
@@ -128,6 +133,11 @@
     else if(indexPath.row == 6)
     {
         [SoundService playSoundAtPath:@"Click.wav"];
+    }
+    else if(indexPath.row == 7)
+    {
+        NSString * status = [GCNetworkReachability connected] ? @"Connected" : @"No Connection";
+        [UIAlertView showWithTitle:@"Network Status" andMessage:status];
     }
 }
 
