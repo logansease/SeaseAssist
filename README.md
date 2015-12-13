@@ -39,6 +39,10 @@ In this package you will find the following:
 - A new helper that shows text on screen for a short time, like an Android "Toast"
 - Network Reachability Helper
 - An Event Counter to track the number of times an event has occurred during the life of an app, or daily.
+- And more...
+
+I plan to add more extensive documentation in the near future.
+
 
 Enjoy! Please feel free to fork and contribute to this repo!
 
