@@ -14,7 +14,7 @@
 @implementation EventCounterService
 
 
-+(NSUInteger)addCountForEvent:(NSString*)event count:(int)add
++(NSUInteger)addCountForEvent:(NSString*)event count:(NSInteger)add
 {
     NSUserDefaults * defaults = [NSUserDefaults standardUserDefaults];
     NSUInteger count = [defaults integerForKey:[NSString stringWithFormat:@"%@%@",kEventPrefPrefix,event]];
@@ -67,7 +67,7 @@
     return [self addCountForDailyEvent:dailyEvent count:1];
 }
 
-+(NSUInteger)addCountForDailyEvent:(NSString*)dailyEvent count:(int)count
++(NSUInteger)addCountForDailyEvent:(NSString*)dailyEvent count:(NSInteger)count
 {
     [self checkDailyEventCount:dailyEvent];
     return [self addCountForEvent:dailyEvent count:count];

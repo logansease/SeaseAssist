@@ -11,4 +11,5 @@
 @interface NSString (Validation)
 -(BOOL)isValidEmail:(BOOL)laxValidation;
 -(BOOL)isValidEmail;
+-(BOOL)isDigitOfLength:(NSInteger)length;
 @end

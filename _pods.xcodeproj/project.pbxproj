@@ -162,7 +162,6 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		005303A31C1E2CEF00DFA907 /* SeaseAssist.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SeaseAssist.h; sourceTree = "<group>"; };
 		00B45DF257B63F7AB38EB3545D97ACD0 /* MBProgressHUD.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = MBProgressHUD.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		012FBB7FB3745F1D449F7DB91F01A85D /* MBProgressHUD-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "MBProgressHUD-dummy.m"; sourceTree = "<group>"; };
 		02AFAC317F245E0C1B8815D06F1F54F2 /* Reachability+Simple.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Reachability+Simple.m"; sourceTree = "<group>"; };
@@ -562,7 +561,6 @@
 				C3E88FE08543D3F5B2120C9ABE727F4E /* UIView+Rounding.m */,
 				0331EF293CD67DB5471708088EC68DF7 /* UIViewController+Top.h */,
 				61B6316B4D90DA50BF55801DAB8ED150 /* UIViewController+Top.m */,
-				005303A31C1E2CEF00DFA907 /* SeaseAssist.h */,
 			);
 			path = Classes;
 			sourceTree = "<group>";
