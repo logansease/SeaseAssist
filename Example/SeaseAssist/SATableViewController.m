@@ -8,14 +8,7 @@
 
 #import "SATableViewController.h"
 
-#import "UIAlertView+Helpers.h"
-#import "UIAlertController+Helpers.h"
-#import "UIViewController+Top.h"
-#import "UILabel+Message.h"
-#import "MBProgressHUD+Singleton.h"
-#import "SpeechService.h"
-#import "SoundService.h"
-#import "Reachability+Simple.h"
+#import "SeaseAssist.h"
 
 @interface SATableViewController ()
 

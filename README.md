@@ -22,6 +22,8 @@ And import the following Header file
 #import "SeaseAssist.h"
 ```
 
+Use this whether your application uses objective-c or Swift! 
+
 ## Info
 
 This library is founded on the basis that commonly performed tasks, which take several lines of code to write should be encompased into simple methods, either using class extensions or services, that can be written in a single line of code. Thus reducing code redundancy and increasing code readibility.
@@ -61,7 +63,7 @@ Logan Sease, lsease@gmail.com
 SeaseAssist is available under the MIT license. See the LICENSE file for more info.
 
 
-#UICLASSES
+#UI CLASSES
 
 ##CleanButton
 A modern button with a nice clean rounded border, an empty background and some text
@@ -76,7 +78,7 @@ A Round View
 
 ##EventCounterService
 A class to track events throughout the life of the app, or daily events
-### methods
+
 ```objective-c
 +(NSUInteger)addCountForEvent:(NSString*)event count:(NSInteger)add;
 +(NSUInteger)addCountForEvent:(NSString*)event;
@@ -89,7 +91,7 @@ A class to track events throughout the life of the app, or daily events
 
 ##Sound Service
 A service to play sounds and maintain a queue
-###Methods
+
 ```objective-c
 + (id)sharedService;
 +(void)playSoundAtPath:(NSString*)path;
@@ -180,7 +182,6 @@ Find our internet connection status.
 
 ##NSString validation
 ```objective-c
--(BOOL)isValidEmail:(BOOL)laxValidation;
 -(BOOL)isValidEmail;
 -(BOOL)isDigitOfLength:(NSInteger)length;
 ```

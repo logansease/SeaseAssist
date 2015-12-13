@@ -9,7 +9,7 @@
 #ifndef SeaseAssist_h
 #define SeaseAssist_h
 
-#import "EventCountService.h"
+#import "EventCounterService.h"
 #import "HTTPRequest.h"
 #import "MBProgressHUD+Singleton.h"
 #import "NSArrayDictionary+Json.h"
@@ -22,7 +22,7 @@
 #import "Reachability+Simple.h"
 #import "SoundService.h"
 #import "SpeechService.h"
-#Import "UIAlertController+Helpers.h"
+#import "UIAlertController+Helpers.h"
 #import "UIAlertView+Helpers.h"
 #import "UIButton+Helpers.h"
 #import "UIDevice+IdentifierAddition.h"

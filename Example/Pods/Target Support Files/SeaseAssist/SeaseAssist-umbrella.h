@@ -14,6 +14,7 @@
 #import "NSThread+Helpers.h"
 #import "Reachability+Simple.h"
 #import "RoundedView.h"
+#import "SeaseAssist.h"
 #import "SoundService.h"
 #import "SpeechService.h"
 #import "UIAlertController+Helpers.h"
