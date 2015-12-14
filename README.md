@@ -72,7 +72,7 @@ A modern button with a nice clean rounded border, an empty background and some t
 A button with a gradient filled background matching the button's Tint Color
 
 ##RoundedView
-A Round View
+A View with slightly rounded corners and a thin border.
 
 #SERVICES
 
@@ -100,7 +100,6 @@ A service to play sounds and maintain a queue
 -(void)pauseQueue;
 -(void)resumeQueue;
 -(BOOL)isPlaying;
-+(NSURL*)urlForSoundNamed:(NSString*)name;
 ```
 
 ##SpeechService
@@ -170,7 +169,7 @@ Find our internet connection status.
 -(BOOL)isBeforeDate:(NSDate*)secondDate;
 ```
 
-##NSArray Helpers
+##NSMutableArray Helpers
 ```objective-c
 - (void)shuffle;
 ```
@@ -197,6 +196,8 @@ Find our internet connection status.
 ```objective-c
 - (NSData *) sha256;
 - (NSString *) stringFromMD5;
+
+//secure a string by adding Key Encryption and then Base 64 Encoding it.
 - (NSString*)encryptWithKey:(NSString*)key;
 ```
 
@@ -289,8 +290,11 @@ Add cool motion effects that give your app depth by moving as you move your devi
 
 ###UIView+Rounding
 ```objective-c
+//round the corners 
 -(void)round:(float)cornerRadius withBorderWidth:(float)width andColor:(UIColor*)color;
 -(void)round;
+
+//completely circle the view and optionally add a border.
 -(void)circleWithColor:(UIColor*)color width:(float)width;
 -(void)circle;
 ```
@@ -298,7 +302,7 @@ Add cool motion effects that give your app depth by moving as you move your devi
 ###UIButton+Helpers
 ```objective-c
 - (void)makeGlossy;
--(void)makeClean;
+- (void)makeClean;
 ```
 
 ##Application View Hierarchy
