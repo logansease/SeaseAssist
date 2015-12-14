@@ -22,7 +22,12 @@ And import the following Header file
 #import "SeaseAssist.h"
 ```
 
-Use this whether your application uses objective-c or Swift! 
+This pod will work if your project uses objective-c or Swift.
+If you are using Swift, you just need to add a bridging header and place the import there:
+- add a new header file to yoour project named ProjectName-Bridging-Header.h
+- add '#import "SeaseAssist.h"' to your header file
+- in your Target Build settings -> Swift Compiler Code Generation -> Objective-C Bridging Header, add a reference to the newly created file. Should be [ProjectName/ProjectName-Bridging-Header.h]
+
 
 ## Info
 
