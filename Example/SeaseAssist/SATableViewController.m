@@ -7,8 +7,11 @@
 //
 
 #import "SATableViewController.h"
+#import "ValuePickerTextField.h"
+#import "UITextField+Toolbar.h"
 
-#import "SeaseAssist.h"
+//move this into your pch (precompiled header file) so you don't have to include this
+//#import "SeaseAssist.h"
 
 @interface SATableViewController ()
 
@@ -18,6 +21,8 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
+    
+    [self.view hideKeyboardOnClick];
     
     // Uncomment the following line to preserve selection between presentations.
     // self.clearsSelectionOnViewWillAppear = NO;
@@ -40,7 +45,7 @@
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
     if(section == 0)
     {
-        return 8;
+        return 10;
     }
     
     return 0;
@@ -48,7 +53,19 @@
 
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
-    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"Cell" forIndexPath:indexPath];
+    
+    NSString * identifier = @"Cell";
+    
+    if(indexPath.row == 8)
+    {
+        identifier = @"DatePickerCell";
+    }
+    else if(indexPath.row == 9)
+    {
+        identifier = @"ValuePickerCell";
+    }
+    
+    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:identifier forIndexPath:indexPath];
     
     cell.detailTextLabel.text = @"";
     
@@ -84,6 +101,17 @@
     else if(indexPath.row == 7)
     {
         cell.textLabel.text = @"Check Network Connection";
+    }
+    else if(indexPath.row == 8)
+    {
+        
+    }
+    else if(indexPath.row == 9)
+    {
+        ValuePickerTextField * field = [cell viewWithTag:1];
+        field.values = @[@"Select 1", @"2"];
+        [field addToolbarWithLeftButton:@"LeftAction" withSelector:@selector(left) andRightButton:@"right" withSelector:@selector(right) andTarget:self];
+        
     }
     
     return cell;
@@ -132,6 +160,7 @@
         NSString * status = [GCNetworkReachability connected] ? @"Connected" : @"No Connection";
         [UIAlertView showWithTitle:@"Network Status" andMessage:status];
     }
+
 }
 
 /*
@@ -143,5 +172,12 @@
     // Pass the selected object to the new view controller.
 }
 */
+
+//these are called by the textField + Toolbar
+-(void)left{
+             
+}
+
+-(void)right{}
 
 @end

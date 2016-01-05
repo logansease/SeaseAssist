@@ -20,13 +20,17 @@ In this package you will find the following:
 - String and NSData cryptography Helpers
 - NSThread Helpers to easily run blocks on the main and background threads
 - A Speech Service for speech to text.
-- UIAlertController Helpers
+- UIAlertController Helpers to show with actions and text input
 - Image Helpers for things like blurring and resizing
 - Animation and Motion Effects Helpers
 - A View Controller helper that can recursively determine the visible view controller from anywhere in your application
 - A new helper that shows text on screen for a short time, like an Android "Toast"
 - Network Reachability Helper
 - An Event Counter to track the number of times an event has occurred during the life of an app, or daily.
+- Blurred Background Helpers, to present a view over another and blur the background.
+- Keyboard Helpers to add an action tool bar and hide the keyboard on click
+- TextField subclasses for date and value inputs
+
 
 
 Enjoy! Please feel free to fork and contribute to this repo!
@@ -54,6 +58,7 @@ If you are using Swift, you just need to add a bridging header and place the imp
 - add a new header file to yoour project named ProjectName-Bridging-Header.h
 - add '#import "SeaseAssist.h"' to your header file
 - in your Target Build settings -> Swift Compiler Code Generation -> Objective-C Bridging Header, add a reference to the newly created file. Should be [ProjectName/ProjectName-Bridging-Header.h]
+- For best results with an objective-c Project, add the SeaseAssist.h import into your .pch file
 
 ## Author
 
@@ -74,6 +79,12 @@ A button with a gradient filled background matching the button's Tint Color
 
 ##RoundedView
 A View with slightly rounded corners and a thin border.
+
+##DatePickerTextField
+Create a UITextField with a Date picker instead of a keyboard
+
+##ValuePickerTextField
+A UITextField with a PickerView instead of a keyboard
 
 #SERVICES
 
@@ -126,6 +137,7 @@ A helper class to make http requests asynchronously in one line without the need
 ##Reachability Helpers
 Find our internet connection status.
 ```objective-c
+GCNetworkReachability
 + (BOOL)connected;
 ```
 #CLASS EXTENSIONS
@@ -207,6 +219,7 @@ Run blocks in the main or background threads with ease
 ```objective-c
 +(void)mainThread:(void (^)())main;
 +(void)backgroundThread:(void (^)())background;
++(void)delay:(float)length code:(void (^)())function;
 ```
 
 ##Device Identifiers
@@ -229,6 +242,7 @@ Show an alert controller with actions and get notified what action was chosen wi
 ```objective-c
 +(void)showAlertWithTitle:(NSString*)title andMessage:(NSString*)message from:(UIViewController*)controller;
 +(void)showDialogWithTitle:(NSString*)title andMessage:(NSString*)message from:(UIViewController*)controller andActions:(NSArray<NSString*>*)buttonTitles completionHandler:(void (^)(NSInteger selected))handler;
++(void)showTextEntryDialogWithTitle:(NSString*)title andMessage:(NSString*)message andPlaceHolder:(NSString*)holder from:(UIViewController*)controller completionHandler:(void (^)(NSString* text))handler;
 ```
 
 ###UIAlertView
@@ -264,7 +278,15 @@ Set an image from a URL and cache the image locally.
 Round an image
 ```objective-c
 -(void)round;
+-(UIImage*)clippedToCircle;
 ```
+
+Set an image from URL to a UIImage View with caching and a default
+```objective-c
+@interface UIImageView (Networking)
+-(void)setImageFromUrl:(NSString*)url withDefault:(UIImage*)defaultImage andRounding:(BOOL)round;
+```
+
 
 ##Animation
 
@@ -304,6 +326,7 @@ Add cool motion effects that give your app depth by moving as you move your devi
 ```objective-c
 - (void)makeGlossy;
 - (void)makeClean;
+-(void)setTitle:(NSString*)title;
 ```
 
 ##Application View Hierarchy
@@ -313,6 +336,57 @@ Find the top most view controller from anywhere. Searches recursively through na
 +(UIViewController*)topViewController;
 ```
 
+
+##Blurred Backgrounds
+###For use with a Covers Current Context Modal Transition
+```objective-c
+@interface UIViewController (Blur)
+-(UIVisualEffectView*)blurBackground;
+-(UIVisualEffectView*)blurBackgroundOfTableView:(UITableView*)tableView;
+-(UIVisualEffectView*)darkBlurBackground;
+-(UIVisualEffectView*)darkBlurBackgroundOfTableView:(UITableView*)tableView;
+@end
+
+@interface UITableViewController (Blur)
+-(UIVisualEffectView*)blurBackground;
+-(UIVisualEffectView*)darkBlurBackground;
+@end
+```
+###To Present and Blur Without a storyboard
+```objective-c
+@interface UIViewController (Presentation)
++(void)present:(nonnull UIViewController* )newVC on:(nullable UIViewController*)source;
++(void)present:(nonnull UIViewController* )newVC on:(nullable UIViewController*)source withBlur:(float)blurAmount;
+```
+
+##Transition Helpers
+```objective-c
+-(void)addFadeTransition;
+
+```
+
+##UIDevice system version
+```objective-c
++(BOOL)versionGreaterThanOrEqual:(NSString*)version;
+```
+
+##Keyboard Helpers 
+```objective-c
+UIView
+-(void)hideKeyboardOnClick;
+-(UIView*)findFirstResponder;
+```
+
+```objective-c
+UITextField
+-(UIToolbar*)addToolbarWithLeftButton:(NSString*)lTitle withSelector:(SEL)lSelector andRightButton:(NSString*)rTitle withSelector:(SEL)rSelector andTarget:(id)target;
+```
+
+##Path Helpers on NSFileManager
+```objective-c
++(NSString *)myDocumentsPathForFile:(NSString*)fileName;
++(NSString *)tempPathForFile:(NSString*)fileName;
+```
 
 
 
