@@ -54,11 +54,12 @@ And import the following Header file
 ```
 
 This pod will work if your project uses objective-c or Swift.
-If you are using Swift, you just need to add a bridging header and place the import there:
-- add a new header file to yoour project named ProjectName-Bridging-Header.h
-- add '#import "SeaseAssist.h"' to your header file
-- in your Target Build settings -> Swift Compiler Code Generation -> Objective-C Bridging Header, add a reference to the newly created file. Should be [ProjectName/ProjectName-Bridging-Header.h]
-- For best results with an objective-c Project, add the SeaseAssist.h import into your .pch file
+- For best results with an objective-c Project, add the SeaseAssist.h import into your .pch file and you will not need to import SeaseAssist into each of your classes that references it.
+- For Similiar result with Swift, you should NOT include the use_frameworks! in your pod file and add a bridging header that includes the library. If you must use_frameworks!, then you need to include SeaseAssist in any class that uses its functions.
+-- add a new header file to yoour project named ProjectName-Bridging-Header.h
+-- add '#import <SeaseAssist/SeaseAssist.h>' to your header file
+-- in your Target Build settings -> Swift Compiler Code Generation -> Objective-C Bridging Header, add a reference to the newly created file. Should be [ProjectName/ProjectName-Bridging-Header.h]
+
 
 ## Author
 

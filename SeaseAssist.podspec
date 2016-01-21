@@ -35,6 +35,6 @@ DESC
     'SeaseAssist' => ['Pod/Assets/*.png']
   }
 
-  # s.public_header_files = 'Pod/Classes/**/*.h'
+    s.public_header_files = 'Pod/Classes/**/*.h'
     s.frameworks = 'UIKit', 'Foundation', 'CoreGraphics', 'SystemConfiguration',  'AVFoundation'
 end
