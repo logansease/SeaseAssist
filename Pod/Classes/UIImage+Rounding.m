@@ -15,15 +15,21 @@
     
     UIImage *image = self;
     
+    float dim = self.size.width;
+    if(self.size.height > self.size.width)
+    {
+        dim = self.size.height;
+    }
+    
     // Begin a new image that will be the new image with the rounded corners
     // (here with the size of an UIImageView)
-    UIGraphicsBeginImageContextWithOptions(self.size, NO, 1.0);
+    UIGraphicsBeginImageContextWithOptions(CGSizeMake(dim, dim), NO, 1.0);
     
     // Add a clip before drawing anything, in the shape of an rounded rect
-    [[UIBezierPath bezierPathWithRoundedRect:CGRectMake(0, 0, self.size.width, self.size.height)
-                                cornerRadius:self.size.width / 2] addClip];
+    [[UIBezierPath bezierPathWithRoundedRect:CGRectMake(0, 0, dim, dim)
+                                cornerRadius:dim / 2] addClip];
     // Draw your image
-    [image drawInRect:CGRectMake(0, 0, self.size.width, self.size.height)];
+    [image drawInRect:CGRectMake(0, 0, dim, dim)];
     
     // Get the image, here setting the UIImageView image
     UIImage * new = UIGraphicsGetImageFromCurrentImageContext();

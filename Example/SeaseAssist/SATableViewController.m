@@ -157,10 +157,9 @@
     }
     else if(indexPath.row == 7)
     {
-        NSString * status = [GCNetworkReachability connected] ? @"Connected" : @"No Connection";
+        NSString * status = [ReachabilityTest connected] ? @"Connected" : @"No Connection";
         [UIAlertView showWithTitle:@"Network Status" andMessage:status];
     }
-
 }
 
 /*

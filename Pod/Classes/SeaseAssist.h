@@ -19,7 +19,6 @@
 #import "NSString+Validation.h"
 #import "NSStringData+Crypt.h"
 #import "NSThread+Helpers.h"
-#import "Reachability+Simple.h"
 #import "SoundService.h"
 #import "SpeechService.h"
 #import "UIAlertController+Helpers.h"
@@ -56,5 +55,19 @@
 #import "DatePickerTextField.h"
 #import "ValuePickerTextField.h"
 #import "UITextField+Toolbar.h"
+
+//v3
+#import "UIView+AnimateShow.h"
+#import "UIColor+Hex.h"
+#import "UIImage+Grayscale.h"
+#import "UIView+MotionEffectsGrouped.h"
+#import "UIView+FrameAdjust.h"
+#import "UIView+Blur.h"
+#import "NSArray+Rearrange.h"
+#import "UIViewController+Back.h"
+#import "UIViewController+Background.h"
+#import "UIImage+Cache.h"
+#import "UIView+Search.h"
+#import "ReachabilityTest.h"
 
 #endif /* SeaseAssist_h */

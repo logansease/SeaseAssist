@@ -11,6 +11,25 @@
 
 @implementation HTTPRequest
 
++(void)customRequest:(NSString*)requestType withData:(NSData*)data toUrl:(NSString*)url withHeaders:(NSDictionary*)headers withHandler:(void (^)(NSString* response,NSError * error))handler
+{
+    
+    // Make a request...
+    NSMutableURLRequest *request = [NSMutableURLRequest requestWithURL:[NSURL URLWithString:url] cachePolicy:NSURLRequestUseProtocolCachePolicy timeoutInterval:120.0];
+    
+    // Add Content-Length header if your server needs it
+    unsigned long long postLength = data.length;
+    NSString *contentLength = [NSString stringWithFormat:@"%llu", postLength];
+    [request addValue:contentLength forHTTPHeaderField:@"Content-Length"];
+    
+    // This should all look familiar...
+    [request setHTTPMethod:requestType];
+    [request setHTTPBody:data];
+    
+    
+    [self sendRequest:request withHeaders:headers withHandler:handler];
+    
+}
 
 +(void)jsonRequestToUrl:(NSString*)urlString  withMethod:(NSString*)method withHeaders:(NSDictionary*)headers withParams:(NSDictionary*)params withHandler:(void (^)(NSString* response,NSError * error))handler
 
@@ -24,7 +43,10 @@
     [request setHTTPMethod:method];
     
     //add the json content type header
-    [request addValue:@"application/json" forHTTPHeaderField:@"Content-Type"];
+    if(![headers objectForKey:@"Content-Type"])
+    {
+        [request addValue:@"application/json" forHTTPHeaderField:@"Content-Type"];
+    }
     
     //set Parameters
     NSString *postString = [params toJsonString];
@@ -37,6 +59,13 @@
 +(void)httpRequestToUrl:(NSString*)urlString  withMethod:(NSString*)method withHeaders:(NSDictionary*)headers withParams:(NSDictionary*)params withHandler:(void (^)(NSString* response,NSError * error))handler
 
 {
+    //if this is a json request, then call the json method
+    if([[headers objectForKey:@"Content-Type"] isEqualToString:@"application/json"])
+    {
+        [self jsonRequestToUrl:urlString withMethod:method withHeaders:headers withParams:params withHandler:handler];
+        return;
+    }
+    
     //set up the request with the URL
     NSURL * url = [NSURL URLWithString:urlString];
     NSMutableURLRequest *request = [NSMutableURLRequest requestWithURL:url
@@ -64,17 +93,34 @@
     //add headers
     for(NSString * key in headers.allKeys)
     {
-        [request addValue:[key valueForKey:key] forHTTPHeaderField:key];
+        [request addValue:[headers valueForKey:key] forHTTPHeaderField:key];
     }
     
-    [NSURLConnection sendAsynchronousRequest:request queue:[NSOperationQueue mainQueue] completionHandler:^(NSURLResponse *response, NSData *data, NSError *error) {
+    NSURLSession *session = [NSURLSession sharedSession];
+    [[session dataTaskWithRequest:request completionHandler:^(NSData * _Nullable data, NSURLResponse * _Nullable response, NSError * _Nullable error) {
         
-        if(handler)
+        //parse our result, ensuring that we return an error if a 200 was not returned from the API
+        
+        // This will Fetch the status code from NSHTTPURLResponse object
+        NSHTTPURLResponse* httpResponse = (NSHTTPURLResponse*)response;
+        NSInteger responseStatusCode = [httpResponse statusCode];
+        
+        NSString * resultString = [[NSString alloc]initWithData:data encoding:NSUTF8StringEncoding];
+        if(responseStatusCode == 200)
         {
-            NSString * resultString = [[NSString alloc]initWithData:data encoding:NSUTF8StringEncoding];
-            handler(resultString, nil);
+            handler(resultString, error);
         }
-    }];
+        else if(error)
+        {
+            handler(resultString,error);
+        }
+        else{
+            NSString * errorString = [NSString stringWithFormat:@"Error Response\n%@",resultString];
+            handler(resultString,[NSError errorWithDomain:@"HTTPRequest" code:responseStatusCode userInfo:@{@"error" : errorString}]);
+        }
+        
+    }]resume];
+    
 }
 
 
@@ -104,7 +150,13 @@
             [result appendString:@"&"];
         }
         
-        [result appendFormat:@"%@=%@",key,[urlParams objectForKey:key]];
+        id value = [urlParams objectForKey:key];
+        if([value isKindOfClass:[NSString class]])
+        {
+            value = [value stringByAddingPercentEscapesUsingEncoding:NSUTF8StringEncoding];
+        }
+        
+        [result appendFormat:@"%@=%@",key,value];
         
         isFirst = NO;
     }
@@ -115,23 +167,23 @@
 +(NSString*)createPostStringWithParams:(NSDictionary*)params
 {
     NSUInteger i=0;
-	NSUInteger count = [[params allKeys] count]-1;
+    NSUInteger count = [[params allKeys] count]-1;
     NSMutableString * result = [NSMutableString stringWithString:@""];
     
-	for (NSString * key in [params allKeys]) {
+    for (NSString * key in [params allKeys]) {
         NSString * value = [params objectForKey:key];
         NSString *data = [NSString stringWithFormat:@"%@=%@%@", [self encodeURL:key], [self encodeURL:value],(i<count ?  @"&" : @"")];
-		[result appendString:data];
-		i++;
-	}
+        [result appendString:data];
+        i++;
+    }
     
     return result;
-
+    
 }
 
 + (NSString*)encodeURL:(NSString *)string
 {
-	 return [string stringByAddingPercentEncodingWithAllowedCharacters:[NSCharacterSet URLQueryAllowedCharacterSet]];
+    return [string stringByAddingPercentEncodingWithAllowedCharacters:[NSCharacterSet URLQueryAllowedCharacterSet]];
 }
 
 

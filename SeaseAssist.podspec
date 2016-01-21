@@ -8,7 +8,7 @@
 
 Pod::Spec.new do |s|
   s.name             = "SeaseAssist"
-  s.version          = "0.0.3"
+  s.version          = "0.0.4"
   s.summary          = "A Library of Awesome Helper classes designed to help you work quickly and effeciently during iOS Development."
 
 # This description is used to generate tags and improve search results.
@@ -37,6 +37,4 @@ DESC
 
   # s.public_header_files = 'Pod/Classes/**/*.h'
     s.frameworks = 'UIKit', 'Foundation', 'CoreGraphics', 'SystemConfiguration',  'AVFoundation'
-    s.dependency 'MBProgressHUD', '~> 0.9.1'
-    s.dependency 'GCNetworkReachability'
 end

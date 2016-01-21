@@ -84,12 +84,8 @@ strip_invalid_archs() {
 
 
 if [[ "$CONFIGURATION" == "Debug" ]]; then
-  install_framework "Pods-SeaseAssist_Example/GCNetworkReachability.framework"
-  install_framework "Pods-SeaseAssist_Example/MBProgressHUD.framework"
   install_framework "Pods-SeaseAssist_Example/SeaseAssist.framework"
 fi
 if [[ "$CONFIGURATION" == "Release" ]]; then
-  install_framework "Pods-SeaseAssist_Example/GCNetworkReachability.framework"
-  install_framework "Pods-SeaseAssist_Example/MBProgressHUD.framework"
   install_framework "Pods-SeaseAssist_Example/SeaseAssist.framework"
 fi

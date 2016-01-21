@@ -7,15 +7,19 @@
 //
 
 #import "UIImageView+Networking.h"
-#import "Reachability+Simple.h"
 #import "NSThread+Helpers.h"
 #import "UIView+Rounding.h"
 #import "UIImage+Rounding.h"
+#import "GCNetworkReachability.h"
 
 @implementation UIImageView (Networking)
 -(void)setImageFromUrl:(NSString*)urlString withDefault:(UIImage*)defaultImage andRounding:(BOOL)round
 {
     self.image = defaultImage;
+    if(round)
+    {
+        self.image = [defaultImage clippedToCircle];
+    }
 
     //return from an empty URL
     if(urlString.length <= 0)
@@ -43,7 +47,7 @@
     NSInteger tag = self.tag;
     
     //if we are connected
-    if([GCNetworkReachability connected]){
+    if([[GCNetworkReachability reachabilityForInternetConnection] isReachable]){
         
         //create our request
         NSMutableURLRequest *request = [[NSMutableURLRequest alloc] initWithURL:[NSURL URLWithString:urlString] cachePolicy:NSURLRequestUseProtocolCachePolicy timeoutInterval:30.0];

@@ -18,7 +18,11 @@
 
 +(void)httpRequestToUrl:(NSString*)urlString  withMethod:(NSString*)method withHeaders:(NSDictionary*)headers withParams:(NSDictionary*)params withHandler:(void (^)(NSString* response,NSError * error))handler;
 
++(void)customRequest:(NSString*)requestType withData:(NSData*)data toUrl:(NSString*)url withHeaders:(NSDictionary*)headers withHandler:(void (^)(NSString* response,NSError * error))handler;
+
 +(NSString*)addParameters:(NSDictionary*)urlParams toUrl:(NSString*)url;
+
++(void)sendRequest:(NSMutableURLRequest*)request withHeaders:(NSDictionary*)headers withHandler:(void (^)(NSString* response,NSError * error))handler;
 
 @end
 

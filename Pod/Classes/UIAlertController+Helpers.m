@@ -8,6 +8,7 @@
 
 #import "UIAlertController+Helpers.h"
 #import "UIViewController+Top.h"
+#import "UIViewController+Presentation.h"
 
 @implementation UIAlertController (Helpers)
 
@@ -49,7 +50,7 @@
         index++;
     }
     
-    [controller presentViewController:alert animated:YES completion:nil];
+    [UIViewController present:alert on:controller];
     
 }
 

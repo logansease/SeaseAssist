@@ -8,6 +8,7 @@
 
 #import "UIAlertController+TextEntry.h"
 #import "UIViewController+Top.h"
+#import "UIViewController+Presentation.h"
 
 @implementation UIAlertController (TextEntry)
 
@@ -37,10 +38,10 @@
     
     [alert addTextFieldWithConfigurationHandler:^(UITextField * _Nonnull textField) {
         textField.placeholder = holder;
+        textField.autocapitalizationType = UITextAutocapitalizationTypeSentences;
     }];
     
-    [controller presentViewController:alert animated:YES completion:nil];
-    
+    [UIViewController present:alert on:controller];
 }
 
 @end
