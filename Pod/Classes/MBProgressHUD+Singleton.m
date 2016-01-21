@@ -8,6 +8,7 @@
 
 #import <UIKit/UIKit.h>
 #import "MBProgressHUD+Singleton.h"
+#import "NSThread+Helpers.h"
 
 @implementation MBProgressHUD (Singleton)
 
@@ -26,20 +27,25 @@ static MBProgressHUD * commonHUD = nil;
 
 +(void)showWithTitle:(NSString*)title
 {
-    MBProgressHUD * hud = [self commonHUD];
-    hud.labelText = title;
-    hud.labelFont = [UIFont systemFontOfSize:20];
+    [NSThread mainThread:^{
+        MBProgressHUD * hud = [self commonHUD];
+        hud.labelText = title;
+        hud.labelFont = [UIFont systemFontOfSize:20];
 #if TARGET_OS_TV
-    hud.labelFont = [UIFont systemFontOfSize:60];
+        hud.labelFont = [UIFont systemFontOfSize:60];
 #endif
-    
-    [hud show:YES];
+        
+        [hud show:YES];
+    }];
+
 }
 
 +(void)hide
 {
+    [NSThread mainThread:^{
     MBProgressHUD * hud = [self commonHUD];
     [hud hide:YES];
+    }];
 }
 
 +(void)setupCommonHUDWithView:(UIView*)view
