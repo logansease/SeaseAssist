@@ -127,9 +127,8 @@ Simple Text to Speech with the Siri API
 ```
 
 ##Email Service
+A simple Email interface to open an email view controller from anywhere.
 ```
-@interface MailService 
-+ (id)sharedService;
 -(void)emailTo:(NSArray*)emails withSubject:(NSString*)subject body:(NSString*)body attachments:(NSArray<MailServiceAttachment*>*)attachments fromVC:(UIViewController*)parent  andCompletion:(void(^)(BOOL success))handler;
 ```
 
@@ -240,12 +239,18 @@ Run blocks in the main or background threads with ease
 +(void)delay:(float)length code:(void (^)())function;
 ```
 
-##Device Identifiers
+##UIDevice: Unique Identifiers
 Since apple now longer gives access to device level Identifier information, this is another way to get an Identifier based on a hash of the mac address
 ```objective-c
 - (NSString *) uniqueDeviceIdentifier;
 - (NSString *) uniqueGlobalDeviceIdentifier;
 ```
+
+##UIDevice system version
+```objective-c
++(BOOL)versionGreaterThanOrEqual:(NSString*)version;
+```
+
 ##Alerts
 
 ###MBProgressHUD+Singleton
@@ -296,6 +301,15 @@ Show a quick "Toast" on screen for a desired amount of time
 
 ```
 
+Cache image and load from cache
+```
++(void)cacheImage:(UIImage*)image forUrl:(NSString*)url;
++(NSString*)cacheFileNameFor:(NSString*)url;
++(UIImage*)cachedImageForUrl:(NSString*)url;
++(void)loadImageToCacheFrom:(NSString*)url;
+```
+
+
 
 
 ###UIImageView Helpers
@@ -314,17 +328,6 @@ Set an image from URL to a UIImage View with caching and a default
 @interface UIImageView (Networking)
 -(void)setImageFromUrl:(NSString*)url withDefault:(UIImage*)defaultImage andRounding:(BOOL)round;
 ```
-
-Cache image and load from cache
-```
-@interface UIImage (Cache)
-+(void)cacheImage:(UIImage*)image forUrl:(NSString*)url;
-+(NSString*)cacheFileNameFor:(NSString*)url;
-+(UIImage*)cachedImageForUrl:(NSString*)url;
-+(void)loadImageToCacheFrom:(NSString*)url;
-@end
-```
-
 
 ##Animation
 
@@ -404,8 +407,8 @@ Find the top most view controller from anywhere. Searches recursively through na
 @end
 ```
 
-##Blurred Backgrounds
-###For use with a Covers Current Context Modal Transition
+##Backgrounds
+### BLURRED: For use with a Covers Current Context Modal Transition
 ```objective-c
 @interface UIViewController (Blur)
 -(UIVisualEffectView*)blurBackground;
@@ -426,7 +429,7 @@ Find the top most view controller from anywhere. Searches recursively through na
 +(void)present:(nonnull UIViewController* )newVC on:(nullable UIViewController*)source withBlur:(float)blurAmount;
 ```
 
-###Add background images
+###Add Non-Blurred background images
 
 ```
 @interface UIViewController (Background)
@@ -439,7 +442,10 @@ Find the top most view controller from anywhere. Searches recursively through na
 @end
 ```
 
-##Transition Helpers
+
+##Navigation Helpers
+
+###Add Tranitions
 ```objective-c
 @interface UINavigationController (Transition)
 //add a fade transitions between view controllers for your next push
@@ -447,17 +453,13 @@ Find the top most view controller from anywhere. Searches recursively through na
 
 ```
 
-UIViewController+Back
-```
 //go back, either by popping or dismissing--- but let this figure out which.
+```
+UIViewController+Back
 -(void)goBackWithAnimation:(BOOL)animates;
 ```
 
 
-##UIDevice system version
-```objective-c
-+(BOOL)versionGreaterThanOrEqual:(NSString*)version;
-```
 
 ##Keyboard Helpers 
 ```objective-c
