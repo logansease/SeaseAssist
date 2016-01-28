@@ -1,5 +1,5 @@
 //
-//  UIViewController+Back.h
+//  UIImage+FromView.h
 //  Conundrums
 //
 //  Created by lsease on 1/11/16.
@@ -8,6 +8,6 @@
 
 #import <UIKit/UIKit.h>
 
-@interface UIViewController (Back)
--(void)goBackWithAnimation:(BOOL)animates;
+@interface UIImage (FromView)
++(UIImage*)fromView:(UIView*)view;
 @end

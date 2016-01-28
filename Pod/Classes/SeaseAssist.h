@@ -70,4 +70,7 @@
 #import "UIView+Search.h"
 #import "ReachabilityTest.h"
 
+#import "UIImage+FromView.h"
+#import "MailService.h"
+
 #endif /* SeaseAssist_h */
