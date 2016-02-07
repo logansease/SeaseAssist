@@ -45,7 +45,7 @@
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
     if(section == 0)
     {
-        return 10;
+        return 11;
     }
     
     return 0;
@@ -111,7 +111,10 @@
         ValuePickerTextField * field = [cell viewWithTag:1];
         field.values = @[@"Select 1", @"2"];
         [field addToolbarWithLeftButton:@"LeftAction" withSelector:@selector(left) andRightButton:@"right" withSelector:@selector(right) andTarget:self];
-        
+    }
+    else if(indexPath.row == 10)
+    {
+        cell.textLabel.text = [[UIDevice currentDevice]uniqueDeviceIdentifier];
     }
     
     return cell;

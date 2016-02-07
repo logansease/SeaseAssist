@@ -13,6 +13,8 @@
 #include <net/if.h>
 #include <net/if_dl.h>
 
+#import "UIDevice+Keychain.h"
+
 @interface UIDevice(Private)
 
 - (NSString *) macaddress;
@@ -79,26 +81,65 @@
 #pragma mark Public Methods
 
 - (NSString *) uniqueDeviceIdentifier{
-    NSString *macaddress = [[UIDevice currentDevice] macaddress];
+    
+    NSString * result = [UIDevice readFromKeychainWithKey:@"UNIQUE_DEVICE_IDENTIFIER"];
+
+    if(result)
+    {
+        return result;
+    }
+    
+    NSString * macAddress = nil;
+    if([[UIDevice currentDevice]respondsToSelector:@selector(identifierForVendor)])
+    {
+        macAddress = [[UIDevice currentDevice] identifierForVendor].UUIDString;
+    }
+    else{
+        NSUInteger randomNumber = random();
+        NSDateFormatter * formatter= [[NSDateFormatter alloc]init];
+        [formatter setDateFormat:@"ASSS"];
+        NSString * result = [[NSString alloc] initWithFormat:@"%@-%lu",[formatter stringFromDate:[NSDate date]],(unsigned long)randomNumber];
+        macAddress = result;
+    }
+    
     NSString *bundleIdentifier = [[NSBundle mainBundle] bundleIdentifier];
     
-    NSString *stringToHash = [NSString stringWithFormat:@"%@%@",macaddress,bundleIdentifier];
-    NSString *uid = [stringToHash stringFromMD5];
+    NSString *stringToHash = [NSString stringWithFormat:@"%@%@",macAddress,bundleIdentifier];
+    result = [stringToHash stringFromMD5];
     
-    return uid;
+    [UIDevice write:result toKeychainWithKey:@"UNIQUE_DEVICE_IDENTIFIER"];
+    
+    return result;
 }
 
 - (NSString *) uniqueGlobalDeviceIdentifier{
-    NSString *macaddress = [[UIDevice currentDevice] macaddress];
-    if(macaddress == nil)
-    {
-        srand((int)time(NULL));
-        long random = rand();
-        macaddress = [NSString stringWithFormat:@"%ld",random];
-    }
-    NSString *uid = [macaddress stringFromMD5];
     
-    return uid;
+    NSString * result = [UIDevice readFromKeychainWithKey:@"UNIQUE_GLOBAL_DEVICE_IDENTIFIER"];
+    
+    if(result)
+    {
+        return result;
+    }
+    
+    NSString * macAddress = nil;
+    if([[UIDevice currentDevice]respondsToSelector:@selector(identifierForVendor)])
+    {
+        macAddress = [[UIDevice currentDevice] identifierForVendor].UUIDString;
+    }
+    else{
+        NSUInteger randomNumber = random();
+        NSDateFormatter * formatter= [[NSDateFormatter alloc]init];
+        [formatter setDateFormat:@"ASSS"];
+        NSString * result = [[NSString alloc] initWithFormat:@"%@-%ld",[formatter stringFromDate:[NSDate date]],(unsigned long)randomNumber];
+        macAddress = result;
+    }
+    
+    result = [macAddress stringFromMD5];
+    
+    [UIDevice write:result toKeychainWithKey:@"UNIQUE_GLOBAL_DEVICE_IDENTIFIER"];
+    
+    return result;
 }
+
 
 @end

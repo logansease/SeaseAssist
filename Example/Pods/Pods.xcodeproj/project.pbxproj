@@ -9,9 +9,13 @@
 /* Begin PBXBuildFile section */
 		0008824A19C3145D190FC90CDB447A64 /* UIImageView+Url.h in Headers */ = {isa = PBXBuildFile; fileRef = 4C5EE6A61211219052866F06A7D7CCD2 /* UIImageView+Url.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		0059638176122896B2FB093747404CD8 /* GCNetworkReachability.m in Sources */ = {isa = PBXBuildFile; fileRef = 0180BFA6C1FAB3092A0CA98AC0D2BD91 /* GCNetworkReachability.m */; };
-		007742E01C599151004FDA68 /* UIImage+FromView.h in Headers */ = {isa = PBXBuildFile; fileRef = 007742DC1C599151004FDA68 /* UIImage+FromView.h */; };
+		0061450D1C678551008A5F8B /* KeychainItemWrapper.h in Headers */ = {isa = PBXBuildFile; fileRef = 0061450B1C678551008A5F8B /* KeychainItemWrapper.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		0061450E1C678551008A5F8B /* KeychainItemWrapper.m in Sources */ = {isa = PBXBuildFile; fileRef = 0061450C1C678551008A5F8B /* KeychainItemWrapper.m */; };
+		006145111C6785FF008A5F8B /* UIDevice+Keychain.h in Headers */ = {isa = PBXBuildFile; fileRef = 0061450F1C6785FF008A5F8B /* UIDevice+Keychain.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		006145121C6785FF008A5F8B /* UIDevice+Keychain.m in Sources */ = {isa = PBXBuildFile; fileRef = 006145101C6785FF008A5F8B /* UIDevice+Keychain.m */; };
+		007742E01C599151004FDA68 /* UIImage+FromView.h in Headers */ = {isa = PBXBuildFile; fileRef = 007742DC1C599151004FDA68 /* UIImage+FromView.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		007742E11C599151004FDA68 /* UIImage+FromView.m in Sources */ = {isa = PBXBuildFile; fileRef = 007742DD1C599151004FDA68 /* UIImage+FromView.m */; };
-		007742E21C599151004FDA68 /* MailService.h in Headers */ = {isa = PBXBuildFile; fileRef = 007742DE1C599151004FDA68 /* MailService.h */; };
+		007742E21C599151004FDA68 /* MailService.h in Headers */ = {isa = PBXBuildFile; fileRef = 007742DE1C599151004FDA68 /* MailService.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		007742E31C599151004FDA68 /* MailService.m in Sources */ = {isa = PBXBuildFile; fileRef = 007742DF1C599151004FDA68 /* MailService.m */; };
 		042B66D320EE1C8031BC5E43F823CD85 /* NSArrayDictionary+Json.h in Headers */ = {isa = PBXBuildFile; fileRef = 640456457F025CBED962CADA6FBCF3DE /* NSArrayDictionary+Json.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		04B01723807EE95F7C64C041AA4AD0A5 /* UIView+Rounding.h in Headers */ = {isa = PBXBuildFile; fileRef = 8BAF4DFBCDF453C0D8A08A221EF50470 /* UIView+Rounding.h */; settings = {ATTRIBUTES = (Public, ); }; };
@@ -172,6 +176,10 @@
 
 /* Begin PBXFileReference section */
 		001D787E5B1431FB6BCEB82803146413 /* UIDevice+Version.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "UIDevice+Version.h"; sourceTree = "<group>"; };
+		0061450B1C678551008A5F8B /* KeychainItemWrapper.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = KeychainItemWrapper.h; sourceTree = "<group>"; };
+		0061450C1C678551008A5F8B /* KeychainItemWrapper.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = KeychainItemWrapper.m; sourceTree = "<group>"; };
+		0061450F1C6785FF008A5F8B /* UIDevice+Keychain.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIDevice+Keychain.h"; sourceTree = "<group>"; };
+		006145101C6785FF008A5F8B /* UIDevice+Keychain.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIDevice+Keychain.m"; sourceTree = "<group>"; };
 		007742DC1C599151004FDA68 /* UIImage+FromView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIImage+FromView.h"; sourceTree = "<group>"; };
 		007742DD1C599151004FDA68 /* UIImage+FromView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIImage+FromView.m"; sourceTree = "<group>"; };
 		007742DE1C599151004FDA68 /* MailService.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MailService.h; sourceTree = "<group>"; };
@@ -550,6 +558,10 @@
 				225315FBC9BCD62FA2BCADA47CABC7B7 /* UIViewController+Top.m */,
 				D19A2A176FE7D2739E9FF7F2604A1093 /* ValuePickerTextField.h */,
 				744C2E5F3EE364AAE73A9ACE6A227908 /* ValuePickerTextField.m */,
+				0061450B1C678551008A5F8B /* KeychainItemWrapper.h */,
+				0061450C1C678551008A5F8B /* KeychainItemWrapper.m */,
+				0061450F1C6785FF008A5F8B /* UIDevice+Keychain.h */,
+				006145101C6785FF008A5F8B /* UIDevice+Keychain.m */,
 			);
 			path = Classes;
 			sourceTree = "<group>";
@@ -674,6 +686,7 @@
 				6E0478FD68847590FC0E82A4F2E7D1E1 /* NSThread+Helpers.h in Headers */,
 				7DB90641455A82E7B9F77E2B4DC06972 /* NSURL+Helpers.h in Headers */,
 				1E04933641B051DF82A01128D6CFB19D /* ReachabilityTest.h in Headers */,
+				006145111C6785FF008A5F8B /* UIDevice+Keychain.h in Headers */,
 				C95DB54E72258D2BCA7C1BE0BB2813E0 /* RoundedView.h in Headers */,
 				5B6587651A71B05F21047A2FDA2C68F3 /* SeaseAssist-umbrella.h in Headers */,
 				DDCC34339F9C3CE7B663CA5806899F35 /* SeaseAssist.h in Headers */,
@@ -703,6 +716,7 @@
 				4B77A66C7F3F6D956C24D3998C6BCB12 /* UIView+Blur.h in Headers */,
 				372604036B7B2071FFD47195678CAC99 /* UIView+FrameAdjust.h in Headers */,
 				F23F4E7B41B999277064F2B83EF835A1 /* UIView+KeyboardHelpers.h in Headers */,
+				0061450D1C678551008A5F8B /* KeychainItemWrapper.h in Headers */,
 				C77140B1658A28D42FE1E2F5B8062C5F /* UIView+MotionEffect.h in Headers */,
 				31A46E505AD9057DF1CE8E29D4B070B1 /* UIView+MotionEffectsGrouped.h in Headers */,
 				04B01723807EE95F7C64C041AA4AD0A5 /* UIView+Rounding.h in Headers */,
@@ -885,6 +899,7 @@
 				216524F2FC0116F508ED15EE4D5116AF /* NSString+Helpers.m in Sources */,
 				BE4BDF1062B97F173A49113681BDE442 /* NSString+Validation.m in Sources */,
 				D497322A3ACB2CCAD55D137B6284A58B /* NSStringData+Crypt.m in Sources */,
+				0061450E1C678551008A5F8B /* KeychainItemWrapper.m in Sources */,
 				85C090CDE9D166EDC61F7C78D3E35D29 /* NSThread+Delay.m in Sources */,
 				65FD84AFA0E06B4FD5F9E4543B07E8EF /* NSThread+Helpers.m in Sources */,
 				F7959B846AB433D6BA05E1AD56E5D78A /* NSURL+Helpers.m in Sources */,
@@ -917,6 +932,7 @@
 				B5EB218437CFD0201BF2EB379EF8EB43 /* UIView+Animation.m in Sources */,
 				8AF7FBEBF12C419F0160383D85D3CBB6 /* UIView+Blur.m in Sources */,
 				2946DF63445A7EA393AB3D99B0F0A644 /* UIView+FrameAdjust.m in Sources */,
+				006145121C6785FF008A5F8B /* UIDevice+Keychain.m in Sources */,
 				E0FDA4C003473FF7554A2D7CA4FE6A8A /* UIView+KeyboardHelpers.m in Sources */,
 				3C328F441D3482E416AE84F430AE9231 /* UIView+MotionEffect.m in Sources */,
 				2A157930A91FAD28EAFE4372E8042AA4 /* UIView+MotionEffectsGrouped.m in Sources */,

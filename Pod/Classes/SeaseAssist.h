@@ -68,9 +68,12 @@
 #import "UIViewController+Background.h"
 #import "UIImage+Cache.h"
 #import "UIView+Search.h"
-#import "ReachabilityTest.h"
 
 #import "UIImage+FromView.h"
 #import "MailService.h"
+#import "UIDevice+Keychain.h"
+#import "KeychainItemWrapper.h"
+
+#import "ReachabilityTest.h"
 
 #endif /* SeaseAssist_h */

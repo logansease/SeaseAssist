@@ -9,6 +9,10 @@
 /* Begin PBXBuildFile section */
 		0008824A19C3145D190FC90CDB447A64 /* UIImageView+Url.h in Headers */ = {isa = PBXBuildFile; fileRef = 4C5EE6A61211219052866F06A7D7CCD2 /* UIImageView+Url.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		0059638176122896B2FB093747404CD8 /* GCNetworkReachability.m in Sources */ = {isa = PBXBuildFile; fileRef = 0180BFA6C1FAB3092A0CA98AC0D2BD91 /* GCNetworkReachability.m */; };
+		007742E01C599151004FDA68 /* UIImage+FromView.h in Headers */ = {isa = PBXBuildFile; fileRef = 007742DC1C599151004FDA68 /* UIImage+FromView.h */; };
+		007742E11C599151004FDA68 /* UIImage+FromView.m in Sources */ = {isa = PBXBuildFile; fileRef = 007742DD1C599151004FDA68 /* UIImage+FromView.m */; };
+		007742E21C599151004FDA68 /* MailService.h in Headers */ = {isa = PBXBuildFile; fileRef = 007742DE1C599151004FDA68 /* MailService.h */; };
+		007742E31C599151004FDA68 /* MailService.m in Sources */ = {isa = PBXBuildFile; fileRef = 007742DF1C599151004FDA68 /* MailService.m */; };
 		042B66D320EE1C8031BC5E43F823CD85 /* NSArrayDictionary+Json.h in Headers */ = {isa = PBXBuildFile; fileRef = 640456457F025CBED962CADA6FBCF3DE /* NSArrayDictionary+Json.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		04B01723807EE95F7C64C041AA4AD0A5 /* UIView+Rounding.h in Headers */ = {isa = PBXBuildFile; fileRef = 8BAF4DFBCDF453C0D8A08A221EF50470 /* UIView+Rounding.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		059AEA1E164F8B216A3C91F11B2FB1F6 /* UITextField+Toolbar.h in Headers */ = {isa = PBXBuildFile; fileRef = 85E32D4F4CC83D3FF2F63C2122C70EFE /* UITextField+Toolbar.h */; settings = {ATTRIBUTES = (Public, ); }; };
@@ -168,6 +172,10 @@
 
 /* Begin PBXFileReference section */
 		001D787E5B1431FB6BCEB82803146413 /* UIDevice+Version.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "UIDevice+Version.h"; sourceTree = "<group>"; };
+		007742DC1C599151004FDA68 /* UIImage+FromView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIImage+FromView.h"; sourceTree = "<group>"; };
+		007742DD1C599151004FDA68 /* UIImage+FromView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIImage+FromView.m"; sourceTree = "<group>"; };
+		007742DE1C599151004FDA68 /* MailService.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MailService.h; sourceTree = "<group>"; };
+		007742DF1C599151004FDA68 /* MailService.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MailService.m; sourceTree = "<group>"; };
 		0180BFA6C1FAB3092A0CA98AC0D2BD91 /* GCNetworkReachability.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = GCNetworkReachability.m; sourceTree = "<group>"; };
 		0341BA3E0F3B806E54A17EE8C7171A4D /* NSArrayDictionary+Json.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "NSArrayDictionary+Json.m"; sourceTree = "<group>"; };
 		042DBE9EF9F5D046E8E1F932E86827A9 /* UIView+MotionEffect.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "UIView+MotionEffect.h"; sourceTree = "<group>"; };
@@ -419,6 +427,10 @@
 		57E4092C17ED836BA1D68ACE938A1F74 /* Classes */ = {
 			isa = PBXGroup;
 			children = (
+				007742DC1C599151004FDA68 /* UIImage+FromView.h */,
+				007742DD1C599151004FDA68 /* UIImage+FromView.m */,
+				007742DE1C599151004FDA68 /* MailService.h */,
+				007742DF1C599151004FDA68 /* MailService.m */,
 				1D179AA51408F04F98D19A6F0F2F2C9A /* CircleButton.h */,
 				231B95C8690706854687059612A0EB02 /* CircleButton.m */,
 				0CF12C15F13583AD58FFB7A97EEDDFA2 /* CleanButton.h */,
@@ -642,6 +654,7 @@
 				911019487C8E9D9382D52D1EDB3B2DDF /* CircleButton.h in Headers */,
 				3CAAF693DB8ED543369F7A0C8177DC25 /* CleanButton.h in Headers */,
 				C462A3EFCDA9F9887C8C2C3AD208C5F1 /* DatePickerTextField.h in Headers */,
+				007742E21C599151004FDA68 /* MailService.h in Headers */,
 				83F6E81D2CFF596680B66E9734E6827D /* EventCounterService.h in Headers */,
 				313D1180606333D6265EF73D2A9DE2E9 /* GCNetworkReachability.h in Headers */,
 				855B1011A2492F0B1C6DFBFE49BE0F1F /* GlossyButton.h in Headers */,
@@ -694,6 +707,7 @@
 				31A46E505AD9057DF1CE8E29D4B070B1 /* UIView+MotionEffectsGrouped.h in Headers */,
 				04B01723807EE95F7C64C041AA4AD0A5 /* UIView+Rounding.h in Headers */,
 				F0A19CE418E38882A426F87305AB043B /* UIView+Search.h in Headers */,
+				007742E01C599151004FDA68 /* UIImage+FromView.h in Headers */,
 				CC73B6DEE27797869B4F061B3C0DAD0A /* UIViewController+Back.h in Headers */,
 				E48A00CD13F4157644353BFC0B216438 /* UIViewController+Background.h in Headers */,
 				1F7FD83C9AEF390AEACEA63EF8D1D0DD /* UIViewController+Blur.h in Headers */,
@@ -885,6 +899,7 @@
 				237189197AD80F973E4BE781B1184960 /* UIButton+Helpers.m in Sources */,
 				9C0442D0C486985401A4F6E95CFC79F9 /* UIButton+TitleHelpers.m in Sources */,
 				EB7ACADB4A20FDE3AE38BCA290AB8665 /* UIColor+Hex.m in Sources */,
+				007742E31C599151004FDA68 /* MailService.m in Sources */,
 				E89A7296A43B30A2D4492B0993935BB3 /* UIDevice+IdentifierAddition.m in Sources */,
 				9A04C490F22779DA4C6F9B173AEB0FDE /* UIDevice+Version.m in Sources */,
 				FA574E321CE069E49BED8FD50648D05C /* UIImage+Blur.m in Sources */,
@@ -907,6 +922,7 @@
 				2A157930A91FAD28EAFE4372E8042AA4 /* UIView+MotionEffectsGrouped.m in Sources */,
 				FBDED0A122FB626FA61F2263213D42BF /* UIView+Rounding.m in Sources */,
 				9687AFC78E26264248136AB19BFE544C /* UIView+Search.m in Sources */,
+				007742E11C599151004FDA68 /* UIImage+FromView.m in Sources */,
 				FADFBD2B95291ED854549ABB59376C94 /* UIViewController+Back.m in Sources */,
 				B515126E3E4C2BDCE7A7E16B4D048F9E /* UIViewController+Background.m in Sources */,
 				2B322945C5978A6FB3F105333077E8F2 /* UIViewController+Blur.m in Sources */,

@@ -251,6 +251,15 @@ Since apple now longer gives access to device level Identifier information, this
 +(BOOL)versionGreaterThanOrEqual:(NSString*)version;
 ```
 
+##Keychain Helpers
+Read and write to the keychain.
+```objective-c
+@interface UIDevice (Keychain)
++(void)write:(NSString*)value toKeychainWithKey:(NSString*)key;
++(NSString*)readFromKeychainWithKey:(NSString*)key;
+@end
+```
+
 ##Alerts
 
 ###MBProgressHUD+Singleton
