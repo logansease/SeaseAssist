@@ -7,8 +7,18 @@
 //
 
 #import "NSString+Validation.h"
+#import "NSString+Helpers.h"
 
 @implementation NSString (Validation)
+
+-(BOOL)isBlank
+{
+    if (self == nil) return TRUE;
+    if ([self isEqual:[NSNull null]]) return TRUE;
+    if ([self stringByStrippingWhitespace].length <= 0) return TRUE;
+    return FALSE;
+}
+
 -(BOOL)isValidEmail
 {
     return [self isValidEmail:NO];
@@ -35,8 +45,19 @@
     {
         return NO;
     }
-    
     return YES;
-    
 }
+
++ (BOOL)isValidAlphanumbericChars: (NSString *)textString
+{
+    
+    NSMutableCharacterSet *_alnum = [NSMutableCharacterSet characterSetWithCharactersInString:@"_"];
+    [_alnum formUnionWithCharacterSet:[NSCharacterSet alphanumericCharacterSet]];
+    
+    BOOL valid = [[textString stringByTrimmingCharactersInSet:_alnum] isEqualToString:@""];
+    
+    return valid;
+}
+
+
 @end

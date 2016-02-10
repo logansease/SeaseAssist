@@ -10,30 +10,56 @@
 #import "KeychainItemWrapper.h"
 
 @implementation UIDevice (Keychain)
-+(void)write:(NSString*)value toKeychainWithKey:(NSString*)key
++(void)write:(NSString*)value toKeychainWithKey:(NSString*)key appSpecific:(BOOL)appSpecific
 {
+    @try{
     NSString *bundleId = [[[NSBundle mainBundle] infoDictionary] objectForKey:@"CFBundleIdentifier"];
+    if(!appSpecific)
+    {
+        bundleId = @"";
+    }
     
-    KeychainItemWrapper *keychainItem = [[KeychainItemWrapper alloc] initWithIdentifier:bundleId accessGroup:nil];
-
+    NSString * combinedKey = [NSString stringWithFormat:@"%@.%@",bundleId,key];
+    
+    KeychainItemWrapper *keychainItem = [[KeychainItemWrapper alloc] initWithIdentifier:combinedKey accessGroup:nil];
+    [keychainItem resetKeychainItem];
     [keychainItem setObject:value forKey:(__bridge id)(kSecValueData)];
     NSLog(@"saving item %@", [keychainItem objectForKey:(__bridge id)(kSecValueData)]);
+    }
+    @catch(NSException * e)
+    {
+        NSLog(@"Error writing to keychain");
+    }
 
 }
-+(NSString*)readFromKeychainWithKey:(NSString*)key
++(NSString*)readFromKeychainWithKey:(NSString*)key appSpecific:(BOOL)appSpecific
 {
+    @try{
     NSString *bundleId = [[[NSBundle mainBundle] infoDictionary] objectForKey:@"CFBundleIdentifier"];
     
-    KeychainItemWrapper *keychainItem = [[KeychainItemWrapper alloc] initWithIdentifier:bundleId accessGroup:nil];
-
+    if(!appSpecific)
+    {
+        bundleId = @"";
+    }
+    
+    NSString * combinedKey = [NSString stringWithFormat:@"%@.%@",bundleId,key];
+    
+    KeychainItemWrapper *keychainItem = [[KeychainItemWrapper alloc] initWithIdentifier:combinedKey accessGroup:nil];
+    
     NSData * result = [keychainItem objectForKey:(__bridge id)(kSecValueData)];
-    if(![result isKindOfClass:[NSData class]])
+    if(![result isKindOfClass:[NSData class]] || ![result respondsToSelector:@selector(length)] || result.length == 0)
     {
         return nil;
     }
     NSString * resultString = [[NSString alloc]initWithData:result encoding:NSUTF8StringEncoding];
     
     return resultString;
+    }
+    @catch(NSException * e)
+    {
+        NSLog(@"Error writing to keychain");
+        return nil;
+    }
     
 }
 @end

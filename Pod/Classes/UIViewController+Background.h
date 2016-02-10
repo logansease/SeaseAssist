@@ -16,3 +16,9 @@
 @interface UITableViewController (Background)
 -(void)setBackgroundImage:(UIImage*)image withAlpha:(float)alpha;
 @end
+
+
+@interface UITableView (Background)
+-(void)setBackgroundImage:(UIImage*)image withAlpha:(float)alpha;
+-(void)setupTableHeader:(UIImage*)image;
+@end

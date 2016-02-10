@@ -11,5 +11,6 @@
 - (NSData *) sha256;
 - (NSString *) stringFromMD5;
 -(NSString*)encryptWithKey:(NSString*)key;
+-(NSString*)sha256String;
 
 @end

@@ -12,6 +12,13 @@
 
 -(void)setBackgroundImage:(UIImage*)image withAlpha:(float)alpha
 {
+    if([self.view isKindOfClass:[UITableView class]])
+    {
+        UITableView * table = (UITableView*)self.view;
+        [table setBackgroundImage:image withAlpha:alpha];
+        return;
+    }
+    
     UIImageView * imageView = [[UIImageView alloc]initWithFrame:self.view.frame];
     imageView.image = image;
     imageView.alpha = alpha;
@@ -43,13 +50,36 @@
 -(void)setBackgroundImage:(UIImage*)image withAlpha:(float)alpha
 {
     
-    UIImageView * imageView = [[UIImageView alloc]initWithFrame:self.tableView.frame];
+    [self.tableView setBackgroundImage:image withAlpha:alpha];
+}
+
+@end
+
+@implementation UITableView (Background)
+
+-(void)setBackgroundImage:(UIImage*)image withAlpha:(float)alpha
+{
+    
+    UIImageView * imageView = [[UIImageView alloc]initWithFrame:self.frame];
     imageView.image = image;
     imageView.alpha = alpha;
     imageView.tag = kViewBackgroundImageTag;
     imageView.contentMode = UIViewContentModeScaleToFill;
     
-    self.tableView.backgroundView = imageView;
+    self.backgroundView = imageView;
+}
+
+-(void)setupTableHeader:(UIImage*)image
+{
+    // create crowdflik logo
+    UIImageView * logoView = [[UIImageView alloc] initWithFrame:CGRectMake(0, 0, image.size.width, image.size.height)];
+    logoView.image = image;
+    //self.imageView = logoView;
+    logoView.contentMode = UIViewContentModeScaleAspectFit;
+    //self.cachedImageViewSize = self.imageView.frame;
+    self.tableHeaderView =  logoView;
+    [self setContentInset:UIEdgeInsetsMake(-image.size.height, 0, 0, 0)];
+    
 }
 
 @end

@@ -1,6 +1,6 @@
 {
   "name": "SeaseAssist",
-  "version": "0.0.4",
+  "version": "0.0.10",
   "summary": "A Library of Awesome Helper classes designed to help you work quickly and effeciently during iOS Development.",
   "description": "\"A Library of Awesome Helper classes designed to help you work quickly and effeciently during iOS Development.\"",
   "homepage": "https://github.com/logansease/SeaseAssist",
@@ -10,7 +10,7 @@
   },
   "source": {
     "git": "https://github.com/logansease/SeaseAssist.git",
-    "tag": "0.0.4"
+    "tag": "0.0.10"
   },
   "platforms": {
     "ios": "7.0"
@@ -22,6 +22,7 @@
       "Pod/Assets/*.png"
     ]
   },
+  "public_header_files": "Pod/Classes/**/*.h",
   "frameworks": [
     "UIKit",
     "Foundation",

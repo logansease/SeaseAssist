@@ -9,6 +9,6 @@
 #import <UIKit/UIKit.h>
 
 @interface UIDevice (Keychain)
-+(void)write:(NSString*)value toKeychainWithKey:(NSString*)key;
-+(NSString*)readFromKeychainWithKey:(NSString*)key;
++(void)write:(NSString*)value toKeychainWithKey:(NSString*)key appSpecific:(BOOL)appSpecific;
++(NSString*)readFromKeychainWithKey:(NSString*)key appSpecific:(BOOL)appSpecific;
 @end

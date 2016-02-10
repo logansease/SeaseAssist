@@ -90,6 +90,13 @@ Create a UITextField with a Date picker instead of a keyboard
 ##ValuePickerTextField
 A UITextField with a PickerView instead of a keyboard
 
+#MLTBadgeView
+A badge that goes over any UIView. See UIView+Badge.h
+```
+[view.badge setBadgeValue:@"4"];
+```
+
+
 #SERVICES
 
 ##EventCounterService
@@ -207,12 +214,21 @@ Find our internet connection status.
 ##NSString Helpers
 ```objective-c
 -(NSInteger)occurancesOfString:(NSString*)test;
+-(BOOL)contains:(NSString *)string;
++(NSString*)empty;
+- (NSInteger)indexOf: (char)character;
+-(NSArray *)splitOnChar:(char)ch;
+-(NSString *)substringFrom:(NSInteger)from to:(NSInteger)to;
+-(NSString *)stringByStrippingWhitespace;
 ```
 
 ##NSString validation
 ```objective-c
+-(BOOL)isValidEmail:(BOOL)laxValidation;
 -(BOOL)isValidEmail;
 -(BOOL)isDigitOfLength:(NSInteger)length;
+-(BOOL)isBlank;
++(BOOL)isValidAlphanumbericChars:(NSString*)textString;
 ```
 
 ##Encryption Helpers
@@ -255,8 +271,8 @@ Since apple now longer gives access to device level Identifier information, this
 Read and write to the keychain.
 ```objective-c
 @interface UIDevice (Keychain)
-+(void)write:(NSString*)value toKeychainWithKey:(NSString*)key;
-+(NSString*)readFromKeychainWithKey:(NSString*)key;
++(void)write:(NSString*)value toKeychainWithKey:(NSString*)key appSpecific:(BOOL)appSpecific;
++(NSString*)readFromKeychainWithKey:(NSString*)key appSpecific:(BOOL)appSpecific;
 @end
 ```
 
@@ -451,6 +467,16 @@ Find the top most view controller from anywhere. Searches recursively through na
 @end
 ```
 
+##UITableView Helpers
+Reload sections of a tableview
+```objective-c
+-(void)reloadSection:(NSInteger)section;
+-(void)reloadSections:(NSInteger)fromSection to:(NSInteger)toSection;
+```
+Add a header to a tableview
+```objective-c
+-(void)setupTableHeader:(UIImage*)image;
+```
 
 ##Navigation Helpers
 

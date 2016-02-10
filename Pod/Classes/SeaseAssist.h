@@ -16,7 +16,6 @@
 #import "NSDate+Helpers.h"
 #import "NSMutableArray+shuffling.h"
 #import "NSString+Helpers.h"
-#import "NSString+Validation.h"
 #import "NSStringData+Crypt.h"
 #import "NSThread+Helpers.h"
 #import "SoundService.h"
@@ -76,4 +75,7 @@
 
 #import "ReachabilityTest.h"
 
+#import "NSString+Validation.h"
+#import "UIView+Badge.h"
+#import "UITableView+Reload.h"
 #endif /* SeaseAssist_h */

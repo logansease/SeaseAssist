@@ -54,7 +54,7 @@
     }];
 }
 
--(void)endBounce
+-(void)endAnimation
 {
     [CATransaction begin];
     [self.layer removeAllAnimations];

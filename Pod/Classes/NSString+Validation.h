@@ -9,7 +9,11 @@
 #import <Foundation/Foundation.h>
 
 @interface NSString (Validation)
+
 -(BOOL)isValidEmail:(BOOL)laxValidation;
 -(BOOL)isValidEmail;
 -(BOOL)isDigitOfLength:(NSInteger)length;
+-(BOOL)isBlank;
++(BOOL)isValidAlphanumbericChars:(NSString*)textString;
+
 @end

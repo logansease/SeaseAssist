@@ -82,8 +82,8 @@
 
 - (NSString *) uniqueDeviceIdentifier{
     
-    NSString * result = [UIDevice readFromKeychainWithKey:@"UNIQUE_DEVICE_IDENTIFIER"];
-
+    NSString * result = [UIDevice readFromKeychainWithKey:@"UNIQUE_DEVICE_IDENTIFIER" appSpecific:YES];
+    
     if(result)
     {
         return result;
@@ -107,14 +107,14 @@
     NSString *stringToHash = [NSString stringWithFormat:@"%@%@",macAddress,bundleIdentifier];
     result = [stringToHash stringFromMD5];
     
-    [UIDevice write:result toKeychainWithKey:@"UNIQUE_DEVICE_IDENTIFIER"];
+    [UIDevice write:result toKeychainWithKey:@"UNIQUE_DEVICE_IDENTIFIER" appSpecific:YES];
     
     return result;
 }
 
 - (NSString *) uniqueGlobalDeviceIdentifier{
     
-    NSString * result = [UIDevice readFromKeychainWithKey:@"UNIQUE_GLOBAL_DEVICE_IDENTIFIER"];
+    NSString * result = [UIDevice readFromKeychainWithKey:@"UNIQUE_GLOBAL_DEVICE_IDENTIFIER" appSpecific:NO];
     
     if(result)
     {
@@ -136,7 +136,7 @@
     
     result = [macAddress stringFromMD5];
     
-    [UIDevice write:result toKeychainWithKey:@"UNIQUE_GLOBAL_DEVICE_IDENTIFIER"];
+    [UIDevice write:result toKeychainWithKey:@"UNIQUE_GLOBAL_DEVICE_IDENTIFIER" appSpecific:NO];
     
     return result;
 }

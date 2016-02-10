@@ -12,5 +12,5 @@
 -(void)bounceFrom:(float)from to:(float)to;
 -(void)bounceTo:(float)scale;
 -(void)bounce:(BOOL)repeat;
--(void)endBounce;
+-(void)endAnimation;
 @end
