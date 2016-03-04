@@ -27,7 +27,6 @@
 #import "UIImage+Blur.h"
 #import "UIImage+Helpers.h"
 #import "UIImageView+Helpers.h"
-#import "UIImageView+Url.h"
 #import "UILabel+Message.h"
 #import "UIView+Animation.h"
 #import "UIView+MotionEffect.h"
@@ -68,14 +67,18 @@
 #import "UIImage+Cache.h"
 #import "UIView+Search.h"
 
+//v4
 #import "UIImage+FromView.h"
 #import "MailService.h"
 #import "UIDevice+Keychain.h"
 #import "KeychainItemWrapper.h"
-
 #import "ReachabilityTest.h"
-
 #import "NSString+Validation.h"
 #import "UIView+Badge.h"
 #import "UITableView+Reload.h"
+
+//future
+#import "UISegmentedControl+Helpers.h"
+#import "ImagePickerHelper.h"
+
 #endif /* SeaseAssist_h */

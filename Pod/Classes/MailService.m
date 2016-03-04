@@ -63,6 +63,11 @@ static MailService *sharedService = nil;
     [self.mailController setSubject:subject];
     [self.mailController setMessageBody:body isHTML:self.usesHtmlContent];
     
+    if(self.customizer)
+    {
+        [self.customizer customizeController:self.mailController];
+    }
+    
     if(parent)
     {
         if(parent.presentingViewController)

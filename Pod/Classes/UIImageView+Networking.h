@@ -9,5 +9,6 @@
 #import <UIKit/UIKit.h>
 
 @interface UIImageView (Networking)
+-(void)setImageFromUrl:(NSString*)url withDefault:(UIImage*)defaultImage;
 -(void)setImageFromUrl:(NSString*)url withDefault:(UIImage*)defaultImage andRounding:(BOOL)round;
 @end

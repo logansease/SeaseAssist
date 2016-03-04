@@ -13,6 +13,11 @@
 #import "GCNetworkReachability.h"
 
 @implementation UIImageView (Networking)
+-(void)setImageFromUrl:(NSString*)urlString withDefault:(UIImage*)defaultImage
+{
+    [self setImageFromUrl:urlString withDefault:defaultImage andRounding:NO];
+    
+}
 -(void)setImageFromUrl:(NSString*)urlString withDefault:(UIImage*)defaultImage andRounding:(BOOL)round
 {
     self.image = defaultImage;
@@ -53,7 +58,7 @@
         NSMutableURLRequest *request = [[NSMutableURLRequest alloc] initWithURL:[NSURL URLWithString:urlString] cachePolicy:NSURLRequestUseProtocolCachePolicy timeoutInterval:30.0];
         
         //call a URL to get the image Data
-        [NSURLConnection sendAsynchronousRequest:request queue:[NSOperationQueue mainQueue] completionHandler:^(NSURLResponse * _Nullable response, NSData * _Nullable data, NSError * _Nullable connectionError) {
+    [[NSURLSession sharedSession]dataTaskWithRequest:request completionHandler:^(NSData * _Nullable data, NSURLResponse * _Nullable response, NSError * _Nullable error) {
             
             //ensure this view hasn't called a new load URL
             if(self.tag == tag)

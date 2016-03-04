@@ -11,7 +11,6 @@
 
 @protocol MailServiceCustomizer <NSObject>
 
-@optional
 //allows for customization
 -(void)customizeController:(MFMailComposeViewController*)controller;
 @end
@@ -27,6 +26,6 @@
 + (id)sharedService;
 -(void)emailTo:(NSArray*)emails withSubject:(NSString*)subject body:(NSString*)body attachments:(NSArray<MailServiceAttachment*>*)attachments fromVC:(UIViewController*)parent  andCompletion:(void(^)(BOOL success))handler;
 @property(nonatomic,strong)	MFMailComposeViewController * mailController;
-@property(nonatomic,weak)id<MailServiceCustomizer> delegate;
+@property(nonatomic,weak)id<MailServiceCustomizer> customizer;
 @property BOOL usesHtmlContent;
 @end

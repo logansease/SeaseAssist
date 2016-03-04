@@ -22,15 +22,17 @@
     NSString * combinedKey = [NSString stringWithFormat:@"%@.%@",bundleId,key];
     
     KeychainItemWrapper *keychainItem = [[KeychainItemWrapper alloc] initWithIdentifier:combinedKey accessGroup:nil];
-    [keychainItem resetKeychainItem];
-    [keychainItem setObject:value forKey:(__bridge id)(kSecValueData)];
-    NSLog(@"saving item %@", [keychainItem objectForKey:(__bridge id)(kSecValueData)]);
+        [keychainItem resetKeychainItem];
+        keychainItem = [[KeychainItemWrapper alloc] initWithIdentifier:combinedKey accessGroup:nil];
+        [keychainItem setObject:key forKey:(__bridge id)(kSecAttrAccount)];
+        [keychainItem setObject:value forKey:(__bridge id)(kSecValueData)];
+        
+        NSLog(@"saving item %@", [keychainItem objectForKey:(__bridge id)(kSecValueData)]);
     }
     @catch(NSException * e)
     {
         NSLog(@"Error writing to keychain");
     }
-
 }
 +(NSString*)readFromKeychainWithKey:(NSString*)key appSpecific:(BOOL)appSpecific
 {
