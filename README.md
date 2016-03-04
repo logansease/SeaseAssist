@@ -139,6 +139,13 @@ A simple Email interface to open an email view controller from anywhere.
 -(void)emailTo:(NSArray*)emails withSubject:(NSString*)subject body:(NSString*)body attachments:(NSArray<MailServiceAttachment*>*)attachments fromVC:(UIViewController*)parent  andCompletion:(void(^)(BOOL success))handler;
 ```
 
+##Image Picker
+A simple interface to show an image picker
+```
+@interface ImagePickerHelper 
+-(void)selectImageFrom:(UIViewController*)source ofType:(UIImagePickerControllerSourceType)type andCompletion:(void(^)(UIImage* image))handler;
+```
+
 #NETWORKING
 
 ##HTTPRequest
@@ -417,6 +424,14 @@ animating hiding and showing of a view or a group of views
 +(UIColor*)colorWithHex:(NSString*)hex;
 ```
 
+###Segmented Control
+```objective-c
+@interface UISegmentedControl (Helpers)
+-(BOOL)setSelectedSegmentNamed:(NSString*)name;
+-(NSArray*)allTitles;
+-(NSString*)selectedSegementTitle;
+@end
+```
 
 ###
 
