@@ -10,13 +10,12 @@
 
 @implementation UIViewController (Background)
 
--(void)setBackgroundImage:(UIImage*)image withAlpha:(float)alpha
+-(UIImageView*)setBackgroundImage:(UIImage*)image withAlpha:(float)alpha
 {
     if([self.view isKindOfClass:[UITableView class]])
     {
         UITableView * table = (UITableView*)self.view;
-        [table setBackgroundImage:image withAlpha:alpha];
-        return;
+        return [table setBackgroundImage:image withAlpha:alpha];
     }
     
     UIImageView * imageView = [[UIImageView alloc]initWithFrame:self.view.frame];
@@ -40,6 +39,7 @@
                                metrics:nil
                                views:NSDictionaryOfVariableBindings(imageView)]];
     self.view.backgroundColor = [UIColor whiteColor];
+    return imageView;
 }
 
 @end
@@ -47,17 +47,17 @@
 
 @implementation UITableViewController (Background)
 
--(void)setBackgroundImage:(UIImage*)image withAlpha:(float)alpha
+-(UIImageView*)setBackgroundImage:(UIImage*)image withAlpha:(float)alpha
 {
     
-    [self.tableView setBackgroundImage:image withAlpha:alpha];
+    return [self.tableView setBackgroundImage:image withAlpha:alpha];
 }
 
 @end
 
 @implementation UITableView (Background)
 
--(void)setBackgroundImage:(UIImage*)image withAlpha:(float)alpha
+-(UIImageView*)setBackgroundImage:(UIImage*)image withAlpha:(float)alpha
 {
     
     UIImageView * imageView = [[UIImageView alloc]initWithFrame:self.frame];
@@ -67,9 +67,10 @@
     imageView.contentMode = UIViewContentModeScaleToFill;
     
     self.backgroundView = imageView;
+    return imageView;
 }
 
--(void)setupTableHeader:(UIImage*)image
+-(UIImageView*)setupTableHeader:(UIImage*)image
 {
     // create crowdflik logo
     UIImageView * logoView = [[UIImageView alloc] initWithFrame:CGRectMake(0, 0, image.size.width, image.size.height)];
@@ -79,6 +80,7 @@
     //self.cachedImageViewSize = self.imageView.frame;
     self.tableHeaderView =  logoView;
     [self setContentInset:UIEdgeInsetsMake(-image.size.height, 0, 0, 0)];
+    return logoView;
     
 }
 

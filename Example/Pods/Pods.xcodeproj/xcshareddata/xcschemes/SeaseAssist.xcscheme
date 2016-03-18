@@ -14,7 +14,7 @@
             buildForArchiving = "YES">
             <BuildableReference
                BuildableIdentifier = 'primary'
-               BlueprintIdentifier = 'D56F454A5CD54DB1F84F27FB'
+               BlueprintIdentifier = '7F9E4AC0A087972E94414DB5'
                BlueprintName = 'SeaseAssist'
                ReferencedContainer = 'container:Pods.xcodeproj'
                BuildableName = 'SeaseAssist.framework'>

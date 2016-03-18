@@ -9,16 +9,16 @@
 #import <UIKit/UIKit.h>
 #define kViewBackgroundImageTag 90123
 @interface UIViewController (Background)
--(void)setBackgroundImage:(UIImage*)image withAlpha:(float)alpha;
+-(UIImageView*)setBackgroundImage:(UIImage*)image withAlpha:(float)alpha;
 @end
 
 
 @interface UITableViewController (Background)
--(void)setBackgroundImage:(UIImage*)image withAlpha:(float)alpha;
+-(UIImageView*)setBackgroundImage:(UIImage*)image withAlpha:(float)alpha;
 @end
 
 
 @interface UITableView (Background)
--(void)setBackgroundImage:(UIImage*)image withAlpha:(float)alpha;
--(void)setupTableHeader:(UIImage*)image;
+-(UIImageView*)setBackgroundImage:(UIImage*)image withAlpha:(float)alpha;
+-(UIImageView*)setupTableHeader:(UIImage*)image;
 @end
