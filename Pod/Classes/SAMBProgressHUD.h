@@ -463,7 +463,7 @@ typedef void (^SAMBProgressHUDCompletionBlock)();
 /**
  * A progress view for showing definite progress by filling up a circle (pie chart).
  */
-@interface MBRoundProgressView : UIView
+@interface SAMBRoundProgressView : UIView
 
 /**
  * Progress (0.0 to 1.0)
@@ -493,7 +493,7 @@ typedef void (^SAMBProgressHUDCompletionBlock)();
 /**
  * A flat bar progress view.
  */
-@interface MBBarProgressView : UIView
+@interface SAMBBarProgressView : UIView
 
 /**
  * Progress (0.0 to 1.0)

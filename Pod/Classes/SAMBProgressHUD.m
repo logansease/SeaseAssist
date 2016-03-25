@@ -476,7 +476,7 @@ static const CGFloat kDetailsLabelFontSize = 12.f;
 - (void)updateIndicators {
     
     BOOL isActivityIndicator = [indicator isKindOfClass:[UIActivityIndicatorView class]];
-    BOOL isRoundIndicator = [indicator isKindOfClass:[MBRoundProgressView class]];
+    BOOL isRoundIndicator = [indicator isKindOfClass:[SAMBRoundProgressView class]];
     
     if (mode == SAMBProgressHUDModeIndeterminate) {
         if (!isActivityIndicator) {
@@ -494,21 +494,21 @@ static const CGFloat kDetailsLabelFontSize = 12.f;
     else if (mode == SAMBProgressHUDModeDeterminateHorizontalBar) {
         // Update to bar determinate indicator
         [indicator removeFromSuperview];
-        self.indicator = MB_AUTORELEASE([[MBBarProgressView alloc] init]);
+        self.indicator = MB_AUTORELEASE([[SAMBBarProgressView alloc] init]);
         [self addSubview:indicator];
     }
     else if (mode == SAMBProgressHUDModeDeterminate || mode == SAMBProgressHUDModeAnnularDeterminate) {
         if (!isRoundIndicator) {
             // Update to determinante indicator
             [indicator removeFromSuperview];
-            self.indicator = MB_AUTORELEASE([[MBRoundProgressView alloc] init]);
+            self.indicator = MB_AUTORELEASE([[SAMBRoundProgressView alloc] init]);
             [self addSubview:indicator];
         }
         if (mode == SAMBProgressHUDModeAnnularDeterminate) {
-            [(MBRoundProgressView *)indicator setAnnular:YES];
+            [(SAMBRoundProgressView *)indicator setAnnular:YES];
         }
-        [(MBRoundProgressView *)indicator setProgressTintColor:self.activityIndicatorColor];
-        [(MBRoundProgressView *)indicator setBackgroundTintColor:[self.activityIndicatorColor colorWithAlphaComponent:0.1f]];
+        [(SAMBRoundProgressView *)indicator setProgressTintColor:self.activityIndicatorColor];
+        [(SAMBRoundProgressView *)indicator setBackgroundTintColor:[self.activityIndicatorColor colorWithAlphaComponent:0.1f]];
     }
     else if (mode == SAMBProgressHUDModeCustomView && customView != indicator) {
         // Update custom view indicator
@@ -784,7 +784,7 @@ static const CGFloat kDetailsLabelFontSize = 12.f;
 @end
 
 
-@implementation MBRoundProgressView
+@implementation SAMBRoundProgressView
 
 #pragma mark - Lifecycle
 
@@ -890,7 +890,7 @@ static const CGFloat kDetailsLabelFontSize = 12.f;
 @end
 
 
-@implementation MBBarProgressView
+@implementation SAMBBarProgressView
 
 #pragma mark - Lifecycle
 
