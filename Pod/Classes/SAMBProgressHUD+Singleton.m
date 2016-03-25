@@ -1,5 +1,5 @@
 //
-//  MBProgressHUD+Singleton.m
+//  SAMBProgressHUD+Singleton.m
 //  Pods
 //
 //  Created by Logan Sease on 12/13/15.
@@ -7,19 +7,19 @@
 //
 
 #import <UIKit/UIKit.h>
-#import "MBProgressHUD+Singleton.h"
+#import "SAMBProgressHUD+Singleton.h"
 #import "NSThread+Helpers.h"
 
-@implementation MBProgressHUD (Singleton)
+@implementation SAMBProgressHUD (Singleton)
 
 
-static MBProgressHUD * commonHUD = nil;
+static SAMBProgressHUD * commonHUD = nil;
 
 +(id)commonHUD
 {
     if(commonHUD == nil)
     {
-        [MBProgressHUD setupCommonHUDWithView:nil];
+        [SAMBProgressHUD setupCommonHUDWithView:nil];
     }
     
     return commonHUD;
@@ -28,7 +28,7 @@ static MBProgressHUD * commonHUD = nil;
 +(void)showWithTitle:(NSString*)title
 {
     [NSThread mainThread:^{
-        MBProgressHUD * hud = [self commonHUD];
+        SAMBProgressHUD * hud = [self commonHUD];
         hud.labelText = title;
         hud.labelFont = [UIFont systemFontOfSize:20];
 #if TARGET_OS_TV
@@ -43,7 +43,7 @@ static MBProgressHUD * commonHUD = nil;
 +(void)hide
 {
     [NSThread mainThread:^{
-    MBProgressHUD * hud = [self commonHUD];
+    SAMBProgressHUD * hud = [self commonHUD];
     [hud hide:YES];
     }];
 }
@@ -67,7 +67,7 @@ static MBProgressHUD * commonHUD = nil;
     
     if(commonHUD == nil)
     {
-        commonHUD = [[MBProgressHUD alloc]initWithView:view];
+        commonHUD = [[SAMBProgressHUD alloc]initWithView:view];
     }
     [view addSubview:commonHUD];
     [view bringSubviewToFront:commonHUD];

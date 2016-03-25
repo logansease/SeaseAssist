@@ -1,14 +1,14 @@
 //
-//  MBProgressHUD+Singleton.h
+//  SAMBProgressHUD+Singleton.h
 //  Pods
 //
 //  Created by Logan Sease on 12/13/15.
 //
 //
 
-#import "MBProgressHUD.h"
+#import "SAMBProgressHUD.h"
 
-@interface MBProgressHUD (Singleton)
+@interface SAMBProgressHUD (Singleton)
 +(id)commonHUD;
 +(void)showWithTitle:(NSString*)title;
 +(void)hide;

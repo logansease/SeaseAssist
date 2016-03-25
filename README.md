@@ -285,8 +285,8 @@ Read and write to the keychain.
 
 ##Alerts
 
-###MBProgressHUD+Singleton
-An extension to MBProgressHUD to show a loading dialog singleton without needing to add it to your view or set it up.
+###SAMBProgressHUD+Singleton
+An extension to SAMBProgressHUD to show a loading dialog singleton without needing to add it to your view or set it up.
 ```objective-c
 +(void)showWithTitle:(NSString*)title;
 +(void)hide;

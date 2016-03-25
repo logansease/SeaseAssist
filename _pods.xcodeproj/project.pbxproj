@@ -22,7 +22,7 @@
 		155D0308FF27552E9723D27481D267B2 /* UIAlertController+Helpers.h in Headers */ = {isa = PBXBuildFile; fileRef = C7C256CEDDA7505F2C99E5893A43DB5C /* UIAlertController+Helpers.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		176974052B302F9C9E5FBFFA89CD7F29 /* HTTPRequest.m in Sources */ = {isa = PBXBuildFile; fileRef = BED9D8E9A1A41DF24B82E5412CD6A778 /* HTTPRequest.m */; };
 		18A88AF463A89DE638DBB90524ABAA2F /* GCNetworkReachability.m in Sources */ = {isa = PBXBuildFile; fileRef = DC66E92D6AFDE9445E1555F4204016C2 /* GCNetworkReachability.m */; };
-		1AF98019E071AC597D898FF046B0A68A /* SAMBProgressHUD+Singleton.h in Headers */ = {isa = PBXBuildFile; fileRef = 45480DE059830A2A365A04B6C611EE17 /* SAMBProgressHUD+Singleton.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		1AF98019E071AC597D898FF046B0A68A /* MBProgressHUD+Singleton.h in Headers */ = {isa = PBXBuildFile; fileRef = 45480DE059830A2A365A04B6C611EE17 /* MBProgressHUD+Singleton.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		1BEE516FB2FB7BECDFC184F82A8175CC /* UIView+KeyboardHelpers.h in Headers */ = {isa = PBXBuildFile; fileRef = 8DB92CFA57B6498ACF3A1472DD264F3A /* UIView+KeyboardHelpers.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		1EA6033100E9833E3EEAEDBE40BF767E /* Pods-SeaseAssist_Tests-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 94F0717FD2CCF89466BB4DC3B0925586 /* Pods-SeaseAssist_Tests-dummy.m */; };
 		1FBF3B8F7D56DDCCF68D85656207F4D2 /* SoundService.h in Headers */ = {isa = PBXBuildFile; fileRef = 6B974A5EED87B5D34EC8BDA2840410B0 /* SoundService.h */; settings = {ATTRIBUTES = (Public, ); }; };
@@ -65,7 +65,7 @@
 		52B8FCD2D184F1A4D70CCCF6E666EC5F /* UIViewController+Blur.h in Headers */ = {isa = PBXBuildFile; fileRef = 0E1BE27766A8B57A2BDAE9C4EBF17DC5 /* UIViewController+Blur.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		56B5A177488BFE73FFE9C751275B931B /* UIDevice+Version.m in Sources */ = {isa = PBXBuildFile; fileRef = 335141AE7F68F865B9E053AB74BD98A0 /* UIDevice+Version.m */; };
 		5AABABEDA62F4A95E365ACE92DABFCAC /* RoundedView.m in Sources */ = {isa = PBXBuildFile; fileRef = 183408FA4D783C10A9F3C3D2C0C6FDF8 /* RoundedView.m */; };
-		5AF77A026509E3A4578EE9BE3559DFD1 /* SAMBProgressHUD+Singleton.m in Sources */ = {isa = PBXBuildFile; fileRef = C42571CE70F43315E7C422E7653CA81D /* SAMBProgressHUD+Singleton.m */; };
+		5AF77A026509E3A4578EE9BE3559DFD1 /* MBProgressHUD+Singleton.m in Sources */ = {isa = PBXBuildFile; fileRef = C42571CE70F43315E7C422E7653CA81D /* MBProgressHUD+Singleton.m */; };
 		5B99A37749CAF8C28551A927EAE3B6AC /* UIView+Search.h in Headers */ = {isa = PBXBuildFile; fileRef = 17967E9F0E74348171AF75196065E8D8 /* UIView+Search.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		60BBC907E3B08CC226BEE86504002239 /* ValuePickerTextField.m in Sources */ = {isa = PBXBuildFile; fileRef = 43949446C13E26B41044433D145A012C /* ValuePickerTextField.m */; };
 		62303BD3E32AAEC2BC3A671671F90355 /* UIDevice+Keychain.m in Sources */ = {isa = PBXBuildFile; fileRef = 005691DACA6C5FA4BA2CD5EA1E27628E /* UIDevice+Keychain.m */; };
@@ -86,7 +86,7 @@
 		847F4313BFFD29CCADED530EBDAD69D7 /* UITextField+Toolbar.h in Headers */ = {isa = PBXBuildFile; fileRef = 04A179467F7D85CF1C89D0E61A2EB3DD /* UITextField+Toolbar.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		87D1E1E7DC07B940793B5AB1A0D68588 /* CleanButton.h in Headers */ = {isa = PBXBuildFile; fileRef = 373AB411DA22BB0BAF6F985B19E4801E /* CleanButton.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		8901DA28C9E6778FF4AC8079D9C19F6D /* RoundedView.h in Headers */ = {isa = PBXBuildFile; fileRef = E841EE27B5B01A80F4FA26229A332690 /* RoundedView.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		8A677B22FD573324B8C1FDFF7840F3E1 /* SAMBProgressHUD.m in Sources */ = {isa = PBXBuildFile; fileRef = 491D0284B5FE52BD2A7EB14F447818B7 /* SAMBProgressHUD.m */; };
+		8A677B22FD573324B8C1FDFF7840F3E1 /* MBProgressHUD.m in Sources */ = {isa = PBXBuildFile; fileRef = 491D0284B5FE52BD2A7EB14F447818B7 /* MBProgressHUD.m */; };
 		8A9D28309FD3D9EEA0A7AFD07A92C4E4 /* GlossyButton.m in Sources */ = {isa = PBXBuildFile; fileRef = 5E275927166BC961D31768DD3182BE27 /* GlossyButton.m */; };
 		8DA8B5B15AD01E529741E65C4E7EB8A9 /* DatePickerTextField.h in Headers */ = {isa = PBXBuildFile; fileRef = 87791A96739FE0E56AFF2EA11041516B /* DatePickerTextField.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		8EAE7C4761472E09540A0198A56C9147 /* UIView+KeyboardHelpers.m in Sources */ = {isa = PBXBuildFile; fileRef = 34B9A78388EF8C458D6CC3D03C75D90C /* UIView+KeyboardHelpers.m */; };
@@ -123,7 +123,7 @@
 		BCF545EE8C2084BD77E324B6C491804B /* KeychainItemWrapper.h in Headers */ = {isa = PBXBuildFile; fileRef = D328BDBE9B5E8351101E01AF4766B809 /* KeychainItemWrapper.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		BD76E0F758754CAC176FE65603FF2150 /* NSDate+Helpers.h in Headers */ = {isa = PBXBuildFile; fileRef = BFE84E3D595476E03C825065834F747D /* NSDate+Helpers.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		BED140643C9E2BCF052CA74E6A183E4F /* NSArray+Rearrange.m in Sources */ = {isa = PBXBuildFile; fileRef = 96D3727EA2EB65E6B536CDEB2E041FCE /* NSArray+Rearrange.m */; };
-		BFCC6D72B0706D966AD240E30C48F6CC /* SAMBProgressHUD.h in Headers */ = {isa = PBXBuildFile; fileRef = 734DA127C48D372157142E184063E408 /* SAMBProgressHUD.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		BFCC6D72B0706D966AD240E30C48F6CC /* MBProgressHUD.h in Headers */ = {isa = PBXBuildFile; fileRef = 734DA127C48D372157142E184063E408 /* MBProgressHUD.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		C27DE7968C4E996B689196835C91E9FD /* UIView+Animation.m in Sources */ = {isa = PBXBuildFile; fileRef = C9A42C3947E6B0527E342354DD27B407 /* UIView+Animation.m */; };
 		C57416EC6FF88654DEFC68EF9F465445 /* NSThread+Helpers.h in Headers */ = {isa = PBXBuildFile; fileRef = B9A2FC975CB28C4E31E636E0B1A69340 /* NSThread+Helpers.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		C65E0AB3DBE26E966398B3BEF5FB9125 /* NSDictionary+Nulls.m in Sources */ = {isa = PBXBuildFile; fileRef = D3D0F6E8D137E4A553A39FDA67F7FB1A /* NSDictionary+Nulls.m */; };
@@ -232,12 +232,12 @@
 		4230326C8C98769F7BDB7F1FF699C7AE /* ValuePickerTextField.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = ValuePickerTextField.h; sourceTree = "<group>"; };
 		4328156F95F612D17A0F4A68293AFC0A /* UITableView+Reload.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "UITableView+Reload.m"; sourceTree = "<group>"; };
 		43949446C13E26B41044433D145A012C /* ValuePickerTextField.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = ValuePickerTextField.m; sourceTree = "<group>"; };
-		45480DE059830A2A365A04B6C611EE17 /* SAMBProgressHUD+Singleton.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "SAMBProgressHUD+Singleton.h"; sourceTree = "<group>"; };
+		45480DE059830A2A365A04B6C611EE17 /* MBProgressHUD+Singleton.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "MBProgressHUD+Singleton.h"; sourceTree = "<group>"; };
 		454A09090F169973391BAC8DAE0B0558 /* UIView+AnimateShow.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "UIView+AnimateShow.m"; sourceTree = "<group>"; };
 		4671382552B510012EB15D12577E2E5B /* NSString+Helpers.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "NSString+Helpers.m"; sourceTree = "<group>"; };
 		47213366E3C3A4F7D6534262FF4B278D /* NSThread+Helpers.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "NSThread+Helpers.m"; sourceTree = "<group>"; };
 		47A36260005857A784D4C3B971583F59 /* SeaseAssist.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = SeaseAssist.xcconfig; sourceTree = "<group>"; };
-		491D0284B5FE52BD2A7EB14F447818B7 /* SAMBProgressHUD.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = SAMBProgressHUD.m; sourceTree = "<group>"; };
+		491D0284B5FE52BD2A7EB14F447818B7 /* MBProgressHUD.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = MBProgressHUD.m; sourceTree = "<group>"; };
 		49620AF4140CBA536CED7DA8FC50626A /* UIView+Blur.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "UIView+Blur.m"; sourceTree = "<group>"; };
 		49A16D4DF7F4751530DFAD8084BF9CCB /* MailService.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = MailService.m; sourceTree = "<group>"; };
 		4C24A2E1397617BC93CEA8B99FE490E0 /* UIImage+FromView.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "UIImage+FromView.m"; sourceTree = "<group>"; };
@@ -259,7 +259,7 @@
 		70B5CA211C1F8F337F0A11257DC942C1 /* NSStringData+Crypt.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "NSStringData+Crypt.m"; sourceTree = "<group>"; };
 		710268ABE00873EFC1E960644C06CB00 /* CircleButton.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = CircleButton.h; sourceTree = "<group>"; };
 		71A295B977D776151E4958D906C591EE /* Pods-SeaseAssist_Example-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-SeaseAssist_Example-dummy.m"; sourceTree = "<group>"; };
-		734DA127C48D372157142E184063E408 /* SAMBProgressHUD.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = SAMBProgressHUD.h; sourceTree = "<group>"; };
+		734DA127C48D372157142E184063E408 /* MBProgressHUD.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = MBProgressHUD.h; sourceTree = "<group>"; };
 		73C0E549B17EC9BD093196260DF01A44 /* Pods-SeaseAssist_Example.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-SeaseAssist_Example.debug.xcconfig"; sourceTree = "<group>"; };
 		74F9DC600C5ABFCD2E0CB00C53ED3BC0 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS9.0.sdk/System/Library/Frameworks/CoreGraphics.framework; sourceTree = DEVELOPER_DIR; };
 		75703666F1415539517251F46BF23001 /* UISegmentedControl+Helpers.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "UISegmentedControl+Helpers.m"; sourceTree = "<group>"; };
@@ -310,7 +310,7 @@
 		C1F6F1C98E9E8242DA7699E287F75D90 /* Pods-SeaseAssist_Tests-resources.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-SeaseAssist_Tests-resources.sh"; sourceTree = "<group>"; };
 		C322AFDD2733DF508BD38B32D00BD061 /* UIImage+Grayscale.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "UIImage+Grayscale.h"; sourceTree = "<group>"; };
 		C35485204939C5374E977D24548F384B /* SeaseAssist-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "SeaseAssist-umbrella.h"; sourceTree = "<group>"; };
-		C42571CE70F43315E7C422E7653CA81D /* SAMBProgressHUD+Singleton.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "SAMBProgressHUD+Singleton.m"; sourceTree = "<group>"; };
+		C42571CE70F43315E7C422E7653CA81D /* MBProgressHUD+Singleton.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "MBProgressHUD+Singleton.m"; sourceTree = "<group>"; };
 		C46257C3C5773AA636BBF8398A313F46 /* UIButton+Helpers.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "UIButton+Helpers.h"; sourceTree = "<group>"; };
 		C7C256CEDDA7505F2C99E5893A43DB5C /* UIAlertController+Helpers.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "UIAlertController+Helpers.h"; sourceTree = "<group>"; };
 		C9A42C3947E6B0527E342354DD27B407 /* UIView+Animation.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "UIView+Animation.m"; sourceTree = "<group>"; };
@@ -496,10 +496,10 @@
 				2CE773B61CEC1DF88194052EA86BD747 /* KeychainItemWrapper.m */,
 				029E48F87B2FC003D25D1D4AD5E378F1 /* MailService.h */,
 				49A16D4DF7F4751530DFAD8084BF9CCB /* MailService.m */,
-				734DA127C48D372157142E184063E408 /* SAMBProgressHUD.h */,
-				491D0284B5FE52BD2A7EB14F447818B7 /* SAMBProgressHUD.m */,
-				45480DE059830A2A365A04B6C611EE17 /* SAMBProgressHUD+Singleton.h */,
-				C42571CE70F43315E7C422E7653CA81D /* SAMBProgressHUD+Singleton.m */,
+				734DA127C48D372157142E184063E408 /* MBProgressHUD.h */,
+				491D0284B5FE52BD2A7EB14F447818B7 /* MBProgressHUD.m */,
+				45480DE059830A2A365A04B6C611EE17 /* MBProgressHUD+Singleton.h */,
+				C42571CE70F43315E7C422E7653CA81D /* MBProgressHUD+Singleton.m */,
 				2697D53D095F29F78E8444B6737DB208 /* NSArray+Rearrange.h */,
 				96D3727EA2EB65E6B536CDEB2E041FCE /* NSArray+Rearrange.m */,
 				DD0DE82A9039A9255B8AB045AF498336 /* NSArrayDictionary+Json.h */,
@@ -691,8 +691,8 @@
 				15593ED251B52CA41F8C98A567C52BA9 /* ImagePickerHelper.h in Headers */,
 				BCF545EE8C2084BD77E324B6C491804B /* KeychainItemWrapper.h in Headers */,
 				D40631FB22B95B9683A57635B3CC23A7 /* MailService.h in Headers */,
-				1AF98019E071AC597D898FF046B0A68A /* SAMBProgressHUD+Singleton.h in Headers */,
-				BFCC6D72B0706D966AD240E30C48F6CC /* SAMBProgressHUD.h in Headers */,
+				1AF98019E071AC597D898FF046B0A68A /* MBProgressHUD+Singleton.h in Headers */,
+				BFCC6D72B0706D966AD240E30C48F6CC /* MBProgressHUD.h in Headers */,
 				B6058817D9CD026EC08B60705FCC7EA5 /* NSArray+Rearrange.h in Headers */,
 				4991FEF88991E9D68930C4100DF81746 /* NSArrayDictionary+Json.h in Headers */,
 				BD76E0F758754CAC176FE65603FF2150 /* NSDate+Helpers.h in Headers */,
@@ -912,8 +912,8 @@
 				2394E8829828262EB555A81792E6F2EA /* ImagePickerHelper.m in Sources */,
 				26570940694586F269A6A25787A27A54 /* KeychainItemWrapper.m in Sources */,
 				D399FDCB79276AD4C51DE5D35CD8F353 /* MailService.m in Sources */,
-				5AF77A026509E3A4578EE9BE3559DFD1 /* SAMBProgressHUD+Singleton.m in Sources */,
-				8A677B22FD573324B8C1FDFF7840F3E1 /* SAMBProgressHUD.m in Sources */,
+				5AF77A026509E3A4578EE9BE3559DFD1 /* MBProgressHUD+Singleton.m in Sources */,
+				8A677B22FD573324B8C1FDFF7840F3E1 /* MBProgressHUD.m in Sources */,
 				BED140643C9E2BCF052CA74E6A183E4F /* NSArray+Rearrange.m in Sources */,
 				98A9CE48675FDD3A9F0D2F455C5D2290 /* NSArrayDictionary+Json.m in Sources */,
 				26E87B0A6D7A7EC2A265D1294E574AEB /* NSDate+Helpers.m in Sources */,

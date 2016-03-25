@@ -11,7 +11,7 @@
 
 #import "EventCounterService.h"
 #import "HTTPRequest.h"
-#import "MBProgressHUD+Singleton.h"
+#import "SAMBProgressHUD+Singleton.h"
 #import "NSArrayDictionary+Json.h"
 #import "NSDate+Helpers.h"
 #import "NSMutableArray+shuffling.h"

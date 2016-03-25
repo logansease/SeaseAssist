@@ -146,8 +146,8 @@
     }
     else if(indexPath.row == 4)
     {
-        [MBProgressHUD showWithTitle:@"Testing!"];
-        MBProgressHUD * hud = [MBProgressHUD commonHUD];
+        [SAMBProgressHUD showWithTitle:@"Testing!"];
+        SAMBProgressHUD * hud = [SAMBProgressHUD commonHUD];
         [hud performSelector:@selector(hide:) withObject:[NSNumber numberWithBool:YES] afterDelay:3];
     }
     else if(indexPath.row ==5)

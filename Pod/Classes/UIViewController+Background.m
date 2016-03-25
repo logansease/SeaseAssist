@@ -25,6 +25,7 @@
     imageView.tag = kViewBackgroundImageTag;
     [self.view addSubview:imageView];
     [self.view sendSubviewToBack:imageView];
+    self.view.clipsToBounds = YES;
     
     //add constraints to 
     [imageView setTranslatesAutoresizingMaskIntoConstraints:NO];
