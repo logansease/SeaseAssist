@@ -12,7 +12,13 @@
 
 @implementation UIAlertController (TextEntry)
 
-+(void)showTextEntryDialogWithTitle:(NSString*)title andMessage:(NSString*)message andPlaceHolder:(NSString*)holder from:(UIViewController*)controller completionHandler:(void (^)(NSString* text))handler
++(UIAlertController*)showTextEntryDialogWithTitle:(NSString*)title andMessage:(NSString*)message andPlaceHolder:(NSString*)holder from:(UIViewController*)controller completionHandler:(void (^)(NSString* text))handler
+{
+    return [self showTextEntryDialogWithTitle:title andMessage:message andPlaceHolder:holder configuration:nil from:controller completionHandler:handler];
+}
+
++(UIAlertController*)showTextEntryDialogWithTitle:(NSString*)title andMessage:(NSString*)message andPlaceHolder:(NSString*)holder
+                                    configuration:(void (^)(UITextField *textField))configurationHandler from:(UIViewController*)controller completionHandler:(void (^)(NSString* text))handler
 {
     if(!controller)
     {
@@ -21,7 +27,7 @@
     
     if(!controller)
     {
-        return;
+        return nil;
     }
     
     UIAlertController * alert = [UIAlertController alertControllerWithTitle:title message:message preferredStyle:UIAlertControllerStyleAlert];
@@ -36,12 +42,21 @@
         handler(nil);
     }]];
     
-    [alert addTextFieldWithConfigurationHandler:^(UITextField * _Nonnull textField) {
-        textField.placeholder = holder;
-        textField.autocapitalizationType = UITextAutocapitalizationTypeSentences;
-    }];
+    if(configurationHandler == nil)
+    {
+        [alert addTextFieldWithConfigurationHandler:^(UITextField * _Nonnull textField) {
+            textField.placeholder = holder;
+            textField.autocapitalizationType = UITextAutocapitalizationTypeSentences;
+        }];
+    }
+    else{
+        [alert addTextFieldWithConfigurationHandler:configurationHandler];
+    }
+    
     
     [UIViewController present:alert on:controller];
+    
+    return alert;
 }
 
 @end

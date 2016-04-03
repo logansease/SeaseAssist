@@ -10,6 +10,8 @@
 
 @interface UIAlertController (TextEntry)
 
-+(void)showTextEntryDialogWithTitle:(NSString*)title andMessage:(NSString*)message andPlaceHolder:(NSString*)holder from:(UIViewController*)controller completionHandler:(void (^)(NSString* text))handler;
++(UIAlertController*)showTextEntryDialogWithTitle:(NSString*)title andMessage:(NSString*)message andPlaceHolder:(NSString*)holder from:(UIViewController*)controller completionHandler:(void (^)(NSString* text))handler;
+
++(UIAlertController*)showTextEntryDialogWithTitle:(NSString*)title andMessage:(NSString*)message andPlaceHolder:(NSString*)holder configuration:(void(^)(UITextField *textField))configurationHandler from:(UIViewController*)controller completionHandler:(void (^)(NSString* text))handler;
 
 @end

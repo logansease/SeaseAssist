@@ -10,6 +10,7 @@
 #import "UIViewController+Top.h"
 #import "NSThread+Helpers.h"
 #import "UIViewController+Presentation.h"
+#import "UIAlertController+Helpers.h"
 
 @interface ImagePickerHelper()
 @property (nonatomic, copy) void (^completionHandler)(UIImage* result);
@@ -31,20 +32,38 @@ static ImagePickerHelper *sharedService = nil;
     return sharedService;
 }
 
--(void)selectImageFrom:(UIViewController*)source ofType:(UIImagePickerControllerSourceType)type andCompletion:(void(^)(UIImage* image))handler
+-(void)selectImageFrom:(UIViewController*)source withCompletion:(void(^)(UIImage* image))handler
+{
+    [UIAlertController showDialogWithTitle:@"Select Source" andMessage:nil from:source andActions:@[@"Camera", @"Camera Roll", @"Cancel"] completionHandler:^(NSInteger selected) {
+        if(selected == 0)
+        {
+            [self selectImageFrom:source ofType:UIImagePickerControllerSourceTypeCamera andCompletion:handler];
+        }
+        else if(selected == 1)
+        {
+            [self selectImageFrom:source ofType:UIImagePickerControllerSourceTypePhotoLibrary andCompletion:handler];
+        }
+        else{
+            handler(nil);
+        }
+    }];
+}
+
+-(UIImagePickerController*)selectImageFrom:(UIViewController*)source ofType:(UIImagePickerControllerSourceType)type andCompletion:(void(^)(UIImage* image))handler
 {
     if(![UIImagePickerController isSourceTypeAvailable:type])
     {
         handler(nil);
-        return;
+        return nil;
     }
- 
+    
     self.completionHandler = handler;
     
     UIImagePickerController *imagePickerController = [[UIImagePickerController alloc] init];
     imagePickerController.modalPresentationStyle = UIModalPresentationCurrentContext;
     imagePickerController.delegate = self;
     imagePickerController.sourceType = type;
+    
     self.imagePickerController = imagePickerController;
     
     if(type == UIImagePickerControllerSourceTypeCamera)
@@ -58,6 +77,8 @@ static ImagePickerHelper *sharedService = nil;
     }
     
     [UIViewController present:imagePickerController on:source];
+    
+    return imagePickerController;
 }
 
 

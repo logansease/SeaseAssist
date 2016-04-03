@@ -8,12 +8,6 @@
 
 #import <Foundation/Foundation.h>
 
-typedef enum ImagePickerTypes : NSUInteger {
-    kPickerTypesCameraRoll,
-    kPickerTypesImage,
-    kPickerTypesAll
-} ImagePickerType;
-
 @protocol ImagePickerCustomizer <NSObject>
 //allows for customization
 -(void)customizeImageController:(UIImagePickerController*)controller;
@@ -22,7 +16,8 @@ typedef enum ImagePickerTypes : NSUInteger {
 @interface ImagePickerHelper : NSObject<UIImagePickerControllerDelegate,UINavigationControllerDelegate>
 
 + (id)sharedInstance;
--(void)selectImageFrom:(UIViewController*)source ofType:(UIImagePickerControllerSourceType)type andCompletion:(void(^)(UIImage* image))handler;
+-(UIImagePickerController*)selectImageFrom:(UIViewController*)source ofType:(UIImagePickerControllerSourceType)type andCompletion:(void(^)(UIImage* image))handler;
+-(void)selectImageFrom:(UIViewController*)source withCompletion:(void(^)(UIImage* image))handler;
 @property(nonatomic,weak)id<ImagePickerCustomizer> customizer;
 
 @end
