@@ -31,7 +31,7 @@
 
 -(void)didStartEditing:(NSNotification *) notification
 {
-    if(self.currentValue)
+    if(self.currentValue.length > 0)
     {
         NSInteger index = [self.values indexOfObject:self.currentValue];
         if(index != NSNotFound)
