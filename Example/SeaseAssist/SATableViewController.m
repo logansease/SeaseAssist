@@ -111,6 +111,7 @@
         ValuePickerTextField * field = [cell viewWithTag:1];
         field.values = @[@"Select 1", @"2"];
         [field addToolbarWithLeftButton:@"LeftAction" withSelector:@selector(left) andRightButton:@"right" withSelector:@selector(right) andTarget:self];
+        field.currentValue = @"2";
     }
     else if(indexPath.row == 10)
     {
@@ -126,19 +127,19 @@
     
     if(indexPath.row == 0)
     {
-        [UIAlertView showWithTitle:@"That Was Easy" andMessage:@"A 1 Liner for a popup. how cool!"];
+        [UIAlertController  showAlertWithTitle:@"That Was Easy" andMessage:@"A 1 Liner for a popup. how cool!" from:self];
     }
     else if(indexPath.row == 1)
     {
         //note you don't even need to pass in a from ViewController... it will figure it out on its own!
         [UIAlertController showDialogWithTitle:@"So simple" andMessage:@"We can even get an alert controller with 1 line!" from:nil andActions:@[@"I love it", @"I Hate it", @"Whatever"] completionHandler:^(NSInteger selected) {
-            [UIAlertView showWithTitle:@"You Pressed" andMessage:[NSString stringWithFormat:@"%li",selected]];
+            [UIAlertController showAlertWithTitle:@"You Pressed" andMessage:[NSString stringWithFormat:@"%li",selected] from:self];
         }];
     }
     else if(indexPath.row == 2)
     {
         UIViewController * top = [UIViewController topViewController];
-        [UIAlertView showWithTitle:@"Found the top" andMessage:[NSString stringWithFormat:@"Top VC is a %@",[top class]]];
+        [UIAlertController showAlertWithTitle:@"Found the top" andMessage:[NSString stringWithFormat:@"Top VC is a %@",[top class]] from:self];
     }
     else if(indexPath.row == 3)
     {
@@ -161,7 +162,7 @@
     else if(indexPath.row == 7)
     {
         NSString * status = [ReachabilityTest connected] ? @"Connected" : @"No Connection";
-        [UIAlertView showWithTitle:@"Network Status" andMessage:status];
+        [UIAlertController showAlertWithTitle:@"Network Status" andMessage:status from:self];
     }
 }
 
