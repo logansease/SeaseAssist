@@ -8,8 +8,8 @@
 
 Pod::Spec.new do |s|
   s.name             = "SeaseAssist"
-  s.version          = "0.0.20"
-  s.summary          = "A Library of Awesome Helper classes designed to help you work quickly and effeciently during iOS Development."
+  s.version          = "0.0.21"
+  s.summary          = "A Library of Awesome Helper classes and extensions designed to help you work quickly and effeciently during iOS Development."
 
 # This description is used to generate tags and improve search results.
 #   * Think: What does it do? Why did you write it? What is the focus?

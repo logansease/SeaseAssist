@@ -75,10 +75,9 @@
     {
         self.currentIndex = row;
         self.currentValue = self.values[row];
+        self.text = self.currentValue;
         
         [self.valueDelegate valuePickerTextField:self changed:self.currentIndex withValue:self.currentValue];
-        
-        self.text = self.currentValue;
     }
 
 }
