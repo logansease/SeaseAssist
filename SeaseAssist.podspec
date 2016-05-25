@@ -8,7 +8,7 @@
 
 Pod::Spec.new do |s|
   s.name             = "SeaseAssist"
-  s.version          = "0.0.21"
+  s.version          = "0.0.22"
   s.summary          = "A Library of Awesome Helper classes and extensions designed to help you work quickly and effeciently during iOS Development."
 
 # This description is used to generate tags and improve search results.
@@ -17,7 +17,8 @@ Pod::Spec.new do |s|
 #   * Write the description between the DESC delimiters below.
 #   * Finally, don't worry about the indent, CocoaPods strips it!  
   s.description      = <<-DESC
-"A Library of Awesome Helper classes designed to help you work quickly and effeciently during iOS Development."
+"A Library of Awesome Helper classes designed to help you work quickly and effeciently during iOS Development.
+Based on the concept that we should create simple one line accessors to commonly written code, there by making our code more reusable and and readable."
 DESC
 
   s.homepage         = "https://github.com/logansease/SeaseAssist"
