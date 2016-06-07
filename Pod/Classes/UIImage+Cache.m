@@ -53,7 +53,7 @@
 +(void)cacheImage:(UIImage*)image forUrl:(NSString*)url
 {
     NSString * filePath = [self cacheFileNameFor:url];
-    NSData * data = UIImageJPEGRepresentation(image, .8f) ;
+    NSData * data = UIImagePNGRepresentation(image) ;
     [data writeToFile:filePath atomically:NO];
     
     NSLog(@"%@",filePath);
