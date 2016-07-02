@@ -21,6 +21,7 @@
 @property(nonatomic,strong)UIPickerView * picker;
 @property(nonatomic,strong)NSArray*values;
 @property(nonatomic,strong)NSString*currentValue;
+@property(nonatomic,strong)NSString* customOptionText;
 @property NSInteger currentIndex;
 
 @end
