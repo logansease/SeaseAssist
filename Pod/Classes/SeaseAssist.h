@@ -80,6 +80,8 @@
 #import "UISegmentedControl+Helpers.h"
 #import "ImagePickerHelper.h"
 
+#import "GenericCompletionHandlers.h"
+
 
 
 #endif /* SeaseAssist_h */

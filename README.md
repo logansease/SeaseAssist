@@ -227,6 +227,8 @@ Find our internet connection status.
 -(NSArray *)splitOnChar:(char)ch;
 -(NSString *)substringFrom:(NSInteger)from to:(NSInteger)to;
 -(NSString *)stringByStrippingWhitespace;
+-(NSString*)initials; //Herby Hancock = HH
++(NSString*)displayString:(float)number; //1,200 = 1.2K
 ```
 
 ##NSString validation
@@ -359,6 +361,14 @@ Set an image from URL to a UIImage View with caching and a default
 ```objective-c
 @interface UIImageView (Networking)
 -(void)setImageFromUrl:(NSString*)url withDefault:(UIImage*)defaultImage andRounding:(BOOL)round;
+```
+
+Set an image from URL like above, but prefill with initials if no image is found
+```
+@interface UIImageView (Initials)
+-(UILabel*)addInitialsPlaceholder:(NSString*)title circle:(BOOL)circle;
+-(void)setImageFromUrl:(NSString*)urlString withPlaceholderString:(NSString*)holder withPlaceHolderImage:(UIImage*)image rounding:(BOOL)round;
+-(void)setImageFromUrl:(NSString*)urlString withPlaceholderString:(NSString*)holder withPlaceHolderImage:(UIImage*)image rounding:(BOOL)round completionHandler:(BoolCompletionHandler)handler;
 ```
 
 ##Animation
