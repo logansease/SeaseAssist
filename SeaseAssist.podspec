@@ -8,7 +8,7 @@
 
 Pod::Spec.new do |s|
   s.name             = "SeaseAssist"
-  s.version          = "0.0.27"
+  s.version          = "0.0.29"
   s.summary          = "A Library of Awesome Helper classes and extensions designed to help you work quickly and effeciently during iOS Development."
 
 # This description is used to generate tags and improve search results.
@@ -33,7 +33,7 @@ DESC
 
   s.source_files = 'Pod/Classes/**/*'
   s.resource_bundles = {
-    'SeaseAssist' => ['Pod/Assets/*.png']
+#'SeaseAssist' => ['Pod/Assets/*.png']
   }
 
     s.public_header_files = 'Pod/Classes/**/*.h'
