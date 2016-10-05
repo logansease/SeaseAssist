@@ -77,10 +77,15 @@
 #import "UIView+Badge.h"
 #import "UITableView+Reload.h"
 
+//v5
 #import "UISegmentedControl+Helpers.h"
 #import "ImagePickerHelper.h"
 
+//v6
 #import "GenericCompletionHandlers.h"
+#import "UIImageView+Initials.h"
+#import "NSString+AbbreviatedDisplay.h"
+#import "NSString+Initials.h"
 
 
 

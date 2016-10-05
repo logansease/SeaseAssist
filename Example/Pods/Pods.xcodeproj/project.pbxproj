@@ -7,11 +7,11 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		008673FE1DA572DE00CD5DF1 /* NSString+AbbreviatedDisplay.h in Headers */ = {isa = PBXBuildFile; fileRef = 008673FA1DA572DE00CD5DF1 /* NSString+AbbreviatedDisplay.h */; };
+		008673FE1DA572DE00CD5DF1 /* NSString+AbbreviatedDisplay.h in Headers */ = {isa = PBXBuildFile; fileRef = 008673FA1DA572DE00CD5DF1 /* NSString+AbbreviatedDisplay.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		008673FF1DA572DE00CD5DF1 /* NSString+AbbreviatedDisplay.m in Sources */ = {isa = PBXBuildFile; fileRef = 008673FB1DA572DE00CD5DF1 /* NSString+AbbreviatedDisplay.m */; };
-		008674001DA572DE00CD5DF1 /* NSString+Initials.h in Headers */ = {isa = PBXBuildFile; fileRef = 008673FC1DA572DE00CD5DF1 /* NSString+Initials.h */; };
+		008674001DA572DE00CD5DF1 /* NSString+Initials.h in Headers */ = {isa = PBXBuildFile; fileRef = 008673FC1DA572DE00CD5DF1 /* NSString+Initials.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		008674011DA572DE00CD5DF1 /* NSString+Initials.m in Sources */ = {isa = PBXBuildFile; fileRef = 008673FD1DA572DE00CD5DF1 /* NSString+Initials.m */; };
-		008674041DA5733B00CD5DF1 /* UIImageView+Initials.h in Headers */ = {isa = PBXBuildFile; fileRef = 008674021DA5733B00CD5DF1 /* UIImageView+Initials.h */; };
+		008674041DA5733B00CD5DF1 /* UIImageView+Initials.h in Headers */ = {isa = PBXBuildFile; fileRef = 008674021DA5733B00CD5DF1 /* UIImageView+Initials.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		008674051DA5733B00CD5DF1 /* UIImageView+Initials.m in Sources */ = {isa = PBXBuildFile; fileRef = 008674031DA5733B00CD5DF1 /* UIImageView+Initials.m */; };
 		008674071DA5744100CD5DF1 /* GenericCompletionHandlers.h in Headers */ = {isa = PBXBuildFile; fileRef = 008674061DA573C600CD5DF1 /* GenericCompletionHandlers.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		0305434DCDB8743523249FBCD28B62FB /* SeaseAssist-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = C35485204939C5374E977D24548F384B /* SeaseAssist-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
