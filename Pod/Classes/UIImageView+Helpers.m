@@ -11,6 +11,8 @@
 @implementation UIImageView (Helpers)
 -(void)round
 {
+    [self layoutIfNeeded];
+    
     /* FIRST, SQUARE THE IMAGE */
     
     UIImage *image = self.image;

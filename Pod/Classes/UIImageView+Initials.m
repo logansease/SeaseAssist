@@ -67,7 +67,7 @@
             }];
         }
         else{
-            handler(false);
+            handler(loaded);
         }
     }];
 

@@ -12,6 +12,9 @@
 
 -(void)makeClean
 {
+    
+    [self layoutIfNeeded];
+    
     CALayer *thisLayer = self.layer;
     
     // Add a border
@@ -19,12 +22,13 @@
     thisLayer.masksToBounds = NO;
     thisLayer.borderWidth = 2.0f;
     
-    thisLayer.borderColor = self.tintColor.CGColor;
-
+    thisLayer.borderColor = [ [self titleColorForState:UIControlStateNormal] CGColor];
 }
 
 - (void)makeGlossy
 {
+    [self layoutIfNeeded];
+    
     CALayer *thisLayer = self.layer;
     
     // Add a border

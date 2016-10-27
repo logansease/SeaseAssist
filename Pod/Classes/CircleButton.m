@@ -9,7 +9,24 @@
 #import "UIView+Rounding.h"
 
 @implementation CircleButton
--(void)setNeedsDisplay {
+
+- (void)baseInit {
     [self circleWithColor:self.tintColor width:2];
+}
+
+- (id)initWithFrame:(CGRect)frame
+{
+    self = [super initWithFrame:frame];
+    if (self) {
+        [self baseInit];
+    }
+    return self;
+}
+
+- (id)initWithCoder:(NSCoder *)aDecoder {
+    if ((self = [super initWithCoder:aDecoder])) {
+        [self baseInit];
+    }
+    return self;
 }
 @end
