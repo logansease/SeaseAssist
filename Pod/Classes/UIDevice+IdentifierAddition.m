@@ -94,7 +94,7 @@
     {
         macAddress = [[UIDevice currentDevice] identifierForVendor].UUIDString;
     }
-    else{
+    if(!macAddress){
         NSUInteger randomNumber = random();
         NSDateFormatter * formatter= [[NSDateFormatter alloc]init];
         [formatter setDateFormat:@"ASSS"];
@@ -126,7 +126,8 @@
     {
         macAddress = [[UIDevice currentDevice] identifierForVendor].UUIDString;
     }
-    else{
+    
+    if(!macAddress){
         NSUInteger randomNumber = random();
         NSDateFormatter * formatter= [[NSDateFormatter alloc]init];
         [formatter setDateFormat:@"ASSS"];
