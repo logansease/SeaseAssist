@@ -210,8 +210,9 @@
 -(BOOL)isBetween:(NSDate*)startDate and:(NSDate*)endDate
 {
     NSDate * checkDate = self;
-    return ([endDate isBeforeDate:checkDate] && [startDate isAfterDate:checkDate]);
+    return ([endDate isAfterDate:checkDate] && [startDate isBeforeDate:checkDate]);
 }
+
 -(NSDate*)dateWithCurrentYear
 {
     NSDate * date= self;
