@@ -88,4 +88,13 @@
     return newImage ;
 }
 
++ (UIImage *)blankImageWithSize:(CGSize)size
+{
+    UIGraphicsBeginImageContextWithOptions(CGSizeMake(size.width, size.height), NO, 0.0);
+    UIImage *blank = UIGraphicsGetImageFromCurrentImageContext();
+    UIGraphicsEndImageContext();
+    return blank;
+    
+}
+
 @end
