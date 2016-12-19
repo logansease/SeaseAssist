@@ -11,4 +11,5 @@
 @interface UIImage (Rounding)
 -(UIImage*)clippedToCircle;
 - (UIImage *)cropToSize:(float)sideLength;
+-(UIImage*)clippedToCircleOfSize:(CGSize)size;
 @end

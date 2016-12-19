@@ -13,164 +13,190 @@
 #import "GCNetworkReachability.h"
 
 @implementation UIImageView (Networking)
-
-
+    
+    
 -(void)setImageFromUrl:(NSString*)urlString withDefault:(UIImage*)defaultImage rounding:(BOOL)round completion:(void(^)(BOOL loaded))handler
-{
-    self.image = defaultImage;
-    if(round)
     {
-        self.image = [defaultImage clippedToCircle];
-    }
-    
-    //return from an empty URL
-    if(urlString.length <= 0)
-    {
-        if(handler)
-        {
-            handler(false);
-        }
-        return;
-    }
-    
-#if !TARGET_OS_TV
-    //if we are on iphone, see if we have cached the image and if so load and set it
-    UIImage * image = [UIImageView cachedImageForUrl:urlString];
-    if(image)
-    {
-        self.image = image;
+        self.image = defaultImage;
         if(round)
         {
-            self.image = [image clippedToCircle];
+            self.image = [defaultImage clippedToCircle];
         }
-        if(handler)
+        
+        //return from an empty URL
+        if(urlString.length <= 0)
         {
-            handler(true);
-        }
-        return;
-    }
-#endif
-    
-    //this will ensure we don't set any old images to our view
-    NSInteger originalTag = self.tag;
-    self.tag = random();
-    NSInteger tag = self.tag;
-    
-    //if we are connected
-    if([[GCNetworkReachability reachabilityForInternetConnection] isReachable]){
-        
-        //create our request
-        NSMutableURLRequest *request = [[NSMutableURLRequest alloc] initWithURL:[NSURL URLWithString:urlString] cachePolicy:NSURLRequestUseProtocolCachePolicy timeoutInterval:30.0];
-        
-        //call a URL to get the image Data
-        [NSURLConnection sendAsynchronousRequest:request queue:[NSOperationQueue mainQueue] completionHandler:^(NSURLResponse * _Nullable response, NSData * _Nullable data, NSError * _Nullable connectionError) {
-            
-            //ensure this view hasn't called a new load URL
-            if(self.tag == tag)
+            if(handler)
             {
-                //set the image data and reset the tag
-                [self setWithData:data fromUrl:urlString andRound:round completion:^(BOOL loaded) {
+                handler(false);
+            }
+            return;
+        }
+        
+#if !TARGET_OS_TV
+        //if we are on iphone, see if we have cached the image and if so load and set it
+        if([self setCachedImage:urlString round:round withHandler:handler])
+        {
+            return;
+        }
+#endif
+        
+        //this will ensure we don't set any old images to our view
+        NSInteger originalTag = self.tag;
+        self.tag = random();
+        NSInteger tag = self.tag;
+        
+        //if we are connected
+        if([[GCNetworkReachability reachabilityForInternetConnection] isReachable]){
+            
+            //create our request
+            NSMutableURLRequest *request = [[NSMutableURLRequest alloc] initWithURL:[NSURL URLWithString:urlString] cachePolicy:NSURLRequestUseProtocolCachePolicy timeoutInterval:30.0];
+            
+            //call a URL to get the image Data
+            [NSURLConnection sendAsynchronousRequest:request queue:[NSOperationQueue mainQueue] completionHandler:^(NSURLResponse * _Nullable response, NSData * _Nullable data, NSError * _Nullable connectionError) {
+                
+                //ensure this view hasn't called a new load URL
+                if(self.tag == tag)
+                {
+                    //set the image data and reset the tag
+                    [self setWithData:data fromUrl:urlString andRound:round completion:^(BOOL loaded) {
+                        if(handler)
+                        {
+                            handler(loaded);
+                        }
+                    }];
+                    self.tag = originalTag;
+                }
+            }];
+        }
+    }
+    
+    //this method will load a cached image from a url and set it, applying rounding if necessary
+-(BOOL)setCachedImage:(NSString*)url round:(BOOL)round withHandler:(void(^)(BOOL loaded))handler
+    {
+        BOOL cached = false;
+        UIImage * image = [UIImageView cachedImageForUrl:url];
+        if(image)
+        {
+            cached = YES;
+            
+            //if we need to round, then do it in a background thread, but call the main thread to set it
+            if(round)
+            {
+                [NSThread backgroundThread:^{
+                    UIImage * scaled = [image clippedToCircleOfSize:CGSizeMake(self.frame.size.width, self.frame.size.height)];
+                    [NSThread mainThread:^{
+                        self.image = scaled;
+                        if(handler)
+                        {
+                            handler(true);
+                        }
+                    }];
+                }];
+            } else{
+                
+                [NSThread mainThread:^{
+                    self.image = image;
                     if(handler)
                     {
-                        handler(loaded);
+                        handler(true);
                     }
                 }];
-                self.tag = originalTag;
             }
-        }];
-    }
-}
-
--(void)setWithData:(NSData*)imageData fromUrl:(NSString*)url andRound:(BOOL)round completion:(void(^)(BOOL loaded))handler
-{
-    if(imageData == nil || ![imageData isKindOfClass:[NSData class]])
-    {
-        if(handler)
-        {
-            handler(NO);
         }
-        return;
+        return cached;
     }
     
-    UIImage* image = [[UIImage alloc] initWithData:imageData];
-    if(image)
+-(void)setWithData:(NSData*)imageData fromUrl:(NSString*)url andRound:(BOOL)round completion:(void(^)(BOOL loaded))handler
     {
-        //        CGSize itemSize = CGSizeMake(self.frame.size.width, self.frame.size.height);
-        //        UIGraphicsBeginImageContext(itemSize);
-        //        CGRect imageRect = CGRectMake(0.0, 0.0, itemSize.width, itemSize.height);
-        //        [image drawInRect:imageRect];
-        //        UIImage * imageFromContext =  UIGraphicsGetImageFromCurrentImageContext();
-        //        UIGraphicsEndImageContext();
+        if(imageData == nil || ![imageData isKindOfClass:[NSData class]])
+        {
+            if(handler)
+            {
+                handler(NO);
+            }
+            return;
+        }
         
-        [NSThread mainThread:^{
-            self.image = image;
+        UIImage* image = [[UIImage alloc] initWithData:imageData];
+        if(image)
+        {
+            //        CGSize itemSize = CGSizeMake(self.frame.size.width, self.frame.size.height);
+            //        UIGraphicsBeginImageContext(itemSize);
+            //        CGRect imageRect = CGRectMake(0.0, 0.0, itemSize.width, itemSize.height);
+            //        [image drawInRect:imageRect];
+            //        UIImage * imageFromContext =  UIGraphicsGetImageFromCurrentImageContext();
+            //        UIGraphicsEndImageContext();
             
             if(round)
             {
-                self.image = [image clippedToCircle];
+                image = [image clippedToCircle];
             }
             
             //if iphone cache the image
 #if !TARGET_OS_TV
             [UIImageView cacheImage:image forUrl:url];
 #endif
+            [NSThread mainThread:^{
+                self.image = image;
+                
+                if(handler)
+                {
+                    handler(YES);
+                }
+            }];
+        }
+        else{
             if(handler)
             {
-                handler(YES);
+                handler(NO);
             }
-        }];
-    }
-    else{
-        if(handler)
-        {
-            handler(NO);
         }
     }
-}
-
-//helpers
-
+    
+    //helpers
+    
 -(void)setImageFromUrl:(NSString*)urlString withDefault:(UIImage*)defaultImage
-{
-    [self setImageFromUrl:urlString withDefault:defaultImage andRounding:NO];
-    
-}
--(void)setImageFromUrl:(NSString*)urlString withDefault:(UIImage*)defaultImage andRounding:(BOOL)round
-{
-    [self setImageFromUrl:urlString withDefault:defaultImage rounding:round completion:nil];
-}
-
-
-+(UIImage*)cachedImageForUrl:(NSString*)url
-{
-    NSString * imagePath = [self cacheFileNameFor:url];
-    NSFileManager * fileManager = [NSFileManager defaultManager];
-    if(imagePath != nil && [fileManager fileExistsAtPath:imagePath])
     {
-        NSData * imageData = [NSData dataWithContentsOfFile:imagePath];
-        return [[UIImage alloc] initWithData:imageData];
+        [self setImageFromUrl:urlString withDefault:defaultImage andRounding:NO];
+        
     }
-    NSLog(@"%@",imagePath);
-    return nil;
-}
-
+-(void)setImageFromUrl:(NSString*)urlString withDefault:(UIImage*)defaultImage andRounding:(BOOL)round
+    {
+        [self setImageFromUrl:urlString withDefault:defaultImage rounding:round completion:nil];
+    }
+    
+    
++(UIImage*)cachedImageForUrl:(NSString*)url
+    {
+        NSString * imagePath = [self cacheFileNameFor:url];
+        NSFileManager * fileManager = [NSFileManager defaultManager];
+        if(imagePath != nil && [fileManager fileExistsAtPath:imagePath])
+        {
+            NSData * imageData = [NSData dataWithContentsOfFile:imagePath];
+            return [[UIImage alloc] initWithData:imageData];
+        }
+        NSLog(@"%@",imagePath);
+        return nil;
+    }
+    
 +(void)cacheImage:(UIImage*)image forUrl:(NSString*)url
-{
-    NSString * filePath = [self cacheFileNameFor:url];
-    NSData * data = UIImageJPEGRepresentation(image, .8f) ;
-    [data writeToFile:filePath atomically:NO];
+    {
+        NSString * filePath = [self cacheFileNameFor:url];
+        NSData * data = UIImageJPEGRepresentation(image, .8f) ;
+        [data writeToFile:filePath atomically:NO];
+        
+        NSLog(@"%@",filePath);
+    }
     
-    NSLog(@"%@",filePath);
-}
-
 +(NSString*)cacheFileNameFor:(NSString*)url
-{
-    NSString * filename = [url stringByReplacingOccurrencesOfString:@":" withString:@""];
-    filename = [filename stringByReplacingOccurrencesOfString:@"/" withString:@""];
-    filename = [filename stringByReplacingOccurrencesOfString:@"." withString:@""];
+    {
+        NSString * filename = [url stringByReplacingOccurrencesOfString:@":" withString:@""];
+        filename = [filename stringByReplacingOccurrencesOfString:@"/" withString:@""];
+        filename = [filename stringByReplacingOccurrencesOfString:@"." withString:@""];
+        
+        return [NSTemporaryDirectory() stringByAppendingPathComponent:filename];
+    }
     
-    return [NSTemporaryDirectory() stringByAppendingPathComponent:filename];
-}
-
-
-@end
+    
+    @end
