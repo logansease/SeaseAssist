@@ -152,15 +152,16 @@
         //        UIImage * imageFromContext =  UIGraphicsGetImageFromCurrentImageContext();
         //        UIGraphicsEndImageContext();
         
+        //if iphone cache the image
+#if !TARGET_OS_TV
+        [UIImageView cacheImage:image forUrl:url];
+#endif
+        
         if(round)
         {
             image = [image clippedToCircle];
         }
         
-        //if iphone cache the image
-#if !TARGET_OS_TV
-        [UIImageView cacheImage:image forUrl:url];
-#endif
         [NSThread mainThread:^{
             self.image = image;
             
