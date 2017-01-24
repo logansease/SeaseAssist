@@ -18,8 +18,6 @@
 
 -(void)setImageFromUrl:(NSString*)urlString withDefault:(UIImage*)defaultImage rounding:(BOOL)round completion:(void(^)(BOOL loaded))handler
 {
-    self.image = defaultImage;
-    
     if(round)
     {
         if(self.frame.size.width > 0)
@@ -29,7 +27,15 @@
             self.image = [defaultImage clippedToCircle];
         }
         
-    } else
+    } else if(defaultImage)
+    {
+        if(self.frame.size.width > 0)
+        {
+            self.image = [defaultImage imageByScalingProportionallyToSize:self.frame.size];
+        } else{
+            self.image = [defaultImage imageByScalingProportionallyToSize:CGSizeMake(100, 100)];
+        }
+    }else
     {
         if(self.frame.size.width > 0)
         {
