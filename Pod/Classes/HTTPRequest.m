@@ -116,7 +116,14 @@
         }
         else{
             NSString * errorString = [NSString stringWithFormat:@"Error Response\n%@",resultString];
-            handler(resultString,[NSError errorWithDomain:@"HTTPRequest" code:responseStatusCode userInfo:@{@"error" : errorString}]);
+            
+            //try to parse to dictionary
+            NSError *jsonError;
+            NSDictionary *json = [NSJSONSerialization JSONObjectWithData:data
+                                                                 options:NSJSONReadingMutableContainers
+                                                                   error:&jsonError];
+            
+            handler(resultString,[NSError errorWithDomain:@"HTTPRequest" code:responseStatusCode userInfo:json ? json :@{@"error" : errorString}]);
         }
         
     }]resume];
