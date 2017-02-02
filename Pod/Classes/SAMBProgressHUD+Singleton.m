@@ -14,7 +14,10 @@
 
 
 static SAMBProgressHUD * commonHUD = nil;
-
+    
+//this helps to track the # of times we've called hide / show to allow for multiple loads
+static NSInteger showingCount = 0;
+    
 +(id)commonHUD
 {
     if(commonHUD == nil)
@@ -27,6 +30,13 @@ static SAMBProgressHUD * commonHUD = nil;
 
 +(void)showWithTitle:(NSString*)title
 {
+    //increment the count, if we are already showing one, then don't show another
+    showingCount++;
+    if(showingCount > 1)
+    {
+        return;
+    }
+    
     [NSThread mainThread:^{
         SAMBProgressHUD * hud = [self commonHUD];
         hud.labelText = title;
@@ -42,6 +52,14 @@ static SAMBProgressHUD * commonHUD = nil;
 
 +(void)hide
 {
+    //decrement the count. only hide if we aren't loading any more
+    showingCount--;
+    if(showingCount > 0)
+    {
+        return;
+    }
+    showingCount = 0;
+    
     [NSThread mainThread:^{
     SAMBProgressHUD * hud = [self commonHUD];
     [hud hide:YES];
