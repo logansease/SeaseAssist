@@ -6,7 +6,7 @@
 //
 //
 
-#import "ReachabilityTest.h"
+#import "UIDevice+Reachability.h"
 #import "GCNetworkReachability.h"
 
 @implementation UIDevice(Reachability)
