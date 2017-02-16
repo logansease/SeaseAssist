@@ -9,7 +9,7 @@
 #import "ReachabilityTest.h"
 #import "GCNetworkReachability.h"
 
-@implementation ReachabilityTest
+@implementation UIDevice(Reachability)
 +(BOOL)connected
 {
     return [[GCNetworkReachability reachabilityForInternetConnection] isReachable];

@@ -163,7 +163,7 @@ A helper class to make http requests asynchronously in one line without the need
 ##Reachability Helpers
 Find our internet connection status.
 ```objective-c
-@interface ReachabilityTest : NSObject
+@interface UIDevice (Reachability)
 +(BOOL)connected;
 @end
 ```

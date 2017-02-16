@@ -126,7 +126,7 @@
 		B6724E5269147F65612691D824A697E2 /* ValuePickerTextField.h in Headers */ = {isa = PBXBuildFile; fileRef = 4230326C8C98769F7BDB7F1FF699C7AE /* ValuePickerTextField.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		B766CFE3A97A8DCF4CA75198C17ED510 /* UITableView+Reload.h in Headers */ = {isa = PBXBuildFile; fileRef = 06A8534602D9C1885715B2DE01DFB274 /* UITableView+Reload.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		BA2B7EE6A77A89C10CADD0463421BA09 /* UIImage+Rounding.m in Sources */ = {isa = PBXBuildFile; fileRef = 7A087A54C6F9BF4253728A343A5FBB18 /* UIImage+Rounding.m */; };
-		BA7AF5BCADD682F973DEE2C4164855B4 /* ReachabilityTest.m in Sources */ = {isa = PBXBuildFile; fileRef = 56BBEED7426C1EFF82F57C96521E5D4A /* ReachabilityTest.m */; };
+		BA7AF5BCADD682F973DEE2C4164855B4 /* UIDevice+Reachability.m in Sources */ = {isa = PBXBuildFile; fileRef = 56BBEED7426C1EFF82F57C96521E5D4A /* UIDevice+Reachability.m */; };
 		BCF545EE8C2084BD77E324B6C491804B /* KeychainItemWrapper.h in Headers */ = {isa = PBXBuildFile; fileRef = D328BDBE9B5E8351101E01AF4766B809 /* KeychainItemWrapper.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		BD76E0F758754CAC176FE65603FF2150 /* NSDate+Helpers.h in Headers */ = {isa = PBXBuildFile; fileRef = BFE84E3D595476E03C825065834F747D /* NSDate+Helpers.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		BED140643C9E2BCF052CA74E6A183E4F /* NSArray+Rearrange.m in Sources */ = {isa = PBXBuildFile; fileRef = 96D3727EA2EB65E6B536CDEB2E041FCE /* NSArray+Rearrange.m */; };
@@ -151,7 +151,7 @@
 		DF0C9C7F4E6D7FA5BFD02D992E9C8031 /* UIDevice+IdentifierAddition.m in Sources */ = {isa = PBXBuildFile; fileRef = 25566198891C468C8E0E448DC2D1847E /* UIDevice+IdentifierAddition.m */; };
 		E0341C5742F1B78EB155A60007F75ACA /* NSDictionary+Nulls.h in Headers */ = {isa = PBXBuildFile; fileRef = 3B524B58F7B2E17CE1D38DC845781BCD /* NSDictionary+Nulls.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		E50CD8955E0DC4FC33C5F7FA546D50DA /* NSMutableArray+shuffling.h in Headers */ = {isa = PBXBuildFile; fileRef = 8AB48A381AAB8AFCBEEAA2F37991264F /* NSMutableArray+shuffling.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		E6C81D6410DAA3BCFDDB4FB64B296D07 /* ReachabilityTest.h in Headers */ = {isa = PBXBuildFile; fileRef = 22402BF1FCB4984459C2BF711A740E92 /* ReachabilityTest.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		E6C81D6410DAA3BCFDDB4FB64B296D07 /* UIDevice+Reachability.h in Headers */ = {isa = PBXBuildFile; fileRef = 22402BF1FCB4984459C2BF711A740E92 /* UIDevice+Reachability.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		EBAE32EBED95A772DE12ED00045BD1D9 /* UIAlertController+TextEntry.m in Sources */ = {isa = PBXBuildFile; fileRef = E8883A62FBCEA29503DA0F42642F1EDA /* UIAlertController+TextEntry.m */; };
 		EF20AE743DBBFF4D656980D2105B7FB5 /* UIButton+Helpers.h in Headers */ = {isa = PBXBuildFile; fileRef = C46257C3C5773AA636BBF8398A313F46 /* UIButton+Helpers.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		F099EAEFCE22926C9337BDA2D8387436 /* UIImageView+Helpers.m in Sources */ = {isa = PBXBuildFile; fileRef = 3F53C2EAC62BBB4A1EBCCBFE6E0F4126 /* UIImageView+Helpers.m */; };
@@ -221,7 +221,7 @@
 		1ED84B3206F602FA534E3B0193DA990B /* Pods-SeaseAssist_Tests.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = "sourcecode.module-map"; path = "Pods-SeaseAssist_Tests.modulemap"; sourceTree = "<group>"; };
 		1F17E8386387790F1B92600B67AFD4AD /* Pods-SeaseAssist_Example-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-SeaseAssist_Example-acknowledgements.markdown"; sourceTree = "<group>"; };
 		22132335C1D744F17043ED6532D3BD93 /* ImagePickerHelper.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = ImagePickerHelper.m; sourceTree = "<group>"; };
-		22402BF1FCB4984459C2BF711A740E92 /* ReachabilityTest.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = ReachabilityTest.h; sourceTree = "<group>"; };
+		22402BF1FCB4984459C2BF711A740E92 /* UIDevice+Reachability.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "UIDevice+Reachability.h"; sourceTree = "<group>"; };
 		25566198891C468C8E0E448DC2D1847E /* UIDevice+IdentifierAddition.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "UIDevice+IdentifierAddition.m"; sourceTree = "<group>"; };
 		256CC7D2944F1C2749C020D41182C10A /* UIView+MotionEffect.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "UIView+MotionEffect.h"; sourceTree = "<group>"; };
 		2697D53D095F29F78E8444B6737DB208 /* NSArray+Rearrange.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "NSArray+Rearrange.h"; sourceTree = "<group>"; };
@@ -255,7 +255,7 @@
 		49620AF4140CBA536CED7DA8FC50626A /* UIView+Blur.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "UIView+Blur.m"; sourceTree = "<group>"; };
 		49A16D4DF7F4751530DFAD8084BF9CCB /* MailService.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = MailService.m; sourceTree = "<group>"; };
 		4C24A2E1397617BC93CEA8B99FE490E0 /* UIImage+FromView.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "UIImage+FromView.m"; sourceTree = "<group>"; };
-		56BBEED7426C1EFF82F57C96521E5D4A /* ReachabilityTest.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = ReachabilityTest.m; sourceTree = "<group>"; };
+		56BBEED7426C1EFF82F57C96521E5D4A /* UIDevice+Reachability.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "UIDevice+Reachability.m"; sourceTree = "<group>"; };
 		5978BBE9793767C4BC1FCD3509DE75B9 /* UIAlertController+TextEntry.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "UIAlertController+TextEntry.h"; sourceTree = "<group>"; };
 		59A0C0C35C74EA51A51534B4CBFD10E4 /* EventCounterService.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = EventCounterService.m; sourceTree = "<group>"; };
 		5BFAA26E1AA14A1246CD0F6D1A0E5BE2 /* UIView+Rounding.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "UIView+Rounding.m"; sourceTree = "<group>"; };
@@ -544,8 +544,8 @@
 				47213366E3C3A4F7D6534262FF4B278D /* NSThread+Helpers.m */,
 				5E16490ADBBE3FF14AF515E83DD7309F /* NSURL+Helpers.h */,
 				0E419A0FE606FA3E6C5A109F51333006 /* NSURL+Helpers.m */,
-				22402BF1FCB4984459C2BF711A740E92 /* ReachabilityTest.h */,
-				56BBEED7426C1EFF82F57C96521E5D4A /* ReachabilityTest.m */,
+				22402BF1FCB4984459C2BF711A740E92 /* UIDevice+Reachability.h */,
+				56BBEED7426C1EFF82F57C96521E5D4A /* UIDevice+Reachability.m */,
 				E841EE27B5B01A80F4FA26229A332690 /* RoundedView.h */,
 				183408FA4D783C10A9F3C3D2C0C6FDF8 /* RoundedView.m */,
 				61E1042E99FF72002D2A2C1CE260B127 /* SeaseAssist.h */,
@@ -726,7 +726,7 @@
 				AE28B69CA636C363F21BC8057E8857AF /* NSThread+Delay.h in Headers */,
 				C57416EC6FF88654DEFC68EF9F465445 /* NSThread+Helpers.h in Headers */,
 				98E3DEFD3322F19583AE99BC15417F2E /* NSURL+Helpers.h in Headers */,
-				E6C81D6410DAA3BCFDDB4FB64B296D07 /* ReachabilityTest.h in Headers */,
+				E6C81D6410DAA3BCFDDB4FB64B296D07 /* UIDevice+Reachability.h in Headers */,
 				008674071DA5744100CD5DF1 /* GenericCompletionHandlers.h in Headers */,
 				8901DA28C9E6778FF4AC8079D9C19F6D /* RoundedView.h in Headers */,
 				0305434DCDB8743523249FBCD28B62FB /* SeaseAssist-umbrella.h in Headers */,
@@ -952,7 +952,7 @@
 				008673FF1DA572DE00CD5DF1 /* NSString+AbbreviatedDisplay.m in Sources */,
 				76D29FAAC3B0545BA619A59CF2B941B9 /* NSThread+Helpers.m in Sources */,
 				FA242F8CFDA5E9241EC48A1F0F98F4A8 /* NSURL+Helpers.m in Sources */,
-				BA7AF5BCADD682F973DEE2C4164855B4 /* ReachabilityTest.m in Sources */,
+				BA7AF5BCADD682F973DEE2C4164855B4 /* UIDevice+Reachability.m in Sources */,
 				5AABABEDA62F4A95E365ACE92DABFCAC /* RoundedView.m in Sources */,
 				0A367DF87A22BFE8BFF1A6AAABF767EC /* SeaseAssist-dummy.m in Sources */,
 				D4BB1DCB3A4126090EE953398B581A48 /* SoundService.m in Sources */,

@@ -72,7 +72,7 @@
 #import "MailService.h"
 #import "UIDevice+Keychain.h"
 #import "KeychainItemWrapper.h"
-#import "ReachabilityTest.h"
+#import "UIDevice+Reachability.h"
 #import "NSString+Validation.h"
 #import "UIView+Badge.h"
 #import "UITableView+Reload.h"

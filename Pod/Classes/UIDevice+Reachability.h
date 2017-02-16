@@ -8,6 +8,6 @@
 
 #import <Foundation/Foundation.h>
 
-@interface ReachabilityTest : NSObject
+@interface UIDevice (Reachability)
 +(BOOL)connected;
 @end

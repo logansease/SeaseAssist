@@ -22,7 +22,7 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     
-    [self.view hideKeyboardOnClick];
+    //[self.view hideKeyboardOnClick];
     
     // Uncomment the following line to preserve selection between presentations.
     // self.clearsSelectionOnViewWillAppear = NO;
@@ -161,7 +161,7 @@
     }
     else if(indexPath.row == 7)
     {
-        NSString * status = [ReachabilityTest connected] ? @"Connected" : @"No Connection";
+        NSString * status = [UIDevice connected] ? @"Connected" : @"No Connection";
         [UIAlertController showAlertWithTitle:@"Network Status" andMessage:status from:self];
     }
 }
