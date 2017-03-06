@@ -29,6 +29,11 @@
         
     } else if(defaultImage)
     {
+        //if the content mode is aspect fill then we should not resize the image since it will impact this
+        if(self.contentMode == UIViewContentModeScaleAspectFill )
+        {
+            self.image = defaultImage;
+        }
         if(self.frame.size.width > 0)
         {
             self.image = [defaultImage imageByScalingProportionallyToSize:self.frame.size];
