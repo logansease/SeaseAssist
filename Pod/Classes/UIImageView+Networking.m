@@ -34,7 +34,7 @@
         {
             self.image = defaultImage;
         }
-        if(self.frame.size.width > 0)
+        else if(self.frame.size.width > 0)
         {
             self.image = [defaultImage imageByScalingProportionallyToSize:self.frame.size];
         } else{
