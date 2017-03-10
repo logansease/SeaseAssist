@@ -54,15 +54,18 @@
 - (UIImage *)cropToSize:(float)sideLength
     {
         
+        //find the pixel density
+        CGFloat screenScale = [[UIScreen mainScreen] scale];
+        
+        sideLength = screenScale * sideLength;
+        
         // input size comes from image
         CGSize inputSize = self.size;
-        CGFloat screenScale = [[UIScreen mainScreen] scale];
         
         // round up side length to avoid fractional output size
         sideLength = ceilf(sideLength);
         
         // output size has sideLength for both dimensions
-        
         CGSize outputSize = CGSizeMake(sideLength, sideLength);
         
         // calculate scale so that smaller dimension fits sideLength
@@ -80,8 +83,8 @@
         // calculate drawing rect relative to output Size
         CGRect outputRect = CGRectMake(center.x - scaledInputSize.width/2.0,
                                        center.y - scaledInputSize.height/2.0,
-                                       scaledInputSize.width * screenScale,
-                                       scaledInputSize.height * screenScale);
+                                       scaledInputSize.width,
+                                       scaledInputSize.height);
         
         // begin a new bitmap context, scale 0 takes display scale
         UIGraphicsBeginImageContextWithOptions(outputSize, YES, 0);
