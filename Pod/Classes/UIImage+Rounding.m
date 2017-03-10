@@ -61,7 +61,8 @@
         sideLength = ceilf(sideLength);
         
         // output size has sideLength for both dimensions
-        CGSize outputSize = CGSizeMake(sideLength, sideLength);
+        CGFloat screenScale = [[UIScreen mainScreen] scale];
+        CGSize outputSize = CGSizeMake(sideLength * screenScale, sideLength* screenScale);
         
         // calculate scale so that smaller dimension fits sideLength
         CGFloat scale = MAX(sideLength / inputSize.width,

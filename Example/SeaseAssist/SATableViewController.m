@@ -9,6 +9,7 @@
 #import "SATableViewController.h"
 #import "ValuePickerTextField.h"
 #import "UITextField+Toolbar.h"
+#import "UIImageView+Networking.h"
 
 //move this into your pch (precompiled header file) so you don't have to include this
 //#import "SeaseAssist.h"
@@ -45,7 +46,7 @@
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
     if(section == 0)
     {
-        return 11;
+        return 12;
     }
     
     return 0;
@@ -63,6 +64,9 @@
     else if(indexPath.row == 9)
     {
         identifier = @"ValuePickerCell";
+    }else if(indexPath.row == 11)
+    {
+        identifier = @"ImageCell"
     }
     
     UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:identifier forIndexPath:indexPath];
@@ -116,6 +120,10 @@
     else if(indexPath.row == 10)
     {
         cell.textLabel.text = [[UIDevice currentDevice]uniqueDeviceIdentifier];
+    }
+    else if(indexPath.row == 11)
+    {
+        UIImageView * image = (UIImageView*)[cell viewWithTag:1];
     }
     
     return cell;
