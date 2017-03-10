@@ -2,11 +2,8 @@ source 'https://github.com/CocoaPods/Specs.git'
 use_frameworks!
 
 
-target 'SeaseAssist_Example', :exclusive => true do
+target 'SeaseAssist_Example' do
   pod "SeaseAssist", :path => "../"
 end
 
-target 'SeaseAssist_Tests', :exclusive => true do
-  pod "SeaseAssist", :path => "../"
-  
-end
+

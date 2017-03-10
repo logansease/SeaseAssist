@@ -159,21 +159,19 @@
     UIImage* image = [[UIImage alloc] initWithData:imageData];
     if(image)
     {
-        //        CGSize itemSize = CGSizeMake(self.frame.size.width, self.frame.size.height);
-        //        UIGraphicsBeginImageContext(itemSize);
-        //        CGRect imageRect = CGRectMake(0.0, 0.0, itemSize.width, itemSize.height);
-        //        [image drawInRect:imageRect];
-        //        UIImage * imageFromContext =  UIGraphicsGetImageFromCurrentImageContext();
-        //        UIGraphicsEndImageContext();
-        
-        //if iphone cache the image
+
 #if !TARGET_OS_TV
         [UIImageView cacheImage:image forUrl:url];
 #endif
-        
         if(round)
         {
             image = [image clippedToCircle];
+        }else if(self.frame.size.width > 0)
+        {
+            //scale the image to avoid issues setting a giant image to a small view
+            //find the pixel density
+            CGFloat screenScale = [[UIScreen mainScreen] scale];
+            image = [image imageByScalingProportionallyToSize:CGSizeMake(self.frame.size.width, self.frame.size.height)];
         }
         
         [NSThread mainThread:^{

@@ -1,5 +1,5 @@
 PODS:
-  - SeaseAssist (0.0.14)
+  - SeaseAssist (0.0.49)
 
 DEPENDENCIES:
   - SeaseAssist (from `../`)
@@ -9,6 +9,8 @@ EXTERNAL SOURCES:
     :path: "../"
 
 SPEC CHECKSUMS:
-  SeaseAssist: b762ca4c76d619ad9f5d9c3406295deabc28e672
+  SeaseAssist: ec586964716fdcb6da0dd7438ef83576d4605466
 
-COCOAPODS: 0.39.0
+PODFILE CHECKSUM: dc1457ca60320fcc0e3772015df6d83ae2363a82
+
+COCOAPODS: 1.2.0.beta.1

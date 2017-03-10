@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		414E331E3B8EE0677FC36936 /* Pods_SeaseAssist_Example.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F8B89A8FBF8A896C0C28D2AF /* Pods_SeaseAssist_Example.framework */; };
 		6003F58E195388D20070C39A /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6003F58D195388D20070C39A /* Foundation.framework */; };
 		6003F590195388D20070C39A /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6003F58F195388D20070C39A /* CoreGraphics.framework */; };
 		6003F592195388D20070C39A /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6003F591195388D20070C39A /* UIKit.framework */; };
@@ -21,9 +22,6 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		000B70471E0864B5004528C0 /* Pods_SeaseAssist_Example.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Pods_SeaseAssist_Example.framework; path = "../../../../Library/Developer/Xcode/DerivedData/SeaseAssist-czuzzgvuiybbptfqlewvudleoidy/Build/Products/Debug-iphonesimulator/Pods_SeaseAssist_Example.framework"; sourceTree = "<group>"; };
-		19E2E214AC032EEBEBED4976 /* Pods_SeaseAssist_Tests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_SeaseAssist_Tests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		5E25753ADF93D63B246D0C9F /* Pods-SeaseAssist_Example.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SeaseAssist_Example.debug.xcconfig"; path = "Pods/Target Support Files/Pods-SeaseAssist_Example/Pods-SeaseAssist_Example.debug.xcconfig"; sourceTree = "<group>"; };
 		6003F58A195388D20070C39A /* SeaseAssist_Example.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SeaseAssist_Example.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		6003F58D195388D20070C39A /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		6003F58F195388D20070C39A /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
@@ -44,14 +42,13 @@
 		709347B41C1E16230058DD38 /* thumb_up.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = thumb_up.png; sourceTree = "<group>"; };
 		70D809F11C1CCE6000AA500B /* SATableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SATableViewController.h; sourceTree = "<group>"; };
 		70D809F21C1CCE6000AA500B /* SATableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SATableViewController.m; sourceTree = "<group>"; };
-		75B8A8BE5618694A91A4C0D5 /* Pods-SeaseAssist_Tests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SeaseAssist_Tests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-SeaseAssist_Tests/Pods-SeaseAssist_Tests.debug.xcconfig"; sourceTree = "<group>"; };
 		873B8AEA1B1F5CCA007FD442 /* Main.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Main.storyboard; sourceTree = "<group>"; };
+		927A9EC54D80DB63A56EA54F /* Pods-SeaseAssist_Example.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SeaseAssist_Example.debug.xcconfig"; path = "Pods/Target Support Files/Pods-SeaseAssist_Example/Pods-SeaseAssist_Example.debug.xcconfig"; sourceTree = "<group>"; };
 		95684D87901C81321A0EF0FD /* README.md */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = net.daringfireball.markdown; name = README.md; path = ../README.md; sourceTree = "<group>"; };
-		95CCCE98F49415B5164F8853 /* Pods_SeaseAssist_Example.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_SeaseAssist_Example.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		C1DF5D9D93FCA40825AAEB35 /* LICENSE */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; name = LICENSE; path = ../LICENSE; sourceTree = "<group>"; };
-		E72942F9D61675DA165E0AA3 /* Pods-SeaseAssist_Tests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SeaseAssist_Tests.release.xcconfig"; path = "Pods/Target Support Files/Pods-SeaseAssist_Tests/Pods-SeaseAssist_Tests.release.xcconfig"; sourceTree = "<group>"; };
+		D70D9E2BFDD58E70B8D88E2E /* Pods-SeaseAssist_Example.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SeaseAssist_Example.release.xcconfig"; path = "Pods/Target Support Files/Pods-SeaseAssist_Example/Pods-SeaseAssist_Example.release.xcconfig"; sourceTree = "<group>"; };
 		F860E71F7A7D87FDE7FA72B9 /* SeaseAssist.podspec */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; name = SeaseAssist.podspec; path = ../SeaseAssist.podspec; sourceTree = "<group>"; };
-		F8CBB90B0F2162C227764425 /* Pods-SeaseAssist_Example.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SeaseAssist_Example.release.xcconfig"; path = "Pods/Target Support Files/Pods-SeaseAssist_Example/Pods-SeaseAssist_Example.release.xcconfig"; sourceTree = "<group>"; };
+		F8B89A8FBF8A896C0C28D2AF /* Pods_SeaseAssist_Example.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_SeaseAssist_Example.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -62,23 +59,13 @@
 				6003F590195388D20070C39A /* CoreGraphics.framework in Frameworks */,
 				6003F592195388D20070C39A /* UIKit.framework in Frameworks */,
 				6003F58E195388D20070C39A /* Foundation.framework in Frameworks */,
+				414E331E3B8EE0677FC36936 /* Pods_SeaseAssist_Example.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		5973348667F57A108A65CCD2 /* Pods */ = {
-			isa = PBXGroup;
-			children = (
-				5E25753ADF93D63B246D0C9F /* Pods-SeaseAssist_Example.debug.xcconfig */,
-				F8CBB90B0F2162C227764425 /* Pods-SeaseAssist_Example.release.xcconfig */,
-				75B8A8BE5618694A91A4C0D5 /* Pods-SeaseAssist_Tests.debug.xcconfig */,
-				E72942F9D61675DA165E0AA3 /* Pods-SeaseAssist_Tests.release.xcconfig */,
-			);
-			name = Pods;
-			sourceTree = "<group>";
-		};
 		6003F581195388D10070C39A = {
 			isa = PBXGroup;
 			children = (
@@ -87,7 +74,7 @@
 				6003F5B5195388D20070C39A /* Tests */,
 				6003F58C195388D20070C39A /* Frameworks */,
 				6003F58B195388D20070C39A /* Products */,
-				5973348667F57A108A65CCD2 /* Pods */,
+				B72C5F202049A4B06FD05DDB /* Pods */,
 			);
 			sourceTree = "<group>";
 		};
@@ -102,13 +89,11 @@
 		6003F58C195388D20070C39A /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				000B70471E0864B5004528C0 /* Pods_SeaseAssist_Example.framework */,
 				6003F58D195388D20070C39A /* Foundation.framework */,
 				6003F58F195388D20070C39A /* CoreGraphics.framework */,
 				6003F591195388D20070C39A /* UIKit.framework */,
 				6003F5AF195388D20070C39A /* XCTest.framework */,
-				95CCCE98F49415B5164F8853 /* Pods_SeaseAssist_Example.framework */,
-				19E2E214AC032EEBEBED4976 /* Pods_SeaseAssist_Tests.framework */,
+				F8B89A8FBF8A896C0C28D2AF /* Pods_SeaseAssist_Example.framework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -170,6 +155,15 @@
 			name = "Podspec Metadata";
 			sourceTree = "<group>";
 		};
+		B72C5F202049A4B06FD05DDB /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				927A9EC54D80DB63A56EA54F /* Pods-SeaseAssist_Example.debug.xcconfig */,
+				D70D9E2BFDD58E70B8D88E2E /* Pods-SeaseAssist_Example.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -177,12 +171,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 6003F5BF195388D20070C39A /* Build configuration list for PBXNativeTarget "SeaseAssist_Example" */;
 			buildPhases = (
-				0670673DA37207476B051607 /* Check Pods Manifest.lock */,
+				F24450E1154CD722C702F731 /* [CP] Check Pods Manifest.lock */,
 				6003F586195388D20070C39A /* Sources */,
 				6003F587195388D20070C39A /* Frameworks */,
 				6003F588195388D20070C39A /* Resources */,
-				D9697F1C174A833DBE01917D /* Embed Pods Frameworks */,
-				FBFF41C0F46479F7C0C561A8 /* Copy Pods Resources */,
+				731A5CC3CF6C9619144E1B44 /* [CP] Embed Pods Frameworks */,
+				FF46E517DCA4FBBF3C34F9B5 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -243,29 +237,14 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
-		0670673DA37207476B051607 /* Check Pods Manifest.lock */ = {
+		731A5CC3CF6C9619144E1B44 /* [CP] Embed Pods Frameworks */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 			);
 			inputPaths = (
 			);
-			name = "Check Pods Manifest.lock";
-			outputPaths = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
-			showEnvVarsInLog = 0;
-		};
-		D9697F1C174A833DBE01917D /* Embed Pods Frameworks */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-			);
-			name = "Embed Pods Frameworks";
+			name = "[CP] Embed Pods Frameworks";
 			outputPaths = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -273,14 +252,29 @@
 			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-SeaseAssist_Example/Pods-SeaseAssist_Example-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
-		FBFF41C0F46479F7C0C561A8 /* Copy Pods Resources */ = {
+		F24450E1154CD722C702F731 /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 			);
 			inputPaths = (
 			);
-			name = "Copy Pods Resources";
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		FF46E517DCA4FBBF3C34F9B5 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
 			outputPaths = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -408,7 +402,7 @@
 		};
 		6003F5C0195388D20070C39A /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 5E25753ADF93D63B246D0C9F /* Pods-SeaseAssist_Example.debug.xcconfig */;
+			baseConfigurationReference = 927A9EC54D80DB63A56EA54F /* Pods-SeaseAssist_Example.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
@@ -430,7 +424,7 @@
 		};
 		6003F5C1195388D20070C39A /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = F8CBB90B0F2162C227764425 /* Pods-SeaseAssist_Example.release.xcconfig */;
+			baseConfigurationReference = D70D9E2BFDD58E70B8D88E2E /* Pods-SeaseAssist_Example.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;

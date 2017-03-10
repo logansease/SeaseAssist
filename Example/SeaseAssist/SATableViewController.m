@@ -66,7 +66,7 @@
         identifier = @"ValuePickerCell";
     }else if(indexPath.row == 11)
     {
-        identifier = @"ImageCell"
+        identifier = @"ImageCell";
     }
     
     UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:identifier forIndexPath:indexPath];

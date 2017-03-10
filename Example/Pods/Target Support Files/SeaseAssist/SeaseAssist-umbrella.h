@@ -1,31 +1,43 @@
+#ifdef __OBJC__
 #import <UIKit/UIKit.h>
+#else
+#ifndef FOUNDATION_EXPORT
+#if defined(__cplusplus)
+#define FOUNDATION_EXPORT extern "C"
+#else
+#define FOUNDATION_EXPORT extern
+#endif
+#endif
+#endif
 
 #import "CircleButton.h"
 #import "CleanButton.h"
 #import "DatePickerTextField.h"
 #import "EventCounterService.h"
 #import "GCNetworkReachability.h"
+#import "GenericCompletionHandlers.h"
 #import "GlossyButton.h"
 #import "HTTPRequest.h"
 #import "ImagePickerHelper.h"
 #import "KeychainItemWrapper.h"
 #import "MailService.h"
-#import "SAMBProgressHUD+Singleton.h"
-#import "SAMBProgressHUD.h"
 #import "NSArray+Rearrange.h"
 #import "NSArrayDictionary+Json.h"
 #import "NSDate+Helpers.h"
 #import "NSDictionary+Nulls.h"
 #import "NSFileManager+Helpers.h"
 #import "NSMutableArray+shuffling.h"
+#import "NSString+AbbreviatedDisplay.h"
 #import "NSString+Helpers.h"
+#import "NSString+Initials.h"
 #import "NSString+Validation.h"
 #import "NSStringData+Crypt.h"
 #import "NSThread+Delay.h"
 #import "NSThread+Helpers.h"
 #import "NSURL+Helpers.h"
-#import "ReachabilityTest.h"
 #import "RoundedView.h"
+#import "SAMBProgressHUD+Singleton.h"
+#import "SAMBProgressHUD.h"
 #import "SeaseAssist.h"
 #import "SoundService.h"
 #import "SpeechService.h"
@@ -37,6 +49,7 @@
 #import "UIColor+Hex.h"
 #import "UIDevice+IdentifierAddition.h"
 #import "UIDevice+Keychain.h"
+#import "UIDevice+Reachability.h"
 #import "UIDevice+Version.h"
 #import "UIImage+Blur.h"
 #import "UIImage+Cache.h"
@@ -45,6 +58,7 @@
 #import "UIImage+Helpers.h"
 #import "UIImage+Rounding.h"
 #import "UIImageView+Helpers.h"
+#import "UIImageView+Initials.h"
 #import "UIImageView+Networking.h"
 #import "UILabel+Message.h"
 #import "UINavigationController+Transitions.h"
