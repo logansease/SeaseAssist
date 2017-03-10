@@ -171,7 +171,7 @@
             //scale the image to avoid issues setting a giant image to a small view
             //find the pixel density
             CGFloat screenScale = [[UIScreen mainScreen] scale];
-            image = [image imageByScalingProportionallyToSize:CGSizeMake(self.frame.size.width, self.frame.size.height)];
+            image = [image imageByScalingProportionallyToSize:CGSizeMake(self.frame.size.width * screenScale, self.frame.size.height * screenScale)];
         }
         
         [NSThread mainThread:^{
