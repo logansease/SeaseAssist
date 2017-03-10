@@ -56,13 +56,14 @@
         
         // input size comes from image
         CGSize inputSize = self.size;
+        CGFloat screenScale = [[UIScreen mainScreen] scale];
         
         // round up side length to avoid fractional output size
         sideLength = ceilf(sideLength);
         
         // output size has sideLength for both dimensions
-        CGFloat screenScale = [[UIScreen mainScreen] scale];
-        CGSize outputSize = CGSizeMake(sideLength * screenScale, sideLength* screenScale);
+        
+        CGSize outputSize = CGSizeMake(sideLength, sideLength);
         
         // calculate scale so that smaller dimension fits sideLength
         CGFloat scale = MAX(sideLength / inputSize.width,
@@ -79,8 +80,8 @@
         // calculate drawing rect relative to output Size
         CGRect outputRect = CGRectMake(center.x - scaledInputSize.width/2.0,
                                        center.y - scaledInputSize.height/2.0,
-                                       scaledInputSize.width,
-                                       scaledInputSize.height);
+                                       scaledInputSize.width * screenScale,
+                                       scaledInputSize.height * screenScale);
         
         // begin a new bitmap context, scale 0 takes display scale
         UIGraphicsBeginImageContextWithOptions(outputSize, YES, 0);
