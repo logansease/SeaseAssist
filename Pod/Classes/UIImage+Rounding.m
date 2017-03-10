@@ -53,12 +53,6 @@
     
 - (UIImage *)cropToSize:(float)sideLength
     {
-        
-        //find the pixel density
-        CGFloat screenScale = [[UIScreen mainScreen] scale];
-        
-        sideLength = screenScale * sideLength;
-        
         // input size comes from image
         CGSize inputSize = self.size;
         

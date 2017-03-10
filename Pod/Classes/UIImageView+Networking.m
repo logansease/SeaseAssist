@@ -115,7 +115,10 @@
                 UIImage * scaled = nil;
                 if(self.frame.size.width > 0)
                 {
-                    scaled = [image clippedToCircleOfSize:CGSizeMake(self.frame.size.width, self.frame.size.height)];
+                    //find the pixel density
+                    CGFloat screenScale = [[UIScreen mainScreen] scale];
+            
+                    scaled = [image clippedToCircleOfSize:CGSizeMake(self.frame.size.width * screenScale, self.frame.size.height * screenScale)];
                 } else
                 {
                     scaled = [image clippedToCircle];
