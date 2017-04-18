@@ -7,7 +7,7 @@
 //
 
 #import "HTTPRequest.h"
-#import "NSArrayDictionary+JSON.h"
+#import "NSArrayDictionary+Json.h"
 
 @implementation HTTPRequest
 
