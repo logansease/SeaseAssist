@@ -9,7 +9,7 @@
 #import "UILabel+Message.h"
 
 @implementation UILabel (Message)
-+(void)showMessage:(NSString*)message ofSize:(float)fontSize ofColor:(UIColor*)color inView:(UIView*)view forDuration:(float)seconds;
++(void)showMessage:(NSString*)message ofSize:(float)fontSize ofColor:(UIColor*)color inView:(UIView*)view forDuration:(float)seconds withBottomOffset:(int)offset
 {
     UILabel * label = [[UILabel alloc]initWithFrame:CGRectMake(0, view.frame.size.height + fontSize + 20, view.frame.size.width, fontSize + 20)];
     label.textColor = color;
@@ -22,7 +22,7 @@
     [view bringSubviewToFront:label];
     
     [UIView animateWithDuration:.5 delay:0 usingSpringWithDamping:.3 initialSpringVelocity:0 options:0 animations:^{
-        label.frame = CGRectMake(label.frame.origin.x, label.frame.origin.y - label.frame.size.height * 3, label.frame.size.width, label.frame.size.height);
+        label.frame = CGRectMake(label.frame.origin.x, label.frame.origin.y - label.frame.size.height * 3 - offset, label.frame.size.width, label.frame.size.height);
     } completion:^(BOOL finished) {
         [UIView animateWithDuration:.5 delay:seconds options:0 animations:^{
             label.alpha = 0.0f;

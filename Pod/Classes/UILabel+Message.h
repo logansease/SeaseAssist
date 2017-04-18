@@ -9,5 +9,5 @@
 #import <UIKit/UIKit.h>
 
 @interface UILabel (Message)
-+(void)showMessage:(NSString*)message ofSize:(float)fontSize ofColor:(UIColor*)color inView:(UIView*)view forDuration:(float)seconds;
++(void)showMessage:(NSString*)message ofSize:(float)fontSize ofColor:(UIColor*)color inView:(UIView*)view forDuration:(float)seconds withBottomOffset:(int)offset;
 @end
