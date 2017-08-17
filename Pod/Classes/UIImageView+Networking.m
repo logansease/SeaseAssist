@@ -120,7 +120,7 @@
                 [NSThread backgroundThread:^{
                     
                     UIImage * scaled = nil;
-                    if(self.frame.size.width > 0)
+                    if(frame.size.width > 0)
                     {
                         //find the pixel density
                         CGFloat screenScale = [[UIScreen mainScreen] scale];
