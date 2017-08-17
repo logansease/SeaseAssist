@@ -111,7 +111,8 @@
     
     [NSThread mainThread:^{
         
-        CGRect frame = self.frame;
+        float width = self.frame.size.width;
+        float height = self.frame.size.height;
         if(image)
         {
             //if we need to round, then do it in a background thread, but call the main thread to set it
@@ -120,12 +121,12 @@
                 [NSThread backgroundThread:^{
                     
                     UIImage * scaled = nil;
-                    if(frame.size.width > 0)
+                    if(width > 0)
                     {
                         //find the pixel density
                         CGFloat screenScale = [[UIScreen mainScreen] scale];
                         
-                        scaled = [image clippedToCircleOfSize:CGSizeMake(frame.size.width * screenScale, frame.size.height * screenScale)];
+                        scaled = [image clippedToCircleOfSize:CGSizeMake(width * screenScale, height * screenScale)];
                     } else
                     {
                         scaled = [image clippedToCircle];
