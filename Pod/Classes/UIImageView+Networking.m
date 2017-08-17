@@ -103,45 +103,53 @@
 {
     BOOL cached = false;
     UIImage * image = [UIImageView cachedImageForUrl:url];
+    
     if(image)
     {
         cached = YES;
+    }
+    
+    [NSThread mainThread:^{
         
-        //if we need to round, then do it in a background thread, but call the main thread to set it
-        if(round)
+        CGRect frame = self.frame;
+        if(image)
         {
-            [NSThread backgroundThread:^{
-                
-                UIImage * scaled = nil;
-                if(self.frame.size.width > 0)
-                {
-                    //find the pixel density
-                    CGFloat screenScale = [[UIScreen mainScreen] scale];
-            
-                    scaled = [image clippedToCircleOfSize:CGSizeMake(self.frame.size.width * screenScale, self.frame.size.height * screenScale)];
-                } else
-                {
-                    scaled = [image clippedToCircle];
-                }
-                
-                [NSThread mainThread:^{
-                    self.image = scaled;
-                    if(handler)
+            //if we need to round, then do it in a background thread, but call the main thread to set it
+            if(round)
+            {
+                [NSThread backgroundThread:^{
+                    
+                    UIImage * scaled = nil;
+                    if(self.frame.size.width > 0)
                     {
-                        handler(true);
+                        //find the pixel density
+                        CGFloat screenScale = [[UIScreen mainScreen] scale];
+                        
+                        scaled = [image clippedToCircleOfSize:CGSizeMake(frame.size.width * screenScale, frame.size.height * screenScale)];
+                    } else
+                    {
+                        scaled = [image clippedToCircle];
                     }
+                    
+                    [NSThread mainThread:^{
+                        self.image = scaled;
+                        if(handler)
+                        {
+                            handler(true);
+                        }
+                    }];
                 }];
-            }];
-        } else{
-            [NSThread mainThread:^{
+            } else{
+                
                 self.image = image;
                 if(handler)
                 {
                     handler(true);
                 }
-            }];
+            }
         }
-    }
+        
+    }];
     return cached;
 }
 
