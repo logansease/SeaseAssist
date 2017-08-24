@@ -124,6 +124,7 @@
     else if(indexPath.row == 11)
     {
         UIImageView * image = (UIImageView*)[cell viewWithTag:1];
+        
     }
     
     return cell;

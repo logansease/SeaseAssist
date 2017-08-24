@@ -209,6 +209,16 @@ Find our internet connection status.
 -(BOOL)isBeforeDate:(NSDate*)secondDate;
 ```
 
+Date Helpers
+```
+public extension Date {
+public func isSameDay(as date: Date?) -> Bool
+public func nsdate() -> NSDate
+public func isOnOrAfter(_ date: Date!) -> Bool
+}
+```
+
+
 ##NSMutableArray Helpers
 ```objective-c
 - (void)shuffle;
@@ -216,6 +226,12 @@ Find our internet connection status.
 //wrap an array around a single object (make it the first object and then go to the end
 //and start back at the beginning.
 -(NSArray*)rotatedArrayAround:(NSInteger)index;
+```
+
+```
+public extension Array {
+public mutating func swap(from ind1: Int, to ind2: Int)
+}
 ```
 
 ##NSString Helpers
@@ -239,6 +255,39 @@ Find our internet connection status.
 -(BOOL)isBlank;
 +(BOOL)isValidAlphanumbericChars:(NSString*)textString;
 ```
+
+##String Format Helpers
+```
+extension String {
+public static func isEmpty(_ string: String?) -> Bool
+
+public static func nonWhiteSpaceCharacterCount(_ string: String?) -> Int
+
+public func upperCasedWords() -> String
+
+public func capitalizingFirstLetter() -> String
+
+public var isSingleEmoji: Bool { get }
+
+public var containsEmoji: Bool { get }
+
+public func camelCaseToTitleCase() -> String!
+
+public func camelCaseToUnderscoreCase() -> String!
+
+public func underscoreCaseToCamelCase() -> String!
+}
+```
+
+String indexes and subscripting
+```
+extension String
+{
+public subscript(r: CountableClosedRange<Int>) -> String? { get }
+}
+```
+
+
 
 ##Encryption Helpers
 ###NSData
@@ -371,6 +420,15 @@ Set an image from URL like above, but prefill with initials if no image is found
 -(void)setImageFromUrl:(NSString*)urlString withPlaceholderString:(NSString*)holder withPlaceHolderImage:(UIImage*)image rounding:(BOOL)round completionHandler:(BoolCompletionHandler)handler;
 ```
 
+
+QR Code Generation
+```
+extension String
+{
+public func toQRCode() -> UIImage?
+}
+```
+
 ##Animation
 
 ###UIView+Bounce
@@ -442,6 +500,22 @@ animating hiding and showing of a view or a group of views
 -(NSString*)selectedSegementTitle;
 @end
 ```
+
+###Decorate textfields and labels
+
+```
+extension UITextField {
+
+func decorateWithImage(named imageName: String) -> UIImageView
+
+func setBottomBorder(color: UIColor = default) 
+}
+
+extension UILabel {
+    func addToLeft(image: UIImage?) -> <<error type>>
+}
+```
+
 
 ###
 
@@ -538,6 +612,9 @@ UITextField
 +(NSString *)myDocumentsPathForFile:(NSString*)fileName;
 +(NSString *)tempPathForFile:(NSString*)fileName;
 ```
+
+
+
 
 
 
