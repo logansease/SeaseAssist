@@ -12,7 +12,6 @@
 		0083A4881F4F26090092CC93 /* String+QRCode.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0083A4871F4F26090092CC93 /* String+QRCode.swift */; };
 		0083A48C1F4F261B0092CC93 /* FormatHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0083A4891F4F261B0092CC93 /* FormatHelper.swift */; };
 		0083A48D1F4F261B0092CC93 /* String+Subscript.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0083A48A1F4F261B0092CC93 /* String+Subscript.swift */; };
-		0083A48E1F4F261B0092CC93 /* RoundedView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0083A48B1F4F261B0092CC93 /* RoundedView.swift */; };
 		0083A4901F4F262F0092CC93 /* String+CaseConversion.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0083A48F1F4F262F0092CC93 /* String+CaseConversion.swift */; };
 		0083A4941F4F263A0092CC93 /* String+Utils.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0083A4911F4F263A0092CC93 /* String+Utils.swift */; };
 		0083A4951F4F263A0092CC93 /* Array+Helpers.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0083A4921F4F263A0092CC93 /* Array+Helpers.swift */; };
@@ -187,7 +186,6 @@
 		0083A4871F4F26090092CC93 /* String+QRCode.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "String+QRCode.swift"; sourceTree = "<group>"; };
 		0083A4891F4F261B0092CC93 /* FormatHelper.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FormatHelper.swift; sourceTree = "<group>"; };
 		0083A48A1F4F261B0092CC93 /* String+Subscript.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "String+Subscript.swift"; sourceTree = "<group>"; };
-		0083A48B1F4F261B0092CC93 /* RoundedView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RoundedView.swift; sourceTree = "<group>"; };
 		0083A48F1F4F262F0092CC93 /* String+CaseConversion.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "String+CaseConversion.swift"; sourceTree = "<group>"; };
 		0083A4911F4F263A0092CC93 /* String+Utils.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "String+Utils.swift"; sourceTree = "<group>"; };
 		0083A4921F4F263A0092CC93 /* Array+Helpers.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Array+Helpers.swift"; sourceTree = "<group>"; };
@@ -396,7 +394,6 @@
 				0083A48F1F4F262F0092CC93 /* String+CaseConversion.swift */,
 				0083A4891F4F261B0092CC93 /* FormatHelper.swift */,
 				0083A48A1F4F261B0092CC93 /* String+Subscript.swift */,
-				0083A48B1F4F261B0092CC93 /* RoundedView.swift */,
 				0083A4871F4F26090092CC93 /* String+QRCode.swift */,
 				0083A4851F4F25900092CC93 /* Date+Utils.swift */,
 				46F16484A7E049D9742EA9EAC510AA54 /* CircleButton.h */,
@@ -823,7 +820,6 @@
 				FF3B5502B5D857286CD59EDE3ECB896B /* GlossyButton.m in Sources */,
 				ACA7D73C650231388F22A5397AF1DD34 /* HTTPRequest.m in Sources */,
 				635D0B19DC194C347426E7838DF671C7 /* ImagePickerHelper.m in Sources */,
-				0083A48E1F4F261B0092CC93 /* RoundedView.swift in Sources */,
 				010289770F98AA8A16A0D56334A0D72A /* KeychainItemWrapper.m in Sources */,
 				36641FE425FF986EAE87B396AB75A426 /* MailService.m in Sources */,
 				2C27BFF333C51BDCCE6C6A163B8FB39F /* NSArray+Rearrange.m in Sources */,
