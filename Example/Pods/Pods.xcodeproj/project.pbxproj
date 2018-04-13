@@ -7,6 +7,10 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		001D8D5C20804CFB00E8EC23 /* String+Random.swift in Sources */ = {isa = PBXBuildFile; fileRef = 001D8D5B20804CFB00E8EC23 /* String+Random.swift */; };
+		001D8D5E20804D3500E8EC23 /* String+Base64.swift in Sources */ = {isa = PBXBuildFile; fileRef = 001D8D5D20804D3500E8EC23 /* String+Base64.swift */; };
+		001D8D6020804D5A00E8EC23 /* UITableView+Deselect.swift in Sources */ = {isa = PBXBuildFile; fileRef = 001D8D5F20804D5A00E8EC23 /* UITableView+Deselect.swift */; };
+		001D8D6220804DB700E8EC23 /* UINavigationBar+Clear.swift in Sources */ = {isa = PBXBuildFile; fileRef = 001D8D6120804DB700E8EC23 /* UINavigationBar+Clear.swift */; };
 		003F506D4B547263D6F0D06789BD7B86 /* UIImage+Helpers.m in Sources */ = {isa = PBXBuildFile; fileRef = BC6B914F6E0426E7C8BC72D8562E6212 /* UIImage+Helpers.m */; };
 		0083A4861F4F25900092CC93 /* Date+Utils.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0083A4851F4F25900092CC93 /* Date+Utils.swift */; };
 		0083A4881F4F26090092CC93 /* String+QRCode.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0083A4871F4F26090092CC93 /* String+QRCode.swift */; };
@@ -181,6 +185,10 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		001D8D5B20804CFB00E8EC23 /* String+Random.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "String+Random.swift"; sourceTree = "<group>"; };
+		001D8D5D20804D3500E8EC23 /* String+Base64.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "String+Base64.swift"; sourceTree = "<group>"; };
+		001D8D5F20804D5A00E8EC23 /* UITableView+Deselect.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UITableView+Deselect.swift"; sourceTree = "<group>"; };
+		001D8D6120804DB700E8EC23 /* UINavigationBar+Clear.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UINavigationBar+Clear.swift"; sourceTree = "<group>"; };
 		006001DA089988971609697A9AF2D3F9 /* UIButton+Helpers.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "UIButton+Helpers.h"; sourceTree = "<group>"; };
 		0083A4851F4F25900092CC93 /* Date+Utils.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Date+Utils.swift"; sourceTree = "<group>"; };
 		0083A4871F4F26090092CC93 /* String+QRCode.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "String+QRCode.swift"; sourceTree = "<group>"; };
@@ -385,6 +393,10 @@
 		1FE76FBC469BDAF88402E8A05BD302D3 /* Classes */ = {
 			isa = PBXGroup;
 			children = (
+				001D8D5F20804D5A00E8EC23 /* UITableView+Deselect.swift */,
+				001D8D5D20804D3500E8EC23 /* String+Base64.swift */,
+				001D8D5B20804CFB00E8EC23 /* String+Random.swift */,
+				001D8D6120804DB700E8EC23 /* UINavigationBar+Clear.swift */,
 				0083A4991F4F26C30092CC93 /* UITextField+Decorator.swift */,
 				0083A49A1F4F26C30092CC93 /* UILabel+Image.swift */,
 				0083A4971F4F267F0092CC93 /* UITextField+BottomBorder.swift */,
@@ -829,6 +841,8 @@
 				0083A48C1F4F261B0092CC93 /* FormatHelper.swift in Sources */,
 				A78E23EE7199C9DAEE6CA078F38A31A7 /* NSFileManager+Helpers.m in Sources */,
 				4F099531401A0DA6E59F32B88012E21C /* NSMutableArray+shuffling.m in Sources */,
+				001D8D6020804D5A00E8EC23 /* UITableView+Deselect.swift in Sources */,
+				001D8D6220804DB700E8EC23 /* UINavigationBar+Clear.swift in Sources */,
 				A1C499E0DEC4DE25222F014623F4B0F2 /* NSString+AbbreviatedDisplay.m in Sources */,
 				0083A4861F4F25900092CC93 /* Date+Utils.swift in Sources */,
 				BE2395ECBCBBB2F745B751E0E0308D43 /* NSString+Helpers.m in Sources */,
@@ -840,6 +854,7 @@
 				6E65A635AC680B774F73B5C6567322D6 /* NSURL+Helpers.m in Sources */,
 				AFE4CE10879A5C9972EC1E6DCE3AF3C0 /* RoundedView.m in Sources */,
 				8F33115F363DBAFBEBC8B67E1556CFEF /* SAMBProgressHUD+Singleton.m in Sources */,
+				001D8D5C20804CFB00E8EC23 /* String+Random.swift in Sources */,
 				0083A4981F4F267F0092CC93 /* UITextField+BottomBorder.swift in Sources */,
 				989460C7B14AFF24D5BEB002DE4E9D45 /* SAMBProgressHUD.m in Sources */,
 				4C76DFB4072962BD1C9BFB7B78635BE4 /* SeaseAssist-dummy.m in Sources */,
@@ -891,6 +906,7 @@
 				25784C231D7B7647DB39FE0D378E61C6 /* UIViewController+Blur.m in Sources */,
 				19452678E94D959BE5615FD11CD83A79 /* UIViewController+Presentation.m in Sources */,
 				165E12C8A83BFF245DC931131D6284B2 /* UIViewController+Top.m in Sources */,
+				001D8D5E20804D3500E8EC23 /* String+Base64.swift in Sources */,
 				ADF57CDA68396CF02930F1BB47BFF5B9 /* ValuePickerTextField.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

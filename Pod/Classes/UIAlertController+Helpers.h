@@ -12,4 +12,5 @@
 
 +(void)showAlertWithTitle:(NSString*)title andMessage:(NSString*)message from:(UIViewController*)controller;
 +(void)showDialogWithTitle:(NSString*)title andMessage:(NSString*)message from:(UIViewController*)controller andActions:(NSArray<NSString*>*)buttonTitles completionHandler:(void (^)(NSInteger selected))handler;
++(void)showDialogWithTitle:(NSString*)title andMessage:(NSString*)message from:(UIViewController*)controller andActions:(NSArray<NSString*>*)buttonTitles configuration:(void (^)(UIAlertController *alertController))configurationHandler completionHandler:(void (^)(NSInteger selected))handler;
 @end

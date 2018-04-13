@@ -15,4 +15,10 @@ public extension Array {
         self[ind1] = self[ind2]
         self[ind2] = temp
     }
+    
+    public func keyArray() -> [AnyHashable]
+    {
+        let lazyMapCollection = self.keys
+        return  Array(lazyMapCollection) as [AnyHashable]
+    }
 }

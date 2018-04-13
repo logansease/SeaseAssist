@@ -245,6 +245,7 @@ public mutating func swap(from ind1: Int, to ind2: Int)
 -(NSString *)stringByStrippingWhitespace;
 -(NSString*)initials; //Herby Hancock = HH
 +(NSString*)displayString:(float)number; //1,200 = 1.2K
+-(NSString*)generateRandom:(int)length;
 ```
 
 ##NSString validation
@@ -294,6 +295,8 @@ public subscript(r: CountableClosedRange<Int>) -> String? { get }
 ```objective-c
 -(NSData *) aesEncryptedDataWithKey:(NSData *) key;
 -(NSString*)toBase64;
+-(NSString*)base64Encoded
+-(NSString*)base64Decoded
 ```
 
 ###NSString
@@ -571,6 +574,7 @@ Reload sections of a tableview
 ```objective-c
 -(void)reloadSection:(NSInteger)section;
 -(void)reloadSections:(NSInteger)fromSection to:(NSInteger)toSection;
+-(void)deselect
 ```
 Add a header to a tableview
 ```objective-c
@@ -592,7 +596,11 @@ Add a header to a tableview
 UIViewController+Back
 -(void)goBackWithAnimation:(BOOL)animates;
 ```
-
+Clear Tab bar
+```
+uiNavigationBar.makeClear()
+uiNavigationBar.unmakeClear()
+```
 
 
 ##Keyboard Helpers 

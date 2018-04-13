@@ -27,4 +27,22 @@ public extension UILabel
             self.attributedText = result
         }
     }
+    
+    public func addToRight(image: UIImage?)
+    {
+        if let image = image{
+            let attachment = NSTextAttachment()
+            attachment.image = image
+            let attachString = NSAttributedString.init(attachment: attachment)
+            let result = NSMutableAttributedString()
+            if let text = text
+            {
+                let titleString = NSAttributedString(string: text)
+                result.append(titleString)
+                self.text = nil
+            }
+            result.append(attachString)
+            self.attributedText = result
+        }
+    }
 }
