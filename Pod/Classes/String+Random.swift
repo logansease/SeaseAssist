@@ -8,9 +8,9 @@
 
 import Foundation
 
-extension String
+public extension String
 {
-    static func generateRandom(length : Int = 32) -> String? {
+    public static func generateRandom(length : Int = 32) -> String? {
         
         var keyData = Data(count: length)
         let result = keyData.withUnsafeMutableBytes {

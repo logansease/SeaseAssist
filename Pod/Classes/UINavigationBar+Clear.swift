@@ -8,16 +8,16 @@
 
 import UIKit
 
-extension UINavigationBar
+public extension UINavigationBar
 {
-    func makeClear()
+    public func makeClear()
     {
         setBackgroundImage(UIImage(), for: .default)
         shadowImage = UIImage()
         isTranslucent = true
     }
     
-    func unmakeClear()
+    public func unmakeClear()
     {
         self.setBackgroundImage(nil, for: .default)
     }

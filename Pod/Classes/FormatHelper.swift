@@ -33,7 +33,7 @@ public class FormatHelper {
             return false
         }
         
-        if string.characters.count > rangeEnd || string.characters.count < rangeStart
+        if string.count > rangeEnd || string.count < rangeStart
         {
             return false
         }

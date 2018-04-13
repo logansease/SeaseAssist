@@ -11,6 +11,7 @@
 		001D8D5E20804D3500E8EC23 /* String+Base64.swift in Sources */ = {isa = PBXBuildFile; fileRef = 001D8D5D20804D3500E8EC23 /* String+Base64.swift */; };
 		001D8D6020804D5A00E8EC23 /* UITableView+Deselect.swift in Sources */ = {isa = PBXBuildFile; fileRef = 001D8D5F20804D5A00E8EC23 /* UITableView+Deselect.swift */; };
 		001D8D6220804DB700E8EC23 /* UINavigationBar+Clear.swift in Sources */ = {isa = PBXBuildFile; fileRef = 001D8D6120804DB700E8EC23 /* UINavigationBar+Clear.swift */; };
+		001D8D642080521D00E8EC23 /* SpecialTypes.swift in Sources */ = {isa = PBXBuildFile; fileRef = 001D8D632080521D00E8EC23 /* SpecialTypes.swift */; };
 		003F506D4B547263D6F0D06789BD7B86 /* UIImage+Helpers.m in Sources */ = {isa = PBXBuildFile; fileRef = BC6B914F6E0426E7C8BC72D8562E6212 /* UIImage+Helpers.m */; };
 		0083A4861F4F25900092CC93 /* Date+Utils.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0083A4851F4F25900092CC93 /* Date+Utils.swift */; };
 		0083A4881F4F26090092CC93 /* String+QRCode.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0083A4871F4F26090092CC93 /* String+QRCode.swift */; };
@@ -189,6 +190,7 @@
 		001D8D5D20804D3500E8EC23 /* String+Base64.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "String+Base64.swift"; sourceTree = "<group>"; };
 		001D8D5F20804D5A00E8EC23 /* UITableView+Deselect.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UITableView+Deselect.swift"; sourceTree = "<group>"; };
 		001D8D6120804DB700E8EC23 /* UINavigationBar+Clear.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UINavigationBar+Clear.swift"; sourceTree = "<group>"; };
+		001D8D632080521D00E8EC23 /* SpecialTypes.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SpecialTypes.swift; sourceTree = "<group>"; };
 		006001DA089988971609697A9AF2D3F9 /* UIButton+Helpers.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "UIButton+Helpers.h"; sourceTree = "<group>"; };
 		0083A4851F4F25900092CC93 /* Date+Utils.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Date+Utils.swift"; sourceTree = "<group>"; };
 		0083A4871F4F26090092CC93 /* String+QRCode.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "String+QRCode.swift"; sourceTree = "<group>"; };
@@ -394,6 +396,7 @@
 			isa = PBXGroup;
 			children = (
 				001D8D5F20804D5A00E8EC23 /* UITableView+Deselect.swift */,
+				001D8D632080521D00E8EC23 /* SpecialTypes.swift */,
 				001D8D5D20804D3500E8EC23 /* String+Base64.swift */,
 				001D8D5B20804CFB00E8EC23 /* String+Random.swift */,
 				001D8D6120804DB700E8EC23 /* UINavigationBar+Clear.swift */,
@@ -793,10 +796,10 @@
 			isa = PBXProject;
 			attributes = {
 				LastSwiftUpdateCheck = 0730;
-				LastUpgradeCheck = 0700;
+				LastUpgradeCheck = 0920;
 				TargetAttributes = {
 					B88802CD76C4331846D5838FE3B827B1 = {
-						LastSwiftMigration = 0830;
+						LastSwiftMigration = 0920;
 					};
 				};
 			};
@@ -904,6 +907,7 @@
 				3331883198BB5E11117D7739033C0F9C /* UIViewController+Back.m in Sources */,
 				D4923E4F1A1821DFC8152EDC699253CC /* UIViewController+Background.m in Sources */,
 				25784C231D7B7647DB39FE0D378E61C6 /* UIViewController+Blur.m in Sources */,
+				001D8D642080521D00E8EC23 /* SpecialTypes.swift in Sources */,
 				19452678E94D959BE5615FD11CD83A79 /* UIViewController+Presentation.m in Sources */,
 				165E12C8A83BFF245DC931131D6284B2 /* UIViewController+Top.m in Sources */,
 				001D8D5E20804D3500E8EC23 /* String+Base64.swift in Sources */,
@@ -940,20 +944,30 @@
 				CLANG_CXX_LIBRARY = "libc++";
 				CLANG_ENABLE_MODULES = YES;
 				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
 				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
 				CLANG_WARN_CONSTANT_CONVERSION = YES;
 				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES;
 				CLANG_WARN_EMPTY_BODY = YES;
 				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
 				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
 				CODE_SIGNING_REQUIRED = NO;
 				COPY_PHASE_STRIP = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
 				ENABLE_TESTABILITY = YES;
 				GCC_C_LANGUAGE_STANDARD = gnu99;
 				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
 				GCC_OPTIMIZATION_LEVEL = 0;
 				GCC_PREPROCESSOR_DEFINITIONS = (
 					"POD_CONFIGURATION_DEBUG=1",
@@ -1072,7 +1086,8 @@
 				PRODUCT_NAME = SeaseAssist;
 				SDKROOT = iphoneos;
 				SKIP_INSTALL = YES;
-				SWIFT_VERSION = 3.0;
+				SWIFT_SWIFT3_OBJC_INFERENCE = On;
+				SWIFT_VERSION = 4.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				VERSIONING_SYSTEM = "apple-generic";
 				VERSION_INFO_PREFIX = "";
@@ -1107,7 +1122,8 @@
 				SDKROOT = iphoneos;
 				SKIP_INSTALL = YES;
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
-				SWIFT_VERSION = 3.0;
+				SWIFT_SWIFT3_OBJC_INFERENCE = On;
+				SWIFT_VERSION = 4.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				VERSIONING_SYSTEM = "apple-generic";
 				VERSION_INFO_PREFIX = "";
@@ -1123,19 +1139,29 @@
 				CLANG_CXX_LIBRARY = "libc++";
 				CLANG_ENABLE_MODULES = YES;
 				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
 				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
 				CLANG_WARN_CONSTANT_CONVERSION = YES;
 				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES;
 				CLANG_WARN_EMPTY_BODY = YES;
 				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
 				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
 				CODE_SIGNING_REQUIRED = NO;
 				COPY_PHASE_STRIP = YES;
 				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
 				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_NO_COMMON_BLOCKS = YES;
 				GCC_PREPROCESSOR_DEFINITIONS = (
 					"POD_CONFIGURATION_RELEASE=1",
 					"$(inherited)",
@@ -1149,6 +1175,7 @@
 				IPHONEOS_DEPLOYMENT_TARGET = 9;
 				PROVISIONING_PROFILE_SPECIFIER = NO_SIGNING/;
 				STRIP_INSTALLED_PRODUCT = NO;
+				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
 				SYMROOT = "${SRCROOT}/../build";
 				VALIDATE_PRODUCT = YES;
 			};

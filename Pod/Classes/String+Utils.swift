@@ -24,7 +24,7 @@ public extension String {
         }
         
         let trimmed = test.trimmingCharacters(in: .whitespacesAndNewlines).replacingOccurrences(of: " ", with: "")
-        return trimmed.characters.count
+        return trimmed.count
     }
     
     
@@ -46,8 +46,8 @@ public extension String {
     }
     
     public func capitalizingFirstLetter() -> String {
-        let first = String(characters.prefix(1)).capitalized
-        let other = String(characters.dropFirst())
+        let first = String(prefix(1)).capitalized
+        let other = String(dropFirst())
         return first + other
     }
 }

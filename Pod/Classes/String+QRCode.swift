@@ -27,4 +27,22 @@ public extension String
         }
     }
     
+    public func toHiDefQRCode() -> UIImage? {
+        
+        let stringData = self.data(using: String.Encoding.utf8)
+        let filter = CIFilter(name: "CIQRCodeGenerator")
+        filter?.setValue(stringData, forKey: "inputMessage")
+        filter?.setValue("H", forKey: "inputCorrectionLevel")
+        if let ciImage = filter?.outputImage
+        {
+            let transform = CGAffineTransform(scaleX: 5.0, y: 5.0)
+            let transformed = ciImage.transformed(by: transform)
+            return UIImage(ciImage: transformed, scale: 1.0, orientation: .down)
+            
+        }else
+        {
+            return nil
+        }
+    }
+    
 }

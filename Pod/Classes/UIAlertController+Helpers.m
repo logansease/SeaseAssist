@@ -59,7 +59,7 @@
     
 +(void)showDialogWithTitle:(NSString*)title andMessage:(NSString*)message from:(UIViewController*)controller andActions:(NSArray<NSString*>*)buttonTitles completionHandler:(void (^)(NSInteger selected))handler
     {
-        [UIAlertController showDialogWithTitle:title andMessage:message from:controller andActions:actions configuration:nil completionHandler:handler];
+        [UIAlertController showDialogWithTitle:title andMessage:message from:controller andActions:buttonTitles configuration:nil completionHandler:handler];
     }
 
 

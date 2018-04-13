@@ -429,6 +429,7 @@ QR Code Generation
 extension String
 {
 public func toQRCode() -> UIImage?
+public func toHiDefQRCode() -> UIImage?
 }
 ```
 

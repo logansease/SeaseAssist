@@ -16,6 +16,9 @@ public extension Array {
         self[ind2] = temp
     }
     
+}
+
+public extension Dictionary {
     public func keyArray() -> [AnyHashable]
     {
         let lazyMapCollection = self.keys
