@@ -8,7 +8,7 @@
 
 Pod::Spec.new do |s|
   s.name             = "SeaseAssist"
-  s.version          = "0.0.62"
+  s.version          = "0.0.63"
   s.summary          = "A Library of Awesome Helper classes and extensions designed to help you work quickly and effeciently during iOS Development."
 
 # This description is used to generate tags and improve search results.
@@ -30,6 +30,7 @@ DESC
 
   s.platform     = :ios, '8.0'
   s.requires_arc = true
+  s.swift_version = 4.0
 
   s.source_files = 'Pod/Classes/**/*'
   s.resource_bundles = {
