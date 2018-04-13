@@ -9,6 +9,6 @@
 #import <Foundation/Foundation.h>
 
 @interface NSThread (Helpers)
-+(void)mainThread:(void (^)())main;
-+(void)backgroundThread:(void (^)())background;
++(void)mainThread:(void (^)(void))main;
++(void)backgroundThread:(void (^)(void))background;
 @end

@@ -8,9 +8,9 @@
 
 import Foundation
 
-public extension UILabel
+@objc public extension UILabel
 {
-    public func addToLeft(image: UIImage?)
+    @objc public func addToLeft(image: UIImage?)
     {
         if let image = image{
             let attachment = NSTextAttachment()
@@ -28,7 +28,7 @@ public extension UILabel
         }
     }
     
-    public func addToRight(image: UIImage?)
+    @objc public func addToRight(image: UIImage?)
     {
         if let image = image{
             let attachment = NSTextAttachment()

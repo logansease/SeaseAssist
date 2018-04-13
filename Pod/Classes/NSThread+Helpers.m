@@ -10,14 +10,14 @@
 
 @implementation NSThread (Helpers)
 
-+(void)mainThread:(void (^)())main
++(void)mainThread:(void (^)(void))main
 {
      dispatch_async(dispatch_get_main_queue(), ^{
          main();
      });
 }
 
-+(void)backgroundThread:(void (^)())background
++(void)backgroundThread:(void (^)(void))background
 {
      dispatch_async(dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_DEFAULT, 0), ^{
          background();

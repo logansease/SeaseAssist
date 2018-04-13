@@ -9,5 +9,5 @@
 #import <Foundation/Foundation.h>
 
 @interface NSThread (Delay)
-+(void)delay:(float)length code:(void (^)())function;
++(void)delay:(float)length code:(void (^)(void))function;
 @end

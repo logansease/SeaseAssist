@@ -8,9 +8,9 @@
 
 import UIKit
 
-public extension UITextField{
+@objc public extension UITextField{
 
-    public func decorateWithImage(named imageName:String) -> UIImageView
+    @objc public func decorateWithImage(named imageName:String) -> UIImageView
     {
         let image =  UIImage(named: imageName)!
         let imageView = UIImageView(image: image)

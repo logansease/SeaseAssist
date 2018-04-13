@@ -8,9 +8,9 @@
 
 import UIKit
 
-public extension UITableView
+@objc public extension UITableView
 {
-    public func deselect(animated : Bool = true)
+    @objc public func deselect(animated : Bool = true)
     {
         if let index = self.indexPathForSelectedRow
         {

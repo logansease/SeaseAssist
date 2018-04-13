@@ -10,7 +10,7 @@
 #import "NSThread+Helpers.h"
 
 @implementation NSThread (Delay)
-+(void)delay:(float)length code:(void (^)())function
++(void)delay:(float)length code:(void (^)(void))function
 {
     [self backgroundThread:^{
         [NSThread sleepForTimeInterval:length];
