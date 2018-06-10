@@ -13,3 +13,9 @@
 -(void)setImageFromUrl:(NSString*)url withDefault:(UIImage*)defaultImage;
 -(void)setImageFromUrl:(NSString*)url withDefault:(UIImage*)defaultImage andRounding:(BOOL)round;
 @end
+
+@interface UIImage (Networking)
++(void)cacheImage:(UIImage*)image forUrl:(NSString*)url;
++(UIImage*)cachedImageForUrl:(NSString*)url;
++(NSString*)cacheFileNameFor:(NSString*)url;
+@end

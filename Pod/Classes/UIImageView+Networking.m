@@ -102,7 +102,7 @@
 -(BOOL)setCachedImage:(NSString*)url round:(BOOL)round withHandler:(void(^)(BOOL loaded))handler
 {
     BOOL cached = false;
-    UIImage * image = [UIImageView cachedImageForUrl:url];
+    UIImage * image = [UIImage cachedImageForUrl:url];
     
     if(image)
     {
@@ -170,7 +170,7 @@
     {
 
 #if !TARGET_OS_TV
-        [UIImageView cacheImage:image forUrl:url];
+        [UIImage cacheImage:image forUrl:url];
 #endif
         if(round)
         {
@@ -215,36 +215,39 @@
 }
 
 
-+(UIImage*)cachedImageForUrl:(NSString*)url
-{
-    NSString * imagePath = [self cacheFileNameFor:url];
-    NSFileManager * fileManager = [NSFileManager defaultManager];
-    if(imagePath != nil && [fileManager fileExistsAtPath:imagePath])
+@end
+
+@implementation UIImage (Networking)
+    
+    +(NSString*)cacheFileNameFor:(NSString*)url
     {
-        NSData * imageData = [NSData dataWithContentsOfFile:imagePath];
-        return [[UIImage alloc] initWithData:imageData];
+        NSString * filename = [url stringByReplacingOccurrencesOfString:@":" withString:@""];
+        filename = [filename stringByReplacingOccurrencesOfString:@"/" withString:@""];
+        filename = [filename stringByReplacingOccurrencesOfString:@"." withString:@""];
+        
+        return [NSTemporaryDirectory() stringByAppendingPathComponent:filename];
     }
-    NSLog(@"%@",imagePath);
-    return nil;
-}
-
+    
+    +(UIImage*)cachedImageForUrl:(NSString*)url
+    {
+        NSString * imagePath = [self cacheFileNameFor:url];
+        NSFileManager * fileManager = [NSFileManager defaultManager];
+        if(imagePath != nil && [fileManager fileExistsAtPath:imagePath])
+        {
+            NSData * imageData = [NSData dataWithContentsOfFile:imagePath];
+            return [[UIImage alloc] initWithData:imageData];
+        }
+        NSLog(@"%@",imagePath);
+        return nil;
+    }
+    
 +(void)cacheImage:(UIImage*)image forUrl:(NSString*)url
-{
-    NSString * filePath = [self cacheFileNameFor:url];
-    NSData * data = UIImageJPEGRepresentation(image, .8f) ;
-    [data writeToFile:filePath atomically:NO];
+    {
+        NSString * filePath = [self cacheFileNameFor:url];
+        NSData * data = UIImageJPEGRepresentation(image, .8f) ;
+        [data writeToFile:filePath atomically:NO];
+        
+        NSLog(@"%@",filePath);
+    }
     
-    NSLog(@"%@",filePath);
-}
-
-+(NSString*)cacheFileNameFor:(NSString*)url
-{
-    NSString * filename = [url stringByReplacingOccurrencesOfString:@":" withString:@""];
-    filename = [filename stringByReplacingOccurrencesOfString:@"/" withString:@""];
-    filename = [filename stringByReplacingOccurrencesOfString:@"." withString:@""];
-    
-    return [NSTemporaryDirectory() stringByAppendingPathComponent:filename];
-}
-
-
 @end
