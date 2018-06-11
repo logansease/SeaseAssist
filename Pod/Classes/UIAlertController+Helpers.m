@@ -57,6 +57,45 @@
         [UIViewController present:alert on:controller];
     }
     
++(void)showActionSheetWithTitle:(NSString*)title andMessage:(NSString*)message from:(UIViewController*)controller andActions:(NSArray<NSString*>*)buttonTitles configuration:(void (^)(UIAlertController *alertController))configurationHandler completionHandler:(void (^)(NSInteger selected))handler
+    {
+        if(!controller)
+        {
+            controller = [UIViewController topViewController];
+        }
+        
+        if(!controller)
+        {
+            return;
+        }
+        
+        UIAlertController * alert = [UIAlertController alertControllerWithTitle:title message:message preferredStyle:UIAlertControllerStyleActionSheet];
+        
+        NSInteger index = 0;
+        for(NSString * title in buttonTitles)
+        {
+            //set the style to cancel for the last button
+            UIAlertActionStyle style = UIAlertActionStyleDefault;
+            if([title isEqual:buttonTitles.lastObject])
+            {
+                style = UIAlertActionStyleCancel;
+            }
+            
+            [alert addAction:[UIAlertAction actionWithTitle:title style:style handler:^(UIAlertAction * _Nonnull action) {
+                handler(index);
+            }]];
+            
+            index++;
+        }
+        
+        if(configurationHandler)
+        {
+            configurationHandler(alert);
+        }
+        
+        [UIViewController present:alert on:controller];
+    }
+    
 +(void)showDialogWithTitle:(NSString*)title andMessage:(NSString*)message from:(UIViewController*)controller andActions:(NSArray<NSString*>*)buttonTitles completionHandler:(void (^)(NSInteger selected))handler
     {
         [UIAlertController showDialogWithTitle:title andMessage:message from:controller andActions:buttonTitles configuration:nil completionHandler:handler];
