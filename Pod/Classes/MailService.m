@@ -16,7 +16,7 @@
 
 @interface MailService()
 
-@property (nonatomic, copy) void (^completionHandler)(BOOL result);
+@property (nonatomic, copy) void (^completionHandler)(BOOL result, NSError * error);
 
 @end
 
@@ -34,16 +34,13 @@ static MailService *sharedService = nil;
     return sharedService;
 }
 
--(void)emailTo:(NSArray*)emails withSubject:(NSString*)subject body:(NSString*)body attachments:(NSArray<MailServiceAttachment*>*)attachments fromVC:(UIViewController*)parent   andCompletion:(void(^)(BOOL success))handler
+-(void)emailTo:(NSArray*)emails withSubject:(NSString*)subject body:(NSString*)body attachments:(NSArray<MailServiceAttachment*>*)attachments fromVC:(UIViewController*)parent   andCompletion:(void(^)(BOOL success, NSError * error))handler
 {
     //validate we can send mail
     if(![MFMailComposeViewController canSendMail]){
-        
-        UIAlertView * alert = [[UIAlertView alloc] initWithTitle:@"Error" message:@"You do not have email set up on this unit. Please configure your email program." delegate:nil cancelButtonTitle:@"OK" otherButtonTitles:nil];
-        [alert show];
         if(handler)
         {
-            handler(NO);
+            handler(NO, [[NSError alloc]initWithDomain:@"MailService" code:0 userInfo:@{@"message": @"You do not have email set up on this unit. Please configure your email program."}]);
         }
     
         return;
@@ -92,21 +89,21 @@ static MailService *sharedService = nil;
     NSLog(@"Dismiss");
     switch (result) {
         case MFMailComposeResultCancelled:
-            [self callSuccess:NO];
+            [self callSuccess:NO error:nil];
             break;
         case MFMailComposeResultSaved:
-            [self callSuccess:NO];
+            [self callSuccess:NO error:nil];
             break;
         case MFMailComposeResultSent:
         {
-            [self callSuccess:YES];
+            [self callSuccess:YES error: nil];
             break;
         }
             
             //show the failure notification
         case MFMailComposeResultFailed:
         {
-            [self callSuccess:NO];
+            [self callSuccess:NO error: error];
             break;
         }
     }
@@ -118,11 +115,11 @@ static MailService *sharedService = nil;
 
 }
 
--(void)callSuccess:(BOOL)success
+-(void)callSuccess:(BOOL)success error:(NSError*)error
 {
     if(self.completionHandler)
     {
-        self.completionHandler(success);
+        self.completionHandler(success, error);
     }
 
 }

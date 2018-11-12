@@ -24,7 +24,7 @@
 @interface MailService : NSObject<MFMailComposeViewControllerDelegate>
 
 + (id)sharedService;
--(void)emailTo:(NSArray*)emails withSubject:(NSString*)subject body:(NSString*)body attachments:(NSArray<MailServiceAttachment*>*)attachments fromVC:(UIViewController*)parent  andCompletion:(void(^)(BOOL success))handler;
+-(void)emailTo:(NSArray*)emails withSubject:(NSString*)subject body:(NSString*)body attachments:(NSArray<MailServiceAttachment*>*)attachments fromVC:(UIViewController*)parent  andCompletion:(void(^)(BOOL success, NSError * error))handler;
 @property(nonatomic,strong)	MFMailComposeViewController * mailController;
 @property(nonatomic,weak)id<MailServiceCustomizer> customizer;
 @property BOOL usesHtmlContent;
