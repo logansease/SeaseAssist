@@ -67,11 +67,12 @@ static MailService *sharedService = nil;
     
     if(parent)
     {
-        if(parent.presentingViewController)
+        if(parent.presentingViewController && parent.presentingViewController.class == [UIAlertController class])
         {
-            [parent dismissViewControllerAnimated:NO completion:nil];
+            [parent dismissViewControllerAnimated:YES completion:^{
+                [parent presentViewController:self.mailController animated:YES completion:nil];
+            }];
         }
-        [parent presentViewController:self.mailController animated:YES completion:nil];
     }
     else{
         [UIViewController present:self.mailController on:parent];
