@@ -72,10 +72,13 @@ static MailService *sharedService = nil;
             [parent dismissViewControllerAnimated:YES completion:^{
                 [parent presentViewController:self.mailController animated:YES completion:nil];
             }];
+        }else
+        {
+            [parent presentViewController:self.mailController animated:YES completion:nil];
         }
     }
     else{
-        [UIViewController present:self.mailController on:parent];
+        [UIViewController present:self.mailController on:nil];
     }
     
     //retain the handler
