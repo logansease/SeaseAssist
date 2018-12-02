@@ -3,7 +3,7 @@
 //  TokenStorage
 //
 //  Created by lsease on 11/15/17.
-//  Copyright © 2017 casa. All rights reserved.
+//  Copyright © 2017 Logan Sease. All rights reserved.
 //
 
 import Foundation

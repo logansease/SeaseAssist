@@ -1,9 +1,9 @@
 //
 //  UITextField+BottomBorder.swift
-//  Bedkin
+//  SeaseAssist
 //
 //  Created by lsease on 5/16/17.
-//  Copyright © 2017 Bedkin. All rights reserved.
+//  Copyright © 2017 Logan Sease. All rights reserved.
 //
 
 import UIKit

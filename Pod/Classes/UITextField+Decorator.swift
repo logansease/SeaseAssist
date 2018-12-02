@@ -1,9 +1,9 @@
 //
 //  UITextField+Decorator.swift
-//  Bedkin
+//  SeaseAssist
 //
 //  Created by lsease on 12/21/16.
-//  Copyright © 2016 Bedkin. All rights reserved.
+//  Copyright © 2016 Logan Sease. All rights reserved.
 //
 
 import UIKit

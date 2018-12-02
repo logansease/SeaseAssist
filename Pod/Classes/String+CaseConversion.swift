@@ -1,9 +1,9 @@
 //
 //  String+CaseConversion.swift
-//  Bedkin
+//  SeaseAssist
 //
 //  Created by lsease on 10/27/16.
-//  Copyright © 2016 Bedkin. All rights reserved.
+//  Copyright © 2016 Logan Sease. All rights reserved.
 //
 
 import Foundation

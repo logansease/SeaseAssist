@@ -1,9 +1,9 @@
 //
 //  Date+Utils.swift
-//  Bedkin
+//  SeaseAssist
 //
 //  Created by lsease on 2/23/17.
-//  Copyright © 2017 Bedkin. All rights reserved.
+//  Copyright © 2017 Logan Sease. All rights reserved.
 //
 
 
