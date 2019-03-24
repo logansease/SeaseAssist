@@ -13,7 +13,9 @@
 {    
     NSRange range = NSMakeRange(fromSection, toSection - fromSection);
     NSIndexSet *sectionToReload = [NSIndexSet indexSetWithIndexesInRange:range];
+    [self beginUpdates];
     [self reloadSections:sectionToReload withRowAnimation:UITableViewRowAnimationAutomatic];
+    [self endUpdates];
 }
 
 -(void)reloadSection:(NSInteger)section

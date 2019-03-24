@@ -1,10 +1,10 @@
-//
-//  ImagePickerHelper.m
-//  Immunization Tracker
-//
-//  Created by Logan Sease on 3/3/16.
-//  Copyright © 2016 Qonceptual. All rights reserved.
-//
+    //
+    //  ImagePickerHelper.m
+    //  Immunization Tracker
+    //
+    //  Created by Logan Sease on 3/3/16.
+    //  Copyright © 2016 Qonceptual. All rights reserved.
+    //
 
 #import "ImagePickerHelper.h"
 #import "UIViewController+Top.h"
@@ -15,6 +15,7 @@
 @interface ImagePickerHelper()
 @property (nonatomic, copy) void (^completionHandler)(UIImage* result);
 @property(nonatomic,strong)UIImagePickerController *imagePickerController;
+@property BOOL selected;
 @end
 
 @implementation ImagePickerHelper
@@ -45,6 +46,7 @@ static ImagePickerHelper *sharedService = nil;
         }
         else{
             handler(nil);
+            self.completionHandler = nil;
         }
     }];
 }
@@ -54,9 +56,11 @@ static ImagePickerHelper *sharedService = nil;
     if(![UIImagePickerController isSourceTypeAvailable:type])
     {
         handler(nil);
+        self.completionHandler = nil;
         return nil;
     }
     
+    self.selected = NO;
     self.completionHandler = handler;
     
     UIImagePickerController *imagePickerController = [[UIImagePickerController alloc] init];
@@ -85,10 +89,15 @@ static ImagePickerHelper *sharedService = nil;
 
 #pragma mark - UIImagePickerControllerDelegate
 
-// This method is called when an image has been chosen from the library or taken from the camera.
+    // This method is called when an image has been chosen from the library or taken from the camera.
 - (void)imagePickerController:(UIImagePickerController *)picker didFinishPickingMediaWithInfo:(NSDictionary *)info
 {
-    //set image to preview
+        //set image to preview
+    if(_selected)
+    {
+        return;
+    }
+    _selected = true;
     UIImage *image = [info valueForKey:UIImagePickerControllerOriginalImage];
     [NSThread mainThread:^{
         self.completionHandler(image);
@@ -102,6 +111,11 @@ static ImagePickerHelper *sharedService = nil;
 
 - (void)imagePickerControllerDidCancel:(UIImagePickerController *)picker
 {
+    if(_selected)
+    {
+        return;
+    }
+    _selected = true;
     [NSThread mainThread:^{
         self.completionHandler(nil);
         self.completionHandler = nil;
