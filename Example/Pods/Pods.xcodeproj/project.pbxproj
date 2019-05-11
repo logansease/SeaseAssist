@@ -24,6 +24,7 @@
 		0083A4981F4F267F0092CC93 /* UITextField+BottomBorder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0083A4971F4F267F0092CC93 /* UITextField+BottomBorder.swift */; };
 		0083A49B1F4F26C30092CC93 /* UITextField+Decorator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0083A4991F4F26C30092CC93 /* UITextField+Decorator.swift */; };
 		0083A49C1F4F26C30092CC93 /* UILabel+Image.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0083A49A1F4F26C30092CC93 /* UILabel+Image.swift */; };
+		00FFE88222877FED0057F303 /* String+SubscriptHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00FFE88122877FED0057F303 /* String+SubscriptHelper.swift */; };
 		010289770F98AA8A16A0D56334A0D72A /* KeychainItemWrapper.m in Sources */ = {isa = PBXBuildFile; fileRef = 3AE0830BCBA27457D848A1E14192525E /* KeychainItemWrapper.m */; };
 		0374568BE06317CD8B9DDA0CBE9E4EDD /* UIView+FrameAdjust.h in Headers */ = {isa = PBXBuildFile; fileRef = 83D8A1C457C2C8DD182D6511A31C68DA /* UIView+FrameAdjust.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		03A43D7ECF79B1AC5F06B1D2B6C44985 /* DatePickerTextField.h in Headers */ = {isa = PBXBuildFile; fileRef = A5C90DE4DD68E6F5285D8674A2B7CE5F /* DatePickerTextField.h */; settings = {ATTRIBUTES = (Public, ); }; };
@@ -203,6 +204,7 @@
 		0083A4971F4F267F0092CC93 /* UITextField+BottomBorder.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UITextField+BottomBorder.swift"; sourceTree = "<group>"; };
 		0083A4991F4F26C30092CC93 /* UITextField+Decorator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UITextField+Decorator.swift"; sourceTree = "<group>"; };
 		0083A49A1F4F26C30092CC93 /* UILabel+Image.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UILabel+Image.swift"; sourceTree = "<group>"; };
+		00FFE88122877FED0057F303 /* String+SubscriptHelper.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "String+SubscriptHelper.swift"; sourceTree = "<group>"; };
 		017607FD3AD8E4123835DA17A7394711 /* UIImageView+Helpers.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "UIImageView+Helpers.h"; sourceTree = "<group>"; };
 		0249C3664E7B875A4887153735869EB8 /* UIImage+Grayscale.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "UIImage+Grayscale.m"; sourceTree = "<group>"; };
 		02BE1071857BE21BDA3B123328DBB8E3 /* UIImageView+Networking.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "UIImageView+Networking.h"; sourceTree = "<group>"; };
@@ -395,6 +397,7 @@
 		1FE76FBC469BDAF88402E8A05BD302D3 /* Classes */ = {
 			isa = PBXGroup;
 			children = (
+				00FFE88122877FED0057F303 /* String+SubscriptHelper.swift */,
 				001D8D5F20804D5A00E8EC23 /* UITableView+Deselect.swift */,
 				001D8D632080521D00E8EC23 /* SpecialTypes.swift */,
 				001D8D5D20804D3500E8EC23 /* String+Base64.swift */,
@@ -808,6 +811,7 @@
 			developmentRegion = English;
 			hasScannedForEncodings = 0;
 			knownRegions = (
+				English,
 				en,
 			);
 			mainGroup = 7DB346D0F39D3F0E887471402A8071AB;
@@ -910,6 +914,7 @@
 				001D8D642080521D00E8EC23 /* SpecialTypes.swift in Sources */,
 				19452678E94D959BE5615FD11CD83A79 /* UIViewController+Presentation.m in Sources */,
 				165E12C8A83BFF245DC931131D6284B2 /* UIViewController+Top.m in Sources */,
+				00FFE88222877FED0057F303 /* String+SubscriptHelper.swift in Sources */,
 				001D8D5E20804D3500E8EC23 /* String+Base64.swift in Sources */,
 				ADF57CDA68396CF02930F1BB47BFF5B9 /* ValuePickerTextField.m in Sources */,
 			);
