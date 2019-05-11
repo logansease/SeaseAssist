@@ -12,7 +12,7 @@ import UIKit
 //TODO: validate
 @objc public class FormatHelper : NSObject {
 
-    @objc public static func isValidEmail(email: String?) -> Bool
+    @objc static func isValidEmail(email: String?) -> Bool
     {
         // print("validate calendar: \(testStr)")
         let emailRegEx = "[A-Z0-9a-z._%+-]+@[A-Za-z0-9.-]+\\.[A-Za-z]{2,}"
@@ -21,7 +21,7 @@ import UIKit
         return emailTest.evaluate(with: email)
     }
     
-    @objc public static func isDigitOfLength(_ test : String?, from rangeStart: Int, to rangeEnd : Int) -> Bool
+    @objc static func isDigitOfLength(_ test : String?, from rangeStart: Int, to rangeEnd : Int) -> Bool
     {
         guard let string = test else
         {

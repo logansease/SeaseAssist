@@ -10,13 +10,13 @@ import UIKit
 
 public extension String {
     
-    public static func isEmpty(_ string : String?) -> Bool
+    func isEmpty(_ string : String?) -> Bool
     {
         let count = nonWhiteSpaceCharacterCount(string)
         return count <= 0
     }
     
-    public static func nonWhiteSpaceCharacterCount(_ string : String? ) -> Int
+    func nonWhiteSpaceCharacterCount(_ string : String? ) -> Int
     {
         guard let test = string else
         {
@@ -30,7 +30,7 @@ public extension String {
     
     //this is a special version of title case that will handle things like O' and Mc in last Names
     //by just capitalizing the first letters of each word, but not modifying case of other characters
-    public func upperCasedWords() -> String{
+    func upperCasedWords() -> String{
         var result = ""
         
         let components = self.components(separatedBy: " ")
@@ -45,7 +45,7 @@ public extension String {
         return result
     }
     
-    public func capitalizingFirstLetter() -> String {
+    func capitalizingFirstLetter() -> String {
         let first = String(prefix(1)).capitalized
         let other = String(dropFirst())
         return first + other

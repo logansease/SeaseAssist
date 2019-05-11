@@ -10,7 +10,7 @@ import UIKit
 
 @objc public extension UITableView
 {
-    @objc public func deselect(animated : Bool = true)
+    @objc func deselect(animated : Bool = true)
     {
         if let index = self.indexPathForSelectedRow
         {

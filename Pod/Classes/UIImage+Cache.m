@@ -65,7 +65,19 @@
     filename = [filename stringByReplacingOccurrencesOfString:@"/" withString:@""];
     filename = [filename stringByReplacingOccurrencesOfString:@"." withString:@""];
     
-    return [NSTemporaryDirectory() stringByAppendingPathComponent:filename];
+    NSString * tempFileName =  [NSTemporaryDirectory() stringByAppendingPathComponent:filename];
+    
+    NSFileManager * fileManager = [NSFileManager defaultManager];
+    if ([fileManager fileExistsAtPath:tempFileName]) {
+        return tempFileName;
+    }
+
+    NSString * documents = [NSSearchPathForDirectoriesInDomains(NSDocumentDirectory, NSUserDomainMask, YES) objectAtIndex:0];
+    NSString * imageFolder = [documents stringByAppendingPathComponent:@"imageCache"];
+    if (![fileManager fileExistsAtPath:imageFolder]) {
+        [fileManager createDirectoryAtPath:imageFolder withIntermediateDirectories:NO attributes:nil error:nil];
+    }
+    return [imageFolder stringByAppendingPathComponent:filename];
 }
 
 

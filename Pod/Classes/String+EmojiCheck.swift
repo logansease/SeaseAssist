@@ -10,7 +10,7 @@ import UIKit
 
 public extension UnicodeScalar {
     
-    public var isEmoji: Bool {
+    var isEmoji: Bool {
         
         switch value {
         case 0x3030, 0x00AE, 0x00A9, // Special Characters
@@ -39,29 +39,29 @@ public extension String {
         return CTLineGetGlyphCount(line)
     }
     
-    public var isSingleEmoji: Bool {
+    var isSingleEmoji: Bool {
         
         return glyphCount == 1 && containsEmoji
     }
     
-    public var containsEmoji: Bool {
+    var containsEmoji: Bool {
         
         return !unicodeScalars.filter { $0.isEmoji }.isEmpty
     }
     
-    public var containsOnlyEmoji: Bool {
+    var containsOnlyEmoji: Bool {
         
         return unicodeScalars.first(where: { !$0.isEmoji && !$0.isZeroWidthJoiner }) == nil
     }
     
     // The next tricks are mostly to demonstrate how tricky it can be to determine emoji's
     // If anyone has suggestions how to improve this, please let me know
-    public var emojiString: String {
+    var emojiString: String {
         
         return emojiScalars.map { String($0) }.reduce("", +)
     }
     
-    public var emojis: [String] {
+    var emojis: [String] {
         
         var scalars: [[UnicodeScalar]] = []
         var currentScalarSet: [UnicodeScalar] = []

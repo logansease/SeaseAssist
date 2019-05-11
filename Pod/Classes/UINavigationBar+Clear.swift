@@ -10,14 +10,14 @@ import UIKit
 
 @objc public extension UINavigationBar
 {
-    @objc public func makeClear()
+    @objc func makeClear()
     {
         setBackgroundImage(UIImage(), for: .default)
         shadowImage = UIImage()
         isTranslucent = true
     }
     
-    @objc public func unmakeClear()
+    @objc func unmakeClear()
     {
         self.setBackgroundImage(nil, for: .default)
     }

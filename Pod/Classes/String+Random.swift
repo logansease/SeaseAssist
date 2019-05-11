@@ -10,7 +10,7 @@ import Foundation
 
 public extension String
 {
-    public static func generateRandom(length : Int = 32) -> String? {
+    static func generateRandom(length : Int = 32) -> String? {
         
         var keyData = Data(count: length)
         let length =  keyData.count

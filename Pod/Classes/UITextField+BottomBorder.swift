@@ -9,7 +9,7 @@
 import UIKit
 
 @objc public extension UITextField {
-   @objc public func setBottomBorder(color: UIColor = UIColor(hex: "A5A5A5")) {
+   @objc func setBottomBorder(color: UIColor = UIColor(hex: "A5A5A5")) {
         self.borderStyle = .none
         
         self.layer.backgroundColor = UIColor.white.cgColor

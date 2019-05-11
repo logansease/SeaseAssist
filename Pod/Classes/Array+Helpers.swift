@@ -9,7 +9,7 @@
 import Foundation
 
 public extension Array {
-    public mutating func swap(from ind1: Int, to ind2: Int){
+    mutating func swap(from ind1: Int, to ind2: Int){
         var temp: Element
         temp = self[ind1]
         self[ind1] = self[ind2]
@@ -19,7 +19,7 @@ public extension Array {
 }
 
 public extension Dictionary {
-    public func keyArray() -> [AnyHashable]
+    func keyArray() -> [AnyHashable]
     {
         let lazyMapCollection = self.keys
         return  Array(lazyMapCollection) as [AnyHashable]

@@ -10,7 +10,7 @@ import Foundation
 
 public extension String{
     
-    public func camelCaseToTitleCase() -> String!
+    func camelCaseToTitleCase() -> String!
     {
         var string = self
         
@@ -21,7 +21,7 @@ public extension String{
         return string
     }
     
-    public func camelCaseToUnderscoreCase() -> String!
+    func camelCaseToUnderscoreCase() -> String!
     {
         var string = self
         
@@ -32,7 +32,7 @@ public extension String{
         return string
     }
     
-    public func underscoreCaseToCamelCase() -> String!
+    func underscoreCaseToCamelCase() -> String!
     {
         var result = ""
         

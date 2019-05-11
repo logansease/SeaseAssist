@@ -28,6 +28,9 @@
 -(BOOL)isOnBeforeOrToday;
 -(BOOL)isToday;
 -(BOOL)isBeforeToday;
+-(BOOL)isSameDayAs:(NSDate*)date;
+-(BOOL)isOnOrBefore:(NSDate*)date;
+-(BOOL)isOnOrAfter:(NSDate*)date;
 
 -(BOOL)isBetween:(NSDate*)startDate and:(NSDate*)endDate;
 -(NSDate*)dateByAdvancingMonths:(NSInteger)monthCount;

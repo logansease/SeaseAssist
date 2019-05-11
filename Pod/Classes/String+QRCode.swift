@@ -12,7 +12,7 @@ import UIKit
 
 public extension String
 {
-   public func toQRCode() -> UIImage? {
+    func toQRCode() -> UIImage? {
         
         let stringData = self.data(using: String.Encoding.utf8)
         let filter = CIFilter(name: "CIQRCodeGenerator")
@@ -27,7 +27,7 @@ public extension String
         }
     }
     
-    public func toHiDefQRCode() -> UIImage? {
+    func toHiDefQRCode() -> UIImage? {
         
         let stringData = self.data(using: String.Encoding.utf8)
         let filter = CIFilter(name: "CIQRCodeGenerator")

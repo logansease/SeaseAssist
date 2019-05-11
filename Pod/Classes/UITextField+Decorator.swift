@@ -10,7 +10,7 @@ import UIKit
 
 @objc public extension UITextField{
 
-    @objc public func decorateWithImage(named imageName:String) -> UIImageView
+    @objc func decorateWithImage(named imageName:String) -> UIImageView
     {
         let image =  UIImage(named: imageName)!
         let imageView = UIImageView(image: image)

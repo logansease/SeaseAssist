@@ -206,6 +206,24 @@
     }
     return NO;
 }
+    
+-(BOOL)isSameDayAs:(NSDate*)date
+{
+    NSDate * myDay = [self dateWithoutTime];
+    NSDate * otherDate = [date dateWithoutTime];
+    
+    return myDay == otherDate;
+}
+    
+-(BOOL)isOnOrAfter:(NSDate*)date
+{
+    return [self isSameDayAs:date] || [self isAfterDate:date];
+}
+    
+-(BOOL)isOnOrBefore:(NSDate*)date
+{
+    return [self isSameDayAs:date] || [self isBeforeDate:date];
+}
 
 -(BOOL)isBetween:(NSDate*)startDate and:(NSDate*)endDate
 {
