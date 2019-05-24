@@ -100,9 +100,9 @@ static ImagePickerHelper *sharedService = nil;
     _selected = true;
     UIImage *image = [info valueForKey:UIImagePickerControllerOriginalImage];
     [NSThread mainThread:^{
-        self.completionHandler(image);
-        self.completionHandler = nil;
         [self.imagePickerController dismissViewControllerAnimated:YES completion:^{
+            self.completionHandler(image);
+            self.completionHandler = nil;
             self.imagePickerController = nil;
         }];
     }];
@@ -117,9 +117,9 @@ static ImagePickerHelper *sharedService = nil;
     }
     _selected = true;
     [NSThread mainThread:^{
-        self.completionHandler(nil);
-        self.completionHandler = nil;
         [self.imagePickerController dismissViewControllerAnimated:YES completion:^{
+            self.completionHandler(nil);
+            self.completionHandler = nil;
             self.imagePickerController = nil;
         }];
     }];
