@@ -13,6 +13,8 @@
 		001D8D6220804DB700E8EC23 /* UINavigationBar+Clear.swift in Sources */ = {isa = PBXBuildFile; fileRef = 001D8D6120804DB700E8EC23 /* UINavigationBar+Clear.swift */; };
 		001D8D642080521D00E8EC23 /* SpecialTypes.swift in Sources */ = {isa = PBXBuildFile; fileRef = 001D8D632080521D00E8EC23 /* SpecialTypes.swift */; };
 		003F506D4B547263D6F0D06789BD7B86 /* UIImage+Helpers.m in Sources */ = {isa = PBXBuildFile; fileRef = BC6B914F6E0426E7C8BC72D8562E6212 /* UIImage+Helpers.m */; };
+		005A3B0C22DE05CA006DDC84 /* SwipeGestureRecognizer+Direction.swift in Sources */ = {isa = PBXBuildFile; fileRef = 005A3B0B22DE05C9006DDC84 /* SwipeGestureRecognizer+Direction.swift */; };
+		005A3B0E22DE062F006DDC84 /* UIColor+rgb.swift in Sources */ = {isa = PBXBuildFile; fileRef = 005A3B0D22DE062F006DDC84 /* UIColor+rgb.swift */; };
 		0083A4861F4F25900092CC93 /* Date+Utils.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0083A4851F4F25900092CC93 /* Date+Utils.swift */; };
 		0083A4881F4F26090092CC93 /* String+QRCode.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0083A4871F4F26090092CC93 /* String+QRCode.swift */; };
 		0083A48C1F4F261B0092CC93 /* FormatHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0083A4891F4F261B0092CC93 /* FormatHelper.swift */; };
@@ -192,6 +194,8 @@
 		001D8D5F20804D5A00E8EC23 /* UITableView+Deselect.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UITableView+Deselect.swift"; sourceTree = "<group>"; };
 		001D8D6120804DB700E8EC23 /* UINavigationBar+Clear.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UINavigationBar+Clear.swift"; sourceTree = "<group>"; };
 		001D8D632080521D00E8EC23 /* SpecialTypes.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SpecialTypes.swift; sourceTree = "<group>"; };
+		005A3B0B22DE05C9006DDC84 /* SwipeGestureRecognizer+Direction.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "SwipeGestureRecognizer+Direction.swift"; sourceTree = "<group>"; };
+		005A3B0D22DE062F006DDC84 /* UIColor+rgb.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIColor+rgb.swift"; sourceTree = "<group>"; };
 		006001DA089988971609697A9AF2D3F9 /* UIButton+Helpers.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "UIButton+Helpers.h"; sourceTree = "<group>"; };
 		0083A4851F4F25900092CC93 /* Date+Utils.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Date+Utils.swift"; sourceTree = "<group>"; };
 		0083A4871F4F26090092CC93 /* String+QRCode.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "String+QRCode.swift"; sourceTree = "<group>"; };
@@ -397,6 +401,8 @@
 		1FE76FBC469BDAF88402E8A05BD302D3 /* Classes */ = {
 			isa = PBXGroup;
 			children = (
+				005A3B0D22DE062F006DDC84 /* UIColor+rgb.swift */,
+				005A3B0B22DE05C9006DDC84 /* SwipeGestureRecognizer+Direction.swift */,
 				00FFE88122877FED0057F303 /* String+SubscriptHelper.swift */,
 				001D8D5F20804D5A00E8EC23 /* UITableView+Deselect.swift */,
 				001D8D632080521D00E8EC23 /* SpecialTypes.swift */,
@@ -835,6 +841,7 @@
 				E78917C795BF91C624488CC109E316AB /* CleanButton.m in Sources */,
 				0EF0FA1F50A4FA0814A6439BE4DAA261 /* DatePickerTextField.m in Sources */,
 				294A6FC6AF2EFAD8858188889FB7F0A9 /* EventCounterService.m in Sources */,
+				005A3B0E22DE062F006DDC84 /* UIColor+rgb.swift in Sources */,
 				E58B894A0C011A7A735FF016C7D29C98 /* GCNetworkReachability.m in Sources */,
 				FF3B5502B5D857286CD59EDE3ECB896B /* GlossyButton.m in Sources */,
 				ACA7D73C650231388F22A5397AF1DD34 /* HTTPRequest.m in Sources */,
@@ -866,6 +873,7 @@
 				989460C7B14AFF24D5BEB002DE4E9D45 /* SAMBProgressHUD.m in Sources */,
 				4C76DFB4072962BD1C9BFB7B78635BE4 /* SeaseAssist-dummy.m in Sources */,
 				58C754B1D07EACA66B77BFB5CCE43871 /* SoundService.m in Sources */,
+				005A3B0C22DE05CA006DDC84 /* SwipeGestureRecognizer+Direction.swift in Sources */,
 				9E76DE9F58467F21F5D508F7BA6B85DC /* SpeechService.m in Sources */,
 				0083A4941F4F263A0092CC93 /* String+Utils.swift in Sources */,
 				0C176859B2EE1B0E766C59553D0EBA4F /* UIAlertController+Helpers.m in Sources */,
