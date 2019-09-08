@@ -13,6 +13,24 @@
 
 @implementation ValuePickerTextField
 
+-(id)init {
+    if (self = [super init]) {
+        
+        [self addAndSetupPicker];
+        [[NSNotificationCenter defaultCenter]addObserver:self selector:@selector(didStartEditing:) name:UITextFieldTextDidBeginEditingNotification object:self];
+    }
+    return self;
+}
+
+-(id)initWithFrame:(CGRect)frame {
+    if (self = [super initWithFrame:frame]) {
+        
+        [self addAndSetupPicker];
+        [[NSNotificationCenter defaultCenter]addObserver:self selector:@selector(didStartEditing:) name:UITextFieldTextDidBeginEditingNotification object:self];
+    }
+    return self;
+}
+
 - (id)initWithCoder:(NSCoder *)aDecoder{
     if (self = [super initWithCoder:aDecoder]) {
         
