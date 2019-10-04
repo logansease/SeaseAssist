@@ -29,7 +29,7 @@
         
         // Begin a new image that will be the new image with the rounded corners
         // (here with the size of an UIImageView)
-        UIGraphicsBeginImageContextWithOptions(CGSizeMake(dim, dim), NO, 1.0);
+        UIGraphicsBeginImageContextWithOptions(CGSizeMake(dim, dim), NO, 0);
         
         // Add a clip before drawing anything, in the shape of an rounded rect
         [[UIBezierPath bezierPathWithRoundedRect:CGRectMake(0, 0, dim, dim)
