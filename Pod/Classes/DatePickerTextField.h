@@ -19,4 +19,5 @@
 @property(nonatomic,weak)IBOutlet id<DatePickerTextFieldDelegate> dateDelegate;
 @property(nonatomic,strong)UIDatePicker * datePicker;
 @property(nonatomic,strong)NSString * displayFormat;
+-(void)setDefaultDate:(NSDate*)date;
 @end

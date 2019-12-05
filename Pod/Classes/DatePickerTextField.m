@@ -16,8 +16,8 @@
         
         UIDatePicker * datePicker = [[UIDatePicker alloc] init] ;
         datePicker.datePickerMode = UIDatePickerModeDate;
-        datePicker.date = [NSDate date];
         self.inputView = datePicker;
+        datePicker.date = [NSDate new];
         
         //retain a copy of the date picker if needed
         self.datePicker = datePicker;
@@ -34,6 +34,16 @@
     }
     return self;
 }
+
+-(void)setDefaultDate:(NSDate*)date
+{
+    [self.datePicker setDate:date];
+    
+    NSDateFormatter * formatter = [[NSDateFormatter alloc]init];
+    [formatter setDateFormat:self.displayFormat];
+    self.text = [formatter stringFromDate:date];
+}
+
 
 -(void)dateChanged:(id)sender
 {
