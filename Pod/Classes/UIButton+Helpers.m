@@ -44,11 +44,7 @@
         thisLayer.shadowColor = [[UIColor blackColor] CGColor];
         thisLayer.shadowOffset = CGSizeMake(0.0, 3.0);
         
-        // TODO: Need to test these on iPad
-        if ([[UIScreen mainScreen] respondsToSelector:@selector(scale)] && [[UIScreen mainScreen] scale] == 2)
-        {
-            thisLayer.rasterizationScale=2.0;
-        }
+        thisLayer.rasterizationScale = UIScreen.mainScreen.scale;
         thisLayer.shouldRasterize = YES; // FYI: Shadows have a poor effect on performance
     }
     
