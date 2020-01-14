@@ -5,7 +5,7 @@
 [![License](https://img.shields.io/cocoapods/l/SeaseAssist.svg?style=flat)](http://cocoapods.org/pods/SeaseAssist)
 [![Platform](https://img.shields.io/cocoapods/p/SeaseAssist.svg?style=flat)](http://cocoapods.org/pods/SeaseAssist)
 
-##Summary Info
+## Summary Info
 
 This library is founded on the basis that commonly performed tasks, which take several lines of code to write should be encompased into simple methods, either using class extensions or services, that can be written in a single line of code. Thus reducing code redundancy and increasing code readibility.
 
@@ -73,33 +73,33 @@ SeaseAssist is available under the MIT license. See the LICENSE file for more in
 
 #### Sorry, there is a lot here. I will do my best to try to keep this documentation readable.
 
-#UI CLASSES
+# UI CLASSES
 
-##CleanButton
+## CleanButton
 A modern button with a nice clean rounded border, an empty background and some text
 
-##GlossyButton
+## GlossyButton
 A button with a gradient filled background matching the button's Tint Color
 
-##RoundedView
+## RoundedView
 A View with slightly rounded corners and a thin border.
 
-##DatePickerTextField
+## DatePickerTextField
 Create a UITextField with a Date picker instead of a keyboard
 
-##ValuePickerTextField
+## ValuePickerTextField
 A UITextField with a PickerView instead of a keyboard
 
-#MLTBadgeView
+# MLTBadgeView
 A badge that goes over any UIView. See UIView+Badge.h
 ```
 [view.badge setBadgeValue:@"4"];
 ```
 
 
-#SERVICES
+# SERVICES
 
-##EventCounterService
+## EventCounterService
 A class to track events throughout the life of the app, or daily events
 
 ```objective-c
@@ -112,7 +112,7 @@ A class to track events throughout the life of the app, or daily events
 +(NSUInteger)addCountForDailyEvent:(NSString*)dailyEvent count:(NSInteger)count;
 ```
 
-##Sound Service
+## Sound Service
 A service to play sounds and maintain a queue
 
 ```objective-c
@@ -125,7 +125,7 @@ A service to play sounds and maintain a queue
 -(BOOL)isPlaying;
 ```
 
-##SpeechService
+## SpeechService
 Simple Text to Speech with the Siri API
 ```objective-c
 + (id)sharedService;
@@ -133,25 +133,25 @@ Simple Text to Speech with the Siri API
 -(void)speakText:(NSString*)text;
 ```
 
-##Email Service
+## Email Service
 A simple Email interface to open an email view controller from anywhere.
 ```
 -(void)emailTo:(NSArray*)emails withSubject:(NSString*)subject body:(NSString*)body attachments:(NSArray<MailServiceAttachment*>*)attachments fromVC:(UIViewController*)parent  andCompletion:(void(^)(BOOL success))handler;
 ```
 
-##Image Picker
+## Image Picker
 A simple interface to show an image picker
 ```
 @interface ImagePickerHelper 
 -(void)selectImageFrom:(UIViewController*)source ofType:(UIImagePickerControllerSourceType)type andCompletion:(void(^)(UIImage* image))handler;
 ```
 
-#NETWORKING
+# NETWORKING
 
-##HTTPRequest
+## HTTPRequest
 A helper class to make http requests asynchronously in one line without the need for any 3rd party frameworks.
 
-##For a more robust Networking helper, see QwikHttp, and also QwikJson for json parsing.
+### For a more robust Networking helper, see QwikHttp, and also QwikJson for json parsing.
 ```objective-c
 +(void)jsonRequestToUrl:(NSString*)urlString withMethod:(NSString*)method withHeaders:(NSDictionary*)headers withParams:(NSDictionary*)params withHandler:(void (^)(NSString* response,NSError * error))handler;
 
@@ -160,16 +160,16 @@ A helper class to make http requests asynchronously in one line without the need
 +(NSString*)addParameters:(NSDictionary*)urlParams toUrl:(NSString*)url;
 ```
 
-##Reachability Helpers
+## Reachability Helpers
 Find our internet connection status.
 ```objective-c
 @interface UIDevice (Reachability)
 +(BOOL)connected;
 @end
 ```
-#CLASS EXTENSIONS
+# CLASS EXTENSIONS
 
-##Json Serialization and Deserialization
+## Json Serialization and Deserialization
 
 ###NSDictionary
 ```objective-c
@@ -182,7 +182,7 @@ Find our internet connection status.
 -(NSString*)toJsonString;
 +(NSArray*)fromJsonString:(NSString*)json;
 ```
-##NSDate Helpers
+## NSDate Helpers
 ```objective-c
 -(NSDate*)beginningOfWeek;
 -(NSDate*)endOfWeek;
@@ -219,7 +219,7 @@ public func isOnOrAfter(_ date: Date!) -> Bool
 ```
 
 
-##NSMutableArray Helpers
+## NSMutableArray Helpers
 ```objective-c
 - (void)shuffle;
 
@@ -234,7 +234,7 @@ public mutating func swap(from ind1: Int, to ind2: Int)
 }
 ```
 
-##NSString Helpers
+## NSString Helpers
 ```objective-c
 -(NSInteger)occurancesOfString:(NSString*)test;
 -(BOOL)contains:(NSString *)string;
@@ -248,7 +248,7 @@ public mutating func swap(from ind1: Int, to ind2: Int)
 -(NSString*)generateRandom:(int)length;
 ```
 
-##NSString validation
+## NSString validation
 ```objective-c
 -(BOOL)isValidEmail:(BOOL)laxValidation;
 -(BOOL)isValidEmail;
@@ -257,7 +257,7 @@ public mutating func swap(from ind1: Int, to ind2: Int)
 +(BOOL)isValidAlphanumbericChars:(NSString*)textString;
 ```
 
-##String Format Helpers
+## String Format Helpers
 ```
 extension String {
 public static func isEmpty(_ string: String?) -> Bool
@@ -290,7 +290,7 @@ public subscript(r: CountableClosedRange<Int>) -> String? { get }
 
 
 
-##Encryption Helpers
+## Encryption Helpers
 ###NSData
 ```objective-c
 -(NSData *) aesEncryptedDataWithKey:(NSData *) key;
@@ -308,7 +308,7 @@ public subscript(r: CountableClosedRange<Int>) -> String? { get }
 - (NSString*)encryptWithKey:(NSString*)key;
 ```
 
-##NSThread Helpers
+## NSThread Helpers
 Run blocks in the main or background threads with ease
 ```objective-c
 +(void)mainThread:(void (^)())main;
@@ -316,19 +316,19 @@ Run blocks in the main or background threads with ease
 +(void)delay:(float)length code:(void (^)())function;
 ```
 
-##UIDevice: Unique Identifiers
+## UIDevice: Unique Identifiers
 Since apple now longer gives access to device level Identifier information, this is another way to get an Identifier based on a hash of the mac address
 ```objective-c
 - (NSString *) uniqueDeviceIdentifier;
 - (NSString *) uniqueGlobalDeviceIdentifier;
 ```
 
-##UIDevice system version
+## UIDevice system version
 ```objective-c
 +(BOOL)versionGreaterThanOrEqual:(NSString*)version;
 ```
 
-##Keychain Helpers
+## Keychain Helpers
 Read and write to the keychain.
 ```objective-c
 @interface UIDevice (Keychain)
@@ -337,7 +337,7 @@ Read and write to the keychain.
 @end
 ```
 
-##Alerts
+## Alerts
 
 ###SAMBProgressHUD+Singleton
 An extension to SAMBProgressHUD to show a loading dialog singleton without needing to add it to your view or set it up.
@@ -365,7 +365,7 @@ Show a quick "Toast" on screen for a desired amount of time
 +(void)showMessage:(NSString*)message ofSize:(float)fontSize ofColor:(UIColor*)color inView:(UIView*)view forDuration:(float)seconds;
 ```
 
-##Images
+## Images
 
 ###UIImage Helpers
 ```objective-c
@@ -424,7 +424,7 @@ Set an image from URL like above, but prefill with initials if no image is found
 ```
 
 
-QR Code Generation
+### QR Code Generation
 ```
 extension String
 {
@@ -433,7 +433,7 @@ public func toHiDefQRCode() -> UIImage?
 }
 ```
 
-##Animation
+## Animation
 
 ###UIView+Bounce
 Make your UI Feel alive and highlight important views by adding a playful bounce 
@@ -465,7 +465,7 @@ animating hiding and showing of a view or a group of views
 ```
 
 
-##View Appearance
+## View Appearance
 
 ###UIView
 ```objective-c
@@ -491,9 +491,12 @@ animating hiding and showing of a view or a group of views
 -(void)setTitle:(NSString*)title;
 ```
 
-###UIColor+hex.h
+### UIColor
 ```objective-c
 +(UIColor*)colorWithHex:(NSString*)hex;
+```
+``` swift
+convenience init(r: Int, g: Int, b: Int, alpha: CGFloat = 1.0)
 ```
 
 ###Segmented Control
@@ -523,7 +526,7 @@ extension UILabel {
 
 ###
 
-##Application View Hierarchy
+## Application View Hierarchy
 Find the top most view controller from anywhere. Searches recursively through navigation, Tab bar and modal view controllers in your app window
 ###UIViewController+Top
 ```objective-c
@@ -535,7 +538,7 @@ Find the top most view controller from anywhere. Searches recursively through na
 @end
 ```
 
-##Backgrounds
+## Backgrounds
 ### BLURRED: For use with a Covers Current Context Modal Transition
 ```objective-c
 @interface UIViewController (Blur)
@@ -570,9 +573,10 @@ Find the top most view controller from anywhere. Searches recursively through na
 @end
 ```
 
-##UITableView Helpers
+## UITableView Helpers
 Reload sections of a tableview
 ```objective-c
+// NOTE This may cause issues :(
 -(void)reloadSection:(NSInteger)section;
 -(void)reloadSections:(NSInteger)fromSection to:(NSInteger)toSection;
 -(void)deselect
@@ -582,7 +586,7 @@ Add a header to a tableview
 -(void)setupTableHeader:(UIImage*)image;
 ```
 
-##Navigation Helpers
+## Navigation Helpers
 
 ###Add Tranitions
 ```objective-c
@@ -604,7 +608,7 @@ uiNavigationBar.unmakeClear()
 ```
 
 
-##Keyboard Helpers 
+## Keyboard Helpers 
 ```objective-c
 UIView
 -(void)hideKeyboardOnClick;
@@ -616,12 +620,20 @@ UITextField
 -(UIToolbar*)addToolbarWithLeftButton:(NSString*)lTitle withSelector:(SEL)lSelector andRightButton:(NSString*)rTitle withSelector:(SEL)rSelector andTarget:(id)target;
 ```
 
-##Path Helpers on NSFileManager
+## Path Helpers on NSFileManager
 ```objective-c
 +(NSString *)myDocumentsPathForFile:(NSString*)fileName;
 +(NSString *)tempPathForFile:(NSString*)fileName;
 ```
 
+## Gestures
+
+```swift
+extension UISwipeGestureRecognizer
+{
+     convenience public init(target: Any?, action: Selector?, direction: Direction) {
+}
+```
 
 
 
