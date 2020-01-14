@@ -50,16 +50,17 @@
         CGFloat widthFactor = targetWidth / width;
         CGFloat heightFactor = targetHeight / height;
         
-        if (widthFactor < heightFactor)
+        if (widthFactor < heightFactor) {
             scaleFactor = widthFactor;
-        else
+        }
+        else {
             scaleFactor = heightFactor;
+        }
         
         scaledWidth  = width * scaleFactor;
         scaledHeight = height * scaleFactor;
         
         // center the image
-        
         if (widthFactor < heightFactor) {
             thumbnailPoint.y = (targetHeight - scaledHeight) * 0.5;
         } else if (widthFactor > heightFactor) {
@@ -67,15 +68,9 @@
         }
     }
     
-    
     // this is actually the interesting part:
-    
-    UIGraphicsBeginImageContext(targetSize);
-    
-    CGRect thumbnailRect = CGRectZero;
-    thumbnailRect.origin = thumbnailPoint;
-    thumbnailRect.size.width  = scaledWidth;
-    thumbnailRect.size.height = scaledHeight;
+    CGRect thumbnailRect = CGRectMake(0, 0, scaledWidth, scaledHeight);
+    UIGraphicsBeginImageContextWithOptions(thumbnailRect.size, NO, 0.0);
     
     [sourceImage drawInRect:thumbnailRect];
     
@@ -83,7 +78,6 @@
     UIGraphicsEndImageContext();
     
     if(newImage == nil) NSLog(@"could not scale image");
-    
     
     return newImage ;
 }
