@@ -68,7 +68,7 @@
     {
         self.text = self.values.firstObject;
     }
-    [self.valueDelegate valuePickerTextField:self changed:self.currentIndex withValue:self.currentValue];
+    // [self.valueDelegate valuePickerTextField:self changed:self.currentIndex withValue:self.currentValue];
 }
 
 #pragma mark range picker methods
