@@ -22,12 +22,14 @@ import UIKit
             result.append(attachString)
             
             let heightDiff = self.font.lineHeight - image.size.height
-            result.addAttribute(.baselineOffset, value: heightDiff, range: NSRange(location: 0, length: 1))
+            result.addAttribute(.baselineOffset, value: heightDiff / 2, range: NSRange(location: 0, length: 1))
             
             if let text = text
             {
                 let titleString = NSAttributedString(string: text)
                 result.append(titleString)
+                result.addAttribute(.baselineOffset, value: -heightDiff, range: NSRange(location: 1, length: result.length - 1))
+                
                 self.text = nil
             }
             self.attributedText = result
@@ -39,19 +41,21 @@ import UIKit
         if let image = image{
             let attachment = NSTextAttachment()
             attachment.image = image
-            let attachString = NSAttributedString.init(attachment: attachment)
+            
+            let heightDiff = self.font.lineHeight - image.size.height
+            
             let result = NSMutableAttributedString()
             if let text = text
             {
                 let titleString = NSAttributedString(string: text)
                 result.append(titleString)
+                result.addAttribute(.baselineOffset, value: -heightDiff, range: NSRange(location: 0, length: result.length))
                 self.text = nil
             }
-            
-            let heightDiff = self.font.lineHeight - image.size.height
-            result.addAttribute(.baselineOffset, value: heightDiff, range: NSRange(location: result.length - 1, length: 1))
-            
+                        
+            let attachString = NSAttributedString.init(attachment: attachment)
             result.append(attachString)
+            result.addAttribute(.baselineOffset, value: heightDiff / 2, range: NSRange(location: result.length - 1, length: 1))
             self.attributedText = result
         }
     }
