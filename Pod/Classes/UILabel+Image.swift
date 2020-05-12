@@ -13,6 +13,7 @@ import UIKit
 {
     @objc func addImageToLeft(_ image: UIImage?)
     {
+        self.baselineAdjustment = .alignCenters
         if let image = image {
             
             let attachment = NSTextAttachment()
@@ -28,7 +29,7 @@ import UIKit
             {
                 let titleString = NSAttributedString(string: text)
                 result.append(titleString)
-                result.addAttribute(.baselineOffset, value: -heightDiff, range: NSRange(location: 1, length: result.length - 1))
+                result.addAttribute(.baselineOffset, value: -heightDiff/2, range: NSRange(location: 1, length: result.length - 1))
                 
                 self.text = nil
             }
@@ -38,6 +39,7 @@ import UIKit
     
     @objc func addImageToRight(_ image: UIImage?)
     {
+        self.baselineAdjustment = .alignCenters
         if let image = image{
             let attachment = NSTextAttachment()
             attachment.image = image
@@ -49,7 +51,7 @@ import UIKit
             {
                 let titleString = NSAttributedString(string: text)
                 result.append(titleString)
-                result.addAttribute(.baselineOffset, value: -heightDiff, range: NSRange(location: 0, length: result.length))
+                result.addAttribute(.baselineOffset, value: -heightDiff / 2, range: NSRange(location: 0, length: result.length))
                 self.text = nil
             }
                         
