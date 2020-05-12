@@ -7,17 +7,23 @@
 //
 
 import Foundation
+import UIKit
 
 @objc public extension UILabel
 {
     @objc func addImageToLeft(_ image: UIImage?)
     {
-        if let image = image{
+        if let image = image {
+            
             let attachment = NSTextAttachment()
             attachment.image = image
             let attachString = NSAttributedString.init(attachment: attachment)
             let result = NSMutableAttributedString()
             result.append(attachString)
+            
+            let heightDiff = self.font.lineHeight - image.size.height
+            result.addAttribute(.baselineOffset, value: heightDiff, range: NSRange(location: 0, length: 1))
+            
             if let text = text
             {
                 let titleString = NSAttributedString(string: text)
@@ -41,6 +47,10 @@ import Foundation
                 result.append(titleString)
                 self.text = nil
             }
+            
+            let heightDiff = self.font.lineHeight - image.size.height
+            result.addAttribute(.baselineOffset, value: heightDiff, range: NSRange(location: result.length - 1, length: 1))
+            
             result.append(attachString)
             self.attributedText = result
         }
