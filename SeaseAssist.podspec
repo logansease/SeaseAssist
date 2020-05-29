@@ -8,7 +8,7 @@
 
 Pod::Spec.new do |s|
   s.name             = "SeaseAssist"
-  s.version          = "0.0.89"
+  s.version          = "0.0.90"
   s.summary          = "A Library of Awesome Helper classes and extensions designed to help you work quickly and effeciently during iOS Development."
 
 # This description is used to generate tags and improve search results.
