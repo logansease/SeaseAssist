@@ -20,7 +20,7 @@
         datePicker.date = [NSDate new];
         
         if (@available(iOS 13.4, *)) {
-            self.datePicker.preferredDatePickerStyle = UIDatePickerStyleWheels;
+            datePicker.preferredDatePickerStyle = UIDatePickerStyleWheels;
         }
         
         //retain a copy of the date picker if needed
